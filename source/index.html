@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.scss" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
     <a class="main-header__logo" href="#">
-      <img class="main-header__logo-image" src="img/logo.svg" width="75" height="22" alt="Pink">
+      <img class="main-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__button button-rounded" type="button" aria-label="Открыть меню"></button>
+      <button class="main-nav__button " type="button" aria-label="Открыть меню"></button>
       <ul class="main-nav__list site-list">
-        <li class="main-nav__item site-item"><a href="index.html" >Главная</a></li>
-        <li class="main-nav__item site-item"><a href="photo.html">Фотографии</a></li>
-        <li class="main-nav__item site-item"><a href="form.html">Конкурс</a></li>
-        <li class="main-nav__item site-item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+        <li class="main-nav__item site-list__item"><a class= "site-list__link" href="index.html" >Главная</a></li>
+        <li class="main-nav__item site-list__item"><a class= "site-list__link" href="photo.html">Фотографии</a></li>
+        <li class="main-nav__item site-list__item"><a class= "site-list__link" href="form.html">Конкурс</a></li>
+        <li class="main-nav__item site-list__item"><a class= "site-list__link" href="https://htmlacademy.ru">HTML Academy</a></li>
       </ul>
     </nav>
   </header>
@@ -25,7 +25,7 @@
     <div class="main-image"></div>
     <section class="download-pink">
       <h2 class="visually-hidden">Скачать приложение PINK</h2>
-      <a href="#" class="download-pink__button">Скачать приложение</a>
+      <a href="#" class="download-pink__button button-rounded">Скачать приложение</a>
       <ul class="download-pink_list list-icon">
         <li class="list-icon__item">
           <a class="list-icon__link list-icon__link--apple" href="#">Apple</a>
