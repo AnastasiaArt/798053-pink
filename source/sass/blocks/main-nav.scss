@@ -1,26 +1,29 @@
 .main-nav {
   @include fontStyle;
   background-color: $blue;
-  color:$white;
+  color: $white;
   line-height: 32px;
   width: 100%;
 }
+
 .main-nav__button {
   width: 50px;
   height: 24px;
 }
+
 .main-nav__list {
   @include list;
   background-color: $blue;
-
 }
+
 .main-nav__item {
   margin: 0;
   padding: 20px;
 }
+
 .main-nav__link {
   @include fontStyle;
-  color:$white;
+  color: $white;
   text-transform: uppercase;
   text-decoration: none;
   line-height: 32px;
