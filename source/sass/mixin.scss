@@ -1,0 +1,20 @@
+@mixin indent {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list {
+  @include indent;
+  list-style: none;
+}
+
+@mixin fontStyle {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@mixin bgImage {
+  background-position: center;
+  background-repeat: no-repeat;
+}
