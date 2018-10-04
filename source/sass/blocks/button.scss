@@ -1,10 +1,17 @@
 .button {
+<<<<<<< HEAD
   @include fontStyle-bold;
 
   display: inline-block;
   line-height: 30px;
   padding: 15px 20px;
   text-decoration: none;
+=======
+  @include fontStyle;
+
+  line-height: 30px;
+  padding: 15px 20px;
+>>>>>>> a73cd3358e0baf8ef94a0ee39dc06ffb93a16518
 }
 
 .button--rounded {

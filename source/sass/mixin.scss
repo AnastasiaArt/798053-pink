@@ -8,6 +8,7 @@
   list-style: none;
 }
 
+<<<<<<< HEAD
 @mixin fontStyle-light {
   font-size: 24px;
   line-height: 30px;
@@ -18,10 +19,15 @@
 @mixin fontStyle-bold {
   font-size: 18px;
   line-height: 30px;
+=======
+@mixin fontStyle {
+  font-size: 18px;
+>>>>>>> a73cd3358e0baf8ef94a0ee39dc06ffb93a16518
   font-weight: bold;
   text-align: center;
 }
 
+<<<<<<< HEAD
 @mixin fontStyle-regular {
   font-size: 14px;
   line-height: 30px;
@@ -29,6 +35,8 @@
   text-align: center;
 }
 
+=======
+>>>>>>> a73cd3358e0baf8ef94a0ee39dc06ffb93a16518
 @mixin bgImage {
   background-position: center;
   background-repeat: no-repeat;

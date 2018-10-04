@@ -1,6 +1,10 @@
 .main-nav {
+<<<<<<< HEAD
   @include fontStyle-bold;
 
+=======
+  @include fontStyle;
+>>>>>>> a73cd3358e0baf8ef94a0ee39dc06ffb93a16518
   background-color: $blue;
   color: $white;
   line-height: 32px;
@@ -14,7 +18,10 @@
 
 .main-nav__list {
   @include list;
+<<<<<<< HEAD
 
+=======
+>>>>>>> a73cd3358e0baf8ef94a0ee39dc06ffb93a16518
   background-color: $blue;
 }
 
@@ -24,8 +31,12 @@
 }
 
 .main-nav__link {
+<<<<<<< HEAD
   @include fontStyle-bold;
 
+=======
+  @include fontStyle;
+>>>>>>> a73cd3358e0baf8ef94a0ee39dc06ffb93a16518
   color: $white;
   text-transform: uppercase;
   text-decoration: none;
