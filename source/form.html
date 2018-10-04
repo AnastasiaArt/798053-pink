@@ -7,16 +7,16 @@
 </head>
 <body>
   <header class="main-header">
-    <a class="main-header__logo logo-pink" href="#">
-      <img class="logo-pink__image" src="img/logo.svg" width="75" height="22" alt="Pink">
+    <a class="main-header__logo" href="#">
+      <img class="main-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
     </a>
     <nav class="main-nav">
       <button class="main-nav__button" type="button" aria-label="Открыть меню"></button>
-      <ul class="main-nav__list site-list">
-        <li class="main-nav__item site-list__item"><a class= "site-list__link" href="index.html" >Главная</a></li>
-        <li class="main-nav__item site-list__item"><a class= "site-list__link" href="photo.html">Фотографии</a></li>
-        <li class="main-nav__item site-list__item"><a class= "site-list__link" href="form.html">Конкурс</a></li>
-        <li class="main-nav__item site-list__item"><a class= "site-list__link" href="https://htmlacademy.ru">HTML Academy</a></li>
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class= "main-nav__link" href="index.html" >Главная</a></li>
+        <li class="main-nav__item"><a class= "main-nav__link" href="photo.html">Фотографии</a></li>
+        <li class="main-nav__item"><a class= "main-nav__link" href="form.html">Конкурс</a></li>
+        <li class="main-nav__item"><a class= "main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
       </ul>
     </nav>
   </header>
@@ -99,9 +99,11 @@
             </li>
           </ul>
         </fieldset>
-        <div class="contest-form__text">
-          <h3 class="contest-form__title">Опишите свои эмоции</h3>
-          <textarea name="think" class="contest-form__text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        <div class="contest-form__text form-participant">
+          <p class="form-participant__item">
+            <label class="form-participant__label" for="emotion">Опишите свои эмоции</label>
+            <textarea name="think" class="form-participant__input" id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </p>
         </div>
         <button type="submit" class="contest-form__button button">Отправить форму</button>
         <small class="contest-form__note">
@@ -115,21 +117,20 @@
       <img class="logo-pink__image--glasses" src="img/logo-glasses.svg" width="147" height="40" alt="Pink">
     </a>
     <div class="main-footer__social social">
-      <b class="social__title">Давайте дружить!</b>
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com">Мы в Twitter</a>
+          <a class="social__link social__link--twitter" href="https://twitter.com"><span>Twitter</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com">Мы в Facebook</a>
+          <a class="social__link social__link--facebook" href="https://www.facebook.com"><span>Facebook</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com">Мы на Youtube</a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com"><span>Youtube</span></a>
         </li>
       </ul>
     </div>
     <div class="main-footer__copyright copyright">
-      <b class="copyright__text">Разработано:</b>
+      <span class="copyright__text">Разработано:</span>
       <a class="copyright__link logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="visually-hidden">HTML Academy</span>
       </a>
