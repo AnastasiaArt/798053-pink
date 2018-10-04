@@ -1,0 +1,5 @@
+.button {
+  @include fontStyle;
+  line-height: 30px;
+  padding: 15px 20px;
+}
