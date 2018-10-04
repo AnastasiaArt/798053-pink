@@ -1,7 +1,4 @@
 .list-icon {
-  @include list;
-}
-.list-icon__link {
-  display: block;
 
+  @include list;
 }

@@ -3,5 +3,6 @@
   min-height: 462px;
   background-color: $blue;
   background-image: url("../img/bg-back-mobile@1x.jpg");
+
   @include bgImage;
 }
