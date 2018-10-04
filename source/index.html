@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
     <a class="main-header__logo" href="#">
-      <img class="main-header__logo-image" src="img/logo.svg" width="75" height="22" alt="Pink">
+      <img class="main-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__button button-rounded" type="button" aria-label="Открыть меню"></button>
-      <ul class="main-nav__list site-list">
-        <li class="main-nav__item site-item"><a href="index.html" >Главная</a></li>
-        <li class="main-nav__item site-item"><a href="photo.html">Фотографии</a></li>
-        <li class="main-nav__item site-item"><a href="form.html">Конкурс</a></li>
-        <li class="main-nav__item site-item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+      <button class="main-nav__button " type="button" aria-label="Открыть меню"></button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class= "main-nav__link" href="index.html" >Главная</a></li>
+        <li class="main-nav__item"><a class= "main-nav__link" href="photo.html">Фотографии</a></li>
+        <li class="main-nav__item"><a class= "main-nav__link" href="form.html">Конкурс</a></li>
+        <li class="main-nav__item"><a class= "main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
       </ul>
     </nav>
   </header>
@@ -25,7 +25,7 @@
     <div class="main-image"></div>
     <section class="download-pink">
       <h2 class="visually-hidden">Скачать приложение PINK</h2>
-      <a href="#" class="download-pink__button">Скачать приложение</a>
+      <a href="#" class="download-pink__button button-rounded">Скачать приложение</a>
       <ul class="download-pink_list list-icon">
         <li class="list-icon__item">
           <a class="list-icon__link list-icon__link--apple" href="#">Apple</a>
@@ -122,12 +122,20 @@
     </section>
     <section class="contacts">
       <h2 class="contacts__title">Остались вопросы?<br>Свяжитесь в нами!</h2>
-      <b class="contacts__type">Звоните:</b>
-      <p class="contacts__text">+7(812)555-66-66</p>
-      <b class="contacts__type">Пишите:</b>
-      <p class="contacts__text">mail@htmlacademy.ru</p>
-      <b class="contacts__type">Приезжайте в гости:</b>
-      <p class="contacts__text">ул.Большая Конюшенная,19/8</p>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <b class="contacts__type">Звоните:</b>
+          <p class="contacts__text">+7(812)555-66-66</p>
+        </li>
+        <li class="contacts__item">
+          <b class="contacts__type">Пишите:</b>
+          <p class="contacts__text">mail@htmlacademy.ru</p>
+        </li>
+        <li class="contacts__item">
+          <b class="contacts__type">Приезжайте в гости:</b>
+          <p class="contacts__text">ул.Большая Конюшенная,19/8</p>
+        </li>
+      </ul>
     </section>
     <div class="map">
       <img src="http://placehold.it/150x100"  width="320" height="645" alt="Карта проезда">
