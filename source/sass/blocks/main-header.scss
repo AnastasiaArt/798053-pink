@@ -1,0 +1,12 @@
+.main-header {
+  position: relative;
+  padding: $padding-mobile;
+  background-color: rgba($blue, 0.3)
+}
+
+.main-header__logo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

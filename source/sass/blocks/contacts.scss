@@ -1,0 +1,22 @@
+.contacts {
+  padding: $padding-mobile;
+    @include fontStyle-light;
+}
+
+.contacts__title {
+  @include fontStyle-light;
+}
+
+.contacts__list {
+  @include list;
+
+  text-align: center;
+}
+.contacts__type {
+  @include fontStyle-bold;
+}
+
+.contacts__text {
+  color: $red;
+
+}

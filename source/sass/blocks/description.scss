@@ -1,0 +1,31 @@
+.description {
+  background-color: $white;
+  padding: 40px 20px;
+  background-image: url("../img/bg-description.png");
+  background-size: 100%;
+  padding: $padding-mobile;
+
+}
+.description__header {
+  @include fontStyle-light;
+}
+
+.description__slogan {
+  @include fontStyle-light;
+  @include indent;
+}
+
+.description__list {
+  @include list;
+
+  text-align: center;
+}
+
+.description__title {
+  @include indent;
+  @include fontStyle-bold;
+}
+
+.description__text {
+  @include fontStyle-regular;
+}

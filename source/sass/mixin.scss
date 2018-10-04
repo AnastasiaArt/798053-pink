@@ -8,9 +8,24 @@
   list-style: none;
 }
 
-@mixin fontStyle {
+@mixin fontStyle-light {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+@mixin fontStyle-bold {
   font-size: 18px;
+  line-height: 30px;
   font-weight: bold;
+  text-align: center;
+}
+
+@mixin fontStyle-regular {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
   text-align: center;
 }
 
