@@ -1,9 +1,9 @@
 .main-nav {
- @include fontStyle;
- background-color: $blue;
- color:$white;
- line-height: 32px;
- width: 100%;
+  @include fontStyle;
+  background-color: $blue;
+  color:$white;
+  line-height: 32px;
+  width: 100%;
 }
 .main-nav__button {
   width: 50px;
