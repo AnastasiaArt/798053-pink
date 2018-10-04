@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.scss" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
@@ -11,7 +11,7 @@
       <img class="main-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__button " type="button" aria-label="Открыть меню"></button>
+      <button class="main-nav__button" type="button" aria-label="Открыть меню"></button>
       <ul class="main-nav__list">
         <li class="main-nav__item"><a class= "main-nav__link" href="index.html" >Главная</a></li>
         <li class="main-nav__item"><a class= "main-nav__link" href="photo.html">Фотографии</a></li>
@@ -26,7 +26,7 @@
     </div>
     <section class="gallery">
       <h2 class="gallery__title intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших!</h2>
-      <ul class="gallery__list ">
+      <ul class="gallery__list">
         <li class="gallery__item">
           <article class="gallery__photo photo">
             <div class="photo__image photo__image--panorama">
@@ -131,8 +131,8 @@
         <button class="option__toggle" type="button">3</button>
       </p>
       <input class="option__range" type="range" min="0" max="100" value="80">
-      <button type="submit" class="option__button-send  button-rounded button-rounded--red">Запостить</button>
-      <button type="button" class="option__button-cancel button-rounded button-rounded--gray">Отмена</button>
+      <button type="submit" class="option__button-send button button--rounded button--rounded-red">Запостить</button>
+      <button type="button" class="option__button-cancel button button--rounded button--rounded-gray">Отмена</button>
     </section>
   </main>
   <footer class="main-footer">
@@ -142,18 +142,18 @@
     <div class="main-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com"><span class="visually-hidden">Твиттер</span></a>
+          <a class="social__link social__link--twitter" href="https://twitter.com"><span>Twitter</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com"><span class="visually-hidden">Фэйсбук</span></a>
+          <a class="social__link social__link--facebook" href="https://www.facebook.com"><span>Facebook</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com"><span class="visually-hidden">Youtube</span></a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com"><span>Youtube</span></a>
         </li>
       </ul>
     </div>
     <div class="main-footer__copyright copyright">
-      <span class="copyright__text">Разработано: </span>
+      <span class="copyright__text">Разработано:</span>
       <a class="copyright__link logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="visually-hidden">HTML Academy</span>
       </a>
