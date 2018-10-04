@@ -82,12 +82,12 @@
             <input class="form-participant__input" type="text" name="mail" id="mail" value="" placeholder="Введите почту*">
           </p>
         </fieldset>
-        <fieldset class="contest-form__OS form-option">
+        <fieldset class="contest-form__os form-option">
           <legend class="form-option__title">С каким приложением путешествовали?</legend>
           <ul class="form-option__list">
             <li class="form-option__item">
-              <input class="visually-hidden radio" type="radio" name="iOS" id="iOS" checked>
-              <label for="iOS">Pink для iOS</label>
+              <input class="visually-hidden radio" type="radio" name="ios" id="ios" checked>
+              <label for="ios">Pink для iOS</label>
             </li>
             <li class="form-option__item">
               <input class="visually-hidden radio" type="radio" name="android" id="android">
@@ -99,12 +99,13 @@
             </li>
           </ul>
         </fieldset>
-        <div class="contest-form__text form-participant">
+        <fieldset class="contest-form__text form-participant">
+          <legend class="visually-hidden">Опишите свои эмоции</legend>
           <p class="form-participant__item">
             <label class="form-participant__label" for="emotion">Опишите свои эмоции</label>
             <textarea name="think" class="form-participant__input" id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </p>
-        </div>
+        </fieldset>
         <button type="submit" class="contest-form__button button">Отправить форму</button>
         <small class="contest-form__note">
           <sup>*</sup> — Обязательные поля
