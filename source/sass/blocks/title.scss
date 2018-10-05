@@ -1,8 +1,15 @@
 .title {
   width: 100%;
   height: 462px;
+  color: $white;
   background-color: $blue;
   background-image: url("../img/bg-back-mobile@1x.jpg");
 
   @include bgImage;
+}
+
+.title__elem {
+  color: $white;
+
+  @include fontStyle-light;
 }

@@ -1,6 +1,7 @@
 .contacts {
   padding: $padding-mobile;
-    @include fontStyle-light;
+
+  @include fontStyle-light;
 }
 
 .contacts__title {
@@ -12,11 +13,11 @@
 
   text-align: center;
 }
+
 .contacts__type {
   @include fontStyle-bold;
 }
 
 .contacts__text {
   color: $red;
-
 }

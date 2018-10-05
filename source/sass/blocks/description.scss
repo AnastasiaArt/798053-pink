@@ -4,8 +4,8 @@
   background-image: url("../img/bg-description.png");
   background-size: 100%;
   padding: $padding-mobile;
-
 }
+
 .description__header {
   @include fontStyle-light;
 }
