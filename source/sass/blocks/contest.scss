@@ -1,0 +1,11 @@
+.contest {
+  background-color: $white;
+  color: $blue;
+  padding: $padding-mobile;
+}
+
+.contest__title {
+  @include fontStyle-regular;
+
+  margin: 40px 0;
+}

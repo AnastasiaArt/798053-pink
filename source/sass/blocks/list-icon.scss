@@ -3,5 +3,5 @@
 }
 
 .list-icon__link {
-  color: $white;
+  @include link;
 }

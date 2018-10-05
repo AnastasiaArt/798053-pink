@@ -1,0 +1,30 @@
+.form-option {
+  @include indent;
+
+  background-color: $gray;
+  border: none;
+}
+
+.form-option__title {
+  @include fontStyle-regular;
+  @include indent;
+
+  line-height: 18px;
+  color:$red;
+  margin-top:50px;
+}
+
+.form-option__list {
+  @include list;
+  @include fontStyle-regular;
+
+  font-size: 18px;
+  text-align: left;
+  margin: 40px 0;
+}
+
+.form-option__item {
+  margin-bottom: 45px;
+  padding-left: 70px;
+  color: $blue;
+}

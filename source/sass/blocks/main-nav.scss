@@ -25,9 +25,8 @@
 
 .main-nav__link {
   @include fontStyle-bold;
+  @include link;
 
-  color: $white;
   text-transform: uppercase;
-  text-decoration: none;
   line-height: 32px;
 }

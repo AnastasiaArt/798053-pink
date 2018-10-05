@@ -2,13 +2,17 @@
   @include fontStyle-bold;
 
   display: inline-block;
-  line-height: 30px;
+  line-height: 18px;
   padding: 15px 20px;
   text-decoration: none;
+  background-color: $green;
+  color: $white;
+  border: none;
 }
 
 .button--rounded {
   border: 2px solid $white;
   border-radius: 15px;
   padding: 15px 20px;
+  background-color: $blue;
 }

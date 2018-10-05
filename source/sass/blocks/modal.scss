@@ -1,0 +1,28 @@
+.modal {
+  @include fontStyle-regular;
+
+  line-height: 24px;
+  background-color: $white;
+  color: $blue;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.modal__title {
+  @include indent;
+
+  color: #000000;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.modal__text {
+  @include indent;
+
+  margin-bottom: 35px;
+
+}
+
+.modal__button {
+  margin-bottom:  50px;
+}
