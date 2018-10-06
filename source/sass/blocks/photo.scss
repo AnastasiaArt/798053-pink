@@ -1,0 +1,44 @@
+.photo__wrapper-text {
+  background-color: $gray;
+  color: $blue;
+  @include indent;
+
+  padding: 0 15px;
+}
+
+.photo__wrapper-text--panorama {
+  margin: $padding-mobile;
+}
+
+.photo__image {
+  @include indent;
+}
+
+.photo__author {
+  @include indent;
+
+  padding-top: 20px;
+}
+
+.photo__author-name {
+  @include fontStyle-bold;
+
+  line-height: 24px;
+  font-style: normal;
+  text-align: left;
+}
+
+.photo__author-time {
+  @include fontStyle-light;
+
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.photo__text {
+  @include fontStyle-regular;
+
+  line-height: 24px;
+  text-align: left;
+}

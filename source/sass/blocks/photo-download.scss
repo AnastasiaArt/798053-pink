@@ -1,0 +1,16 @@
+.photo-download {
+  @include fontStyle-regular;
+
+  background-color: $gray;
+  color: $blue;
+  margin: $padding-mobile;
+}
+
+.photo-download__title {
+  background-color: $white;
+  margin: 50px 0;
+}
+
+.photo-download__image {
+  margin: 20px 0;
+}
