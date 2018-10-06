@@ -1,7 +1,6 @@
 .like {
-  @include fontStyle-light;
+  @include fontStyle(12px, 24px, lighter);
 
-  line-height: 24px;
   text-transform: uppercase;
   text-align: left;
   color: $red;

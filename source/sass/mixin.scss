@@ -1,3 +1,12 @@
+@mixin font-face($family, $path, $weight, $style) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$path}.woff') format('woff'), url('#{$path}.woff2') format('woff2');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
 @mixin indent {
   margin: 0;
   padding: 0;
@@ -9,24 +18,10 @@
   list-style: none;
 }
 
-@mixin fontStyle-light {
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: lighter;
-  text-align: center;
-}
-
-@mixin fontStyle-bold {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: bold;
-  text-align: center;
-}
-
-@mixin fontStyle-regular {
-  font-size: 14px;
-  line-height: 30px;
-  font-weight: normal;
+@mixin fontStyle($size, $height, $weight) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
   text-align: center;
 }
 
@@ -38,4 +33,11 @@
 @mixin link {
   color: $white;
   text-decoration: none;
+}
+
+@mixin color-btn($color, $bg-color) {
+  border: 3px solid $color;
+  border-radius: 30px;
+  background-color: $bg-color;
+  color: $color;
 }

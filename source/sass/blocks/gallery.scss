@@ -7,7 +7,7 @@
   padding: $padding-mobile;
   margin: 50px auto;
 
-  @include fontStyle-regular;
+  @include fontStyle(14px, 30px, normal);
 }
 
 .gallery__list {

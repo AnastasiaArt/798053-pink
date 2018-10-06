@@ -1,8 +1,7 @@
 .button {
-  @include fontStyle-bold;
+  @include fontStyle(18px, 18px, bold);
 
   display: inline-block;
-  line-height: 18px;
   padding: 15px 20px;
   text-decoration: none;
   background-color: $green;
@@ -11,20 +10,13 @@
 }
 
 .button--rounded {
-  border: 3px solid $white;
-  border-radius: 30px;
-  padding: 15px 20px;
-  background-color: $blue;
+  @include color-btn($white, $bg-color: $blue);
 }
 
 .button--rounded-red {
-  border-color: $red;
-  color: $red;
-  background-color: $white;
+  @include color-btn($red, $bg-color: $white);
 }
 
 .button--rounded-gray {
-  border-color: $gray-btn;
-  color: $gray-btn;
-  background-color: $white;
+  @include color-btn($gray-btn, $bg-color: $white);
 }

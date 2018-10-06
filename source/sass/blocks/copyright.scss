@@ -1,6 +1,5 @@
 .copyright {
-  @include fontStyle-regular;
+  @include fontStyle(14px, 18px, normal);
 
-  line-height: 18px;
   color: $blue;
 }

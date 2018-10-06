@@ -1,11 +1,11 @@
 .contacts {
   padding: $padding-mobile;
 
-  @include fontStyle-light;
+  @include fontStyle(24px, 30px, lighter);
 }
 
 .contacts__title {
-  @include fontStyle-light;
+  @include fontStyle(24px, 30px, lighter);
 }
 
 .contacts__list {
@@ -15,7 +15,7 @@
 }
 
 .contacts__type {
-  @include fontStyle-bold;
+  @include fontStyle(18px, 30px, bold);
 }
 
 .contacts__text {

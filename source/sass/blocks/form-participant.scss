@@ -7,7 +7,7 @@
 
 .form-participant__item {
   @include indent;
-  @include fontStyle-regular;
+  @include fontStyle(14px, 30px, normal);
 
   text-align: left;
 }
@@ -18,8 +18,9 @@
 }
 
 .form-participant__input {
+  @include fontStyle(18px, 30px, normal);
+
   color: $blue;
-  font-size: 18px;
   padding: 20px;
   border: 3px solid #e5e5e5;
 }

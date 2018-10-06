@@ -6,11 +6,11 @@
 }
 
 .description__header {
-  @include fontStyle-light;
+  @include fontStyle(24px, 30px, lighter);
 }
 
 .description__slogan {
-  @include fontStyle-light;
+  @include fontStyle(24px, 30px, lighter);
   @include indent;
 }
 
@@ -22,9 +22,9 @@
 
 .description__title {
   @include indent;
-  @include fontStyle-bold;
+  @include fontStyle(18px, 30px, bold);
 }
 
 .description__text {
-  @include fontStyle-regular;
+  @include fontStyle(14px, 30px, normal);
 }
