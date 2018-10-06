@@ -21,6 +21,6 @@
 //   font-weight: bold;
 //   font-style: normal;
 // }
-@include font-face('OpenSans', '../fonts/opensans', normal, normal);
-@include font-face('OpenSans', '../fonts/opensansbold', bold, normal);
-@include font-face('OpenSans', '../fonts/opensanslight', lighter, normal);
+@include font-face("OpenSans", "../fonts/opensans", normal, normal);
+@include font-face("OpenSans", "../fonts/opensansbold", bold, normal);
+@include font-face("OpenSans", "../fonts/opensanslight", lighter, normal);
