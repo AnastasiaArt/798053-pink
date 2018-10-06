@@ -1,3 +1,7 @@
+.social {
+  text-align: center;
+}
+
 .social__list {
- @include list;
+  @include list;
 }
