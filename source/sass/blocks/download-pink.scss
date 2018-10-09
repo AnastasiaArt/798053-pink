@@ -1,17 +1,19 @@
 .download-pink {
-  color: white;
-  background-color: #1d2631;
+  color: $white;
+  background-color: $blue;
+  text-align: center;
+  padding: $padding-mobile;
 }
 
 .download-pink__button {
   margin: 0 auto;
   margin-top: 28px;
   margin-bottom: 35px;
+  color: $white;
 }
 
 .download-pink__os {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: lighter;
+  @include fontStyle(14px, 24px, lighter);
+
   margin: 20px auto;
 }

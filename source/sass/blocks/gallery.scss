@@ -1,0 +1,23 @@
+.gallery {
+  background-color: $white;
+  color: $blue;
+}
+
+.gallery__title {
+  padding: $padding-mobile;
+  margin: 50px auto;
+
+  @include fontStyle(14px, 30px, normal);
+}
+
+.gallery__list {
+  @include list;
+}
+
+.gallery__photo {
+  margin: $padding-mobile;
+}
+
+.gallery__photo--panorama {
+  @include indent;
+}

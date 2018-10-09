@@ -1,0 +1,8 @@
+.like {
+  @include fontStyle(12px, 24px, lighter);
+
+  text-transform: uppercase;
+  text-align: left;
+  color: $red;
+  padding-left: 22px;
+}

@@ -1,8 +1,8 @@
 .main-nav {
-  @include fontStyle;
+  @include fontStyle(18px, 32px, bold);
+
   background-color: $blue;
   color: $white;
-  line-height: 32px;
   width: 100%;
 }
 
@@ -13,6 +13,7 @@
 
 .main-nav__list {
   @include list;
+
   background-color: $blue;
 }
 
@@ -22,9 +23,8 @@
 }
 
 .main-nav__link {
-  @include fontStyle;
-  color: $white;
+  @include fontStyle(18px, 32px, bold);
+  @include link;
+
   text-transform: uppercase;
-  text-decoration: none;
-  line-height: 32px;
 }

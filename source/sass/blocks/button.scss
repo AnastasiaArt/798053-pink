@@ -1,12 +1,22 @@
 .button {
-  @include fontStyle;
+  @include fontStyle(18px, 18px, bold);
 
-  line-height: 30px;
+  display: inline-block;
   padding: 15px 20px;
+  text-decoration: none;
+  background-color: $green;
+  color: $white;
+  border: none;
 }
 
 .button--rounded {
-  border: 2px solid $white;
-  border-radius: 15px;
-  padding: 15px 20px;
+  @include color-btn($white, $bg-color: $blue);
+}
+
+.button--rounded-red {
+  @include color-btn($red, $bg-color: $white);
+}
+
+.button--rounded-gray {
+  @include color-btn($gray-btn, $bg-color: $white);
 }

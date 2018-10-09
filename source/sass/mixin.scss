@@ -1,3 +1,12 @@
+@mixin font-face($family, $path, $weight, $style) {
+  @font-face {
+    font-family: $family;
+    src: url("#{$path}.woff") format("woff"), url("#{$path}.woff2") format("woff2");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
 @mixin indent {
   margin: 0;
   padding: 0;
@@ -5,16 +14,30 @@
 
 @mixin list {
   @include indent;
+
   list-style: none;
 }
 
-@mixin fontStyle {
-  font-size: 18px;
-  font-weight: bold;
+@mixin fontStyle($size, $height, $weight) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
   text-align: center;
 }
 
 @mixin bgImage {
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@mixin link {
+  color: $white;
+  text-decoration: none;
+}
+
+@mixin color-btn($color, $bg-color) {
+  border: 3px solid $color;
+  border-radius: 30px;
+  background-color: $bg-color;
+  color: $color;
 }
