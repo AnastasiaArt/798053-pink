@@ -1,7 +1,7 @@
 .button {
-  @include fontStyle(18px, 18px, bold);
+  @include font-style(18px, 18px, bold);
 
-  display: inline-block;
+  display: block;
   padding: 15px 20px;
   text-decoration: none;
   background-color: $green;

@@ -1,7 +1,45 @@
 .rate {
+  width: 320px;
+  box-sizing: border-box;
   background-color: $white;
-  margin: 40px 20px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   background-image: url("../img/bg-description.png");
-  background-size: 100%;
-  padding: $padding-mobile;
+  background-size: cover;
+}
+
+.rate__name {
+  text-transform: uppercase;
+  background-color: $blue;
+  color: $white;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  &::before {
+    @include pseudo();
+
+    width: 74px;
+    height: 73px;
+    background-image: url("../img/bg-hit.svg");
+    top:0px;
+    left:0;
+  }
+  &::after {
+    @include pseudo($content: 'ХИТ');
+    @include font-style(14px, 30px, lighter);
+
+    transform: rotate(-45deg);
+    top:10px;
+    left:13px;
+  }
+}
+
+.rate__price {
+  @include font-style(24px, 30px, lighter);
+}
+
+.rate__toggles {
+  @include indent;
+
+  margin-top: 30px;
 }

@@ -18,7 +18,7 @@
   list-style: none;
 }
 
-@mixin fontStyle($size, $height, $weight) {
+@mixin font-style($size, $height, $weight) {
   font-size: $size;
   line-height: $height;
   font-weight: $weight;
@@ -33,6 +33,7 @@
 @mixin link {
   color: $white;
   text-decoration: none;
+  display: block;
 }
 
 @mixin color-btn($color, $bg-color) {
@@ -40,4 +41,16 @@
   border-radius: 30px;
   background-color: $bg-color;
   color: $color;
+}
+
+@mixin respond-to($breakpoint) {
+  $width-screen: map-get($breakpoints, $breakpoint);
+  @media (min-width: $width-screen){
+    @content;
+  }
+}
+ @mixin pseudo($display: block, $pos: absolute, $content: ''){
+  display: $display;
+  position: $pos;
+  content: $content;
 }

@@ -1,5 +1,5 @@
 .main-nav {
-  @include fontStyle(18px, 32px, bold);
+  @include font-style(18px, 32px, bold);
 
   background-color: $blue;
   color: $white;
@@ -9,21 +9,32 @@
 .main-nav__button {
   width: 50px;
   height: 24px;
+  display: block;
+  // margin-left: auto;
+  position: absolute;
+  top: 20px;
+  right: 6.25%;
 }
 
 .main-nav__list {
   @include list;
 
+  width: 100%;
+  box-sizing: border-box;
   background-color: $blue;
 }
 
 .main-nav__item {
   margin: 0;
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid $gray-border;
+  border-bottom: 1px solid $black;
 }
 
 .main-nav__link {
-  @include fontStyle(18px, 32px, bold);
+  @include font-style(18px, 32px, bold);
   @include link;
 
   text-transform: uppercase;

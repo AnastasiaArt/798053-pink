@@ -6,7 +6,7 @@
 }
 
 .form-option__title {
-  @include fontStyle(14px, 18px, normal);
+  @include font-style(14px, 18px, normal);
   @include indent;
 
   color: $red;
@@ -15,7 +15,7 @@
 
 .form-option__list {
   @include list;
-  @include fontStyle(18px, 30px, normal);
+  @include font-style(18px, 30px, normal);
 
   text-align: left;
   margin: 40px 0;

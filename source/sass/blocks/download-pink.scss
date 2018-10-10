@@ -3,17 +3,27 @@
   background-color: $blue;
   text-align: center;
   padding: $padding-mobile;
+  padding-top: 38px;
+  width: 320px;
+  box-sizing: border-box;
 }
 
 .download-pink__button {
-  margin: 0 auto;
-  margin-top: 28px;
+  width: 280px;
+  box-sizing: border-box;
+  margin: $center;
   margin-bottom: 35px;
   color: $white;
 }
 
-.download-pink__os {
-  @include fontStyle(14px, 24px, lighter);
+.download-pink_list {
+  margin: $center;
+  margin-bottom: 20px;
+}
 
-  margin: 20px auto;
+.download-pink__os {
+  @include indent;
+  @include font-style(14px, 24px, lighter);
+
+  padding-bottom: 28px;
 }

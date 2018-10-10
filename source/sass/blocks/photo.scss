@@ -21,14 +21,14 @@
 }
 
 .photo__author-name {
-  @include fontStyle(18px, 24px, bold);
+  @include font-style(18px, 24px, bold);
 
   font-style: normal;
   text-align: left;
 }
 
 .photo__author-time {
-  @include fontStyle(18px, 24px, lighter);
+  @include font-style(18px, 24px, lighter);
 
   line-height: 24px;
   text-transform: uppercase;
@@ -36,7 +36,7 @@
 }
 
 .photo__text {
-  @include fontStyle(14px, 24px, normal);
+  @include font-style(14px, 24px, normal);
 
   text-align: left;
 }

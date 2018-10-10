@@ -1,5 +1,5 @@
 .modal {
-  @include fontStyle(14px, 24px, normal);
+  @include font-style(14px, 24px, normal);
 
   background-color: $white;
   color: $blue;

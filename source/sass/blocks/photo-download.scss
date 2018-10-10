@@ -1,5 +1,5 @@
 .photo-download {
-  @include fontStyle(14px, 30px, normal);
+  @include font-style(14px, 30px, normal);
 
   background-color: $gray;
   color: $blue;

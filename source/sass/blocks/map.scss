@@ -1,0 +1,14 @@
+.map {
+  width: 320px;
+  position: absolute;
+  z-index: 1;
+  bottom: -5%;;
+  left: 0;
+  &::before {
+    @include pseudo($content: url("../img/icon-map-marker.svg"));
+
+    left: 0;
+    right: 0;
+    bottom:10%;
+  }
+}

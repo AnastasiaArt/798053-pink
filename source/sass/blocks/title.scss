@@ -1,15 +1,17 @@
 .title {
   @include bgImage;
 
-  width: 100%;
+  width: 320px;
   height: 462px;
   color: $white;
   background-color: $blue;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-image:  url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-position: bottom left, center center;
+  background-size: auto, cover;
 }
 
 .title__elem {
-  @include fontStyle(24px, 30px, lighter);
+  @include font-style(24px, 30px, lighter);
 
   color: $white;
   margin: 30px 0;

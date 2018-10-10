@@ -5,7 +5,7 @@
 }
 
 .contest__title {
-  @include fontStyle(14px, 30px, normal);
+  @include font-style(14px, 30px, normal);
 
   margin: 40px 0;
 }
