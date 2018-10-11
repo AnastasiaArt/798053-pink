@@ -49,7 +49,7 @@
     @content;
   }
 }
- @mixin pseudo($display: block, $pos: absolute, $content: ''){
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
   display: $display;
   position: $pos;
   content: $content;
