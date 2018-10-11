@@ -1,13 +1,15 @@
 .gallery {
   background-color: $white;
   color: $blue;
+  width: 320px;
+  box-sizing: border-box;
 }
 
 .gallery__title {
-  padding: $padding-mobile;
-  margin: 50px auto;
-
   @include font-style(14px, 30px, normal);
+  @include indent;
+
+  padding: 40px 20px;
 }
 
 .gallery__list {
@@ -15,9 +17,16 @@
 }
 
 .gallery__photo {
+  height: auto;
+}
+
+.gallery__item {
+  margin-bottom: 20px;
   margin: $padding-mobile;
 }
 
-.gallery__photo--panorama {
+.gallery__item--panorama {
   @include indent;
+
+  width: 100%;
 }

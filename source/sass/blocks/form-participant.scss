@@ -2,7 +2,10 @@
   @include indent;
 
   border: none;
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-participant__item {
@@ -10,17 +13,28 @@
   @include font-style(14px, 30px, normal);
 
   text-align: left;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-participant__label {
   color: $red;
+  text-transform: uppercase;
   padding: 10px 20px;
 }
 
 .form-participant__input {
   @include font-style(18px, 30px, normal);
 
+  text-align: left;
   color: $blue;
   padding: 20px;
   border: 3px solid #e5e5e5;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-participant__input--indent {
+  margin-top: 10px;
 }

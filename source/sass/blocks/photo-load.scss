@@ -1,0 +1,32 @@
+.photo-load {
+  @include font-style(14px, 30px, normal);
+
+  color: $blue;
+  width: 320px;
+  box-sizing: border-box;
+}
+
+.photo-load__title {
+  @include font-style(14px, 30px, normal);
+
+  background-color: $white;
+  margin: 40px 0;
+  padding: 0 30px;
+}
+
+.photo-load__wrapper {
+  background-color: $gray;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.photo-load__image {
+  padding: 20px 0;
+}
+
+.photo-load__button {
+  width: 280px;
+  margin: $center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}

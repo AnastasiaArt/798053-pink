@@ -10,7 +10,11 @@
   @include indent;
 
   color: $red;
-  margin-top: 50px;
+  text-transform: uppercase;
+  padding: 0 40px;
+  padding-top: 30px;
+  background-color: $gray;
+  width: 100%;
 }
 
 .form-option__list {
@@ -23,6 +27,9 @@
 
 .form-option__item {
   margin-bottom: 45px;
-  padding-left: 70px;
+  padding-left: 90px;
+  padding-right: 20px;
   color: $blue;
+  width: 100%;
+  box-sizing: border-box;
 }

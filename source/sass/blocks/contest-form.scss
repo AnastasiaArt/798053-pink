@@ -1,6 +1,35 @@
+.contest-form {
+  width: 100%;
+}
+
 .contest-form__note {
   @include font-style(14px, 30px, normal);
 
-  padding-top: 40px;
-  padding-bottom: 20px;
+  display: block;
+  width: 280px;
+  margin: $center;
+  padding: 20px 0;
+  & sup {
+    color: $red;
+  }
+}
+
+.contest-form__name,
+.contest-form__text {
+  padding: $padding-mobile;
+}
+
+.contest-form__contact {
+  padding: $padding-mobile;
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+.contest-form__text {
+  padding: $padding-mobile;
+  padding-top:30px;
+}
+
+.contest-form__button {
+  width: 280px;
+  margin:$center;
 }

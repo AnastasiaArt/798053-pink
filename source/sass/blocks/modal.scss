@@ -1,17 +1,31 @@
 .modal {
   @include font-style(14px, 24px, normal);
 
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  right: 0;
   background-color: $white;
   color: $blue;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 320px;
+
 }
 
+.modal--error {
+  top: 50%;
+}
+
+.modal--done {
+  top: 67%;
+}
 .modal__title {
   @include indent;
 
   color: #000000;
   font-weight: bold;
-  margin-top: 50px;
+  padding: $padding-mobile;
+  padding-top: 50px;
   margin-bottom: 20px;
 }
 
@@ -19,8 +33,11 @@
   @include indent;
 
   margin-bottom: 35px;
+  padding: $padding-mobile;
 }
 
 .modal__button {
+  margin: $center;
   margin-bottom: 50px;
+  width: 280px;
 }

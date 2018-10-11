@@ -18,25 +18,33 @@
   @include indent;
 
   padding-top: 20px;
+  text-align: left;
 }
 
 .photo__author-name {
   @include font-style(18px, 24px, bold);
 
   font-style: normal;
-  text-align: left;
 }
 
 .photo__author-time {
-  @include font-style(18px, 24px, lighter);
+  @include font-style(14px, 24px, lighter);
 
   line-height: 24px;
   text-transform: uppercase;
-  text-align: left;
 }
 
 .photo__text {
   @include font-style(14px, 24px, normal);
+  @include indent;
 
   text-align: left;
+}
+
+.photo__like {
+  @include indent;
+
+  padding: $padding-mobile;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }

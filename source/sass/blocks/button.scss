@@ -2,15 +2,17 @@
   @include font-style(18px, 18px, bold);
 
   display: block;
-  padding: 15px 20px;
+  padding: 20px 20px;
   text-decoration: none;
   background-color: $green;
   color: $white;
   border: none;
+  text-transform: uppercase;
 }
 
 .button--rounded {
   @include color-btn($white, $bg-color: $blue);
+  text-transform: none;
 }
 
 .button--rounded-red {
