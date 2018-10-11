@@ -9,6 +9,7 @@
   width: 280px;
   margin: $center;
   padding: 20px 0;
+
   & sup {
     color: $red;
   }
@@ -24,12 +25,13 @@
   margin-top: 35px;
   margin-bottom: 40px;
 }
+
 .contest-form__text {
   padding: $padding-mobile;
-  padding-top:30px;
+  padding-top: 30px;
 }
 
 .contest-form__button {
   width: 280px;
-  margin:$center;
+  margin: $center;
 }

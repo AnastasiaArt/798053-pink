@@ -45,11 +45,13 @@
 
 @mixin respond-to($breakpoint) {
   $width-screen: map-get($breakpoints, $breakpoint);
-  @media (min-width: $width-screen){
+
+  @media (min-width: $width-screen) {
     @content;
   }
 }
-@mixin pseudo($display: block, $pos: absolute, $content: ''){
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
   display: $display;
   position: $pos;
   content: $content;

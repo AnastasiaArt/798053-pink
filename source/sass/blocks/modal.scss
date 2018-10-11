@@ -9,7 +9,6 @@
   color: $blue;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 320px;
-
 }
 
 .modal--error {
@@ -19,6 +18,7 @@
 .modal--done {
   top: 67%;
 }
+
 .modal__title {
   @include indent;
 
