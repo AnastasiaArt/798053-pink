@@ -1,9 +1,9 @@
 .main-nav {
   @include font-style(18px, 32px, bold);
 
-  background-color: $blue;
   color: $white;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .main-nav__button {
@@ -13,7 +13,7 @@
   // margin-left: auto;
   position: absolute;
   top: 20px;
-  right: 6.25%;
+  right: 20px;
 }
 
 .main-nav__list {
@@ -25,8 +25,8 @@
 }
 
 .main-nav__item {
-  margin: 0;
-  padding: 20px;
+  @include indent;
+
   width: 100%;
   box-sizing: border-box;
   border-top: 1px solid $gray-border;
@@ -38,4 +38,30 @@
   @include link;
 
   text-transform: uppercase;
+  margin: 0;
+  padding: 20px;
+}
+
+@include respond-to(large) {
+  .main-nav {
+    width: 65%;
+    padding-right: 110px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+    justify-content: space-between;
+  }
+
+  .main-nav__item {
+    border: none;
+    width: auto;
+  }
+
+  .main-nav__link {
+    @include font-style(18px, 18px, normal);
+    padding: 40px 20px;
+  }
 }

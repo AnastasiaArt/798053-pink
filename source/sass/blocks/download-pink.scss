@@ -8,6 +8,12 @@
   box-sizing: border-box;
 }
 
+.download-pink__name {
+  @include indent;
+
+  display: none;
+}
+
 .download-pink__button {
   width: 280px;
   box-sizing: border-box;
@@ -26,4 +32,37 @@
   @include font-style(14px, 24px, lighter);
 
   padding-bottom: 28px;
+}
+
+@include respond-to(medium) {
+  .download-pink {
+    position: absolute;
+    left: 20px;
+    bottom: 90px;
+    background-color: transparent;
+    width: 300px;
+    padding: 0;
+  }
+
+  .download-pink__os {
+    font-size: 18px;
+  }
+
+  .download-pink__button {
+    background-color: transparent;
+  }
+
+  .download-pink__name {
+    @include font-style(40px, 50px, lighter);
+
+    display: block;
+    padding: 30px;
+  }
+}
+
+@include respond-to(large) {
+  .download-pink {
+    left: 130px;
+    bottom: 115px;
+  }
 }

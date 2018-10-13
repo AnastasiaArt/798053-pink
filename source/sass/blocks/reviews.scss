@@ -3,3 +3,45 @@
   padding: $padding-mobile;
   margin-top: 20px;
 }
+
+.reviews__item--hidden {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .reviews__item {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .reviews__item--hidden {
+    display: none;
+  }
+}
+
+@include respond-to(large) {
+  .reviews {
+    padding: 0 130px;
+  }
+
+  .reviews__item {
+    padding-top: 170px;
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      @include bgImage;
+
+      width: 100px;
+      height: 90px;
+      top: 70px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background-image: url("../img/icon-quotes.svg");
+    }
+  }
+
+  .reviews__item--hidden {
+    display: none;
+  }
+}

@@ -4,6 +4,8 @@
   z-index: 1;
   bottom: -5%;
   left: 0;
+  height: 600px;
+  overflow: hidden;
 
   &::before {
     @include pseudo($content: url("../img/icon-map-marker.svg"));

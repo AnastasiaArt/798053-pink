@@ -32,3 +32,19 @@
 .slider__item--hidden {
   display: none;
 }
+
+.slider__title span {
+  @include font-style(14px, 30px, normal);
+
+  display: none;
+}
+
+@include respond-to(medium) {
+  .slider__title {
+    font-size: 20px;
+  }
+
+  .slider__title span {
+    display: block;
+  }
+}
