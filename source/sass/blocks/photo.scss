@@ -1,13 +1,13 @@
 .photo__wrapper-text {
   @include indent;
 
-  background-color: $gray;
   color: $blue;
   padding: 0 15px;
 }
 
 .photo__wrapper-text--panorama {
   margin: $padding-mobile;
+  background-color: $gray;
 }
 
 .photo__image {
@@ -46,5 +46,24 @@
 
   padding: $padding-mobile;
   padding-top: 10px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
+
+@include respond-to(medium) {
+  .photo__wrapper-text {
+    padding-left: 20px;
+    padding-right: 30px;
+    // display: flex;
+    // flex-direction: column;
+
+    &--panorama {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+//
+// @include respond-to(large) {
+//
+// }

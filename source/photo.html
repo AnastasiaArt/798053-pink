@@ -27,7 +27,7 @@
       <h1 class="title__name">Фотографии пользователей</h1>
     </div>
     <section class="gallery">
-      <h2 class="gallery__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших!</h2>
+      <h2 class="gallery__title">Взгляните на фотографии, которые выкладывают пользователи! <span>Видите, как не хватает ваших!</span></h2>
       <ul class="gallery__list">
         <li class="gallery__item gallery__item--panorama">
           <article class="gallery__photo photo">
@@ -142,14 +142,16 @@
         <div class="photo-load__image">
           <img src="../img/photo-road-mobile@1x.jpg" width="280" height="375" alt="Ваше фото">
         </div>
-        <p class="photo-load__option option__toggles">
-          <button class="option__toggle" type="button">1</button>
-          <button class="option__toggle" type="button">2</button>
-          <button class="option__toggle" type="button">3</button>
-        </p>
-        <input class="option__range" type="range" min="0" max="100" value="80">
-        <button type="submit" class="photo-load__button button button--rounded button--rounded-red">Запостить</button>
-        <button type="button" class="photo-load__button button button--rounded button--rounded-gray">Отмена</button>
+        <div class="photo-load__filters">
+          <p class="photo-load__option option__toggles">
+            <button class="option__toggle" type="button">1</button>
+            <button class="option__toggle" type="button">2</button>
+            <button class="option__toggle" type="button">3</button>
+          </p>
+          <input class="option__range" type="range" min="0" max="100" value="80">
+          <button type="submit" class="photo-load__button button button--rounded button--rounded-red">Запостить</button>
+          <button type="button" class="photo-load__button button button--rounded button--rounded-gray">Отмена</button>
+        </div>
       </div>
     </section>
   </main>

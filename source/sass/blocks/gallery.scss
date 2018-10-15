@@ -9,7 +9,7 @@
   @include font-style(14px, 30px, normal);
   @include indent;
 
-  padding: 40px 20px;
+  margin: 40px 20px;
 }
 
 .gallery__list {
@@ -23,10 +23,71 @@
 .gallery__item {
   margin: $padding-mobile;
   margin-bottom: 20px;
+  background-color: $gray;
 }
 
 .gallery__item--panorama {
   @include indent;
 
   width: 100%;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+@include respond-to(medium) {
+  .gallery__title {
+    @include font-style(18px, 30px, normal);
+
+    padding: 0 85px;
+    margin-top: 90px;
+    margin-bottom: 70px;
+  }
+
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .gallery__item {
+    width: 45%;
+    margin: 0;
+    margin-bottom: 20px;
+
+
+    &--panorama {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .gallery__title {
+    @include font-style(18px, 30px, normal);
+
+    margin-left: 130px;
+    margin-right: 130px;
+    margin-bottom: 80px;
+
+    & span {
+      display: block;
+    }
+  }
+
+  .gallery__list {
+    padding: 0 130px;
+  }
+
+  .gallery__item {
+    width: 32%;
+    margin-bottom: 55px;
+
+    &--panorama {
+      width: 100%;
+    }
+  }
 }
