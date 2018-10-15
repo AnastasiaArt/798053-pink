@@ -31,6 +31,19 @@
     background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
     background-position: bottom center, bottom center;
   }
+
+  .title--bg {
+    min-height: 330px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: center;
+  }
+
+  .title__name {
+    @include font-style(50px, 60px, lighter);
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 }
 
 @include respond-to(large) {
@@ -38,5 +51,18 @@
     min-height: 850px;
     background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
     background-position: bottom right, bottom center;
+  }
+
+  .title--bg {
+    min-height: 394px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: center;
+  }
+
+  .title__name {
+    padding-top: 190px;
+    padding-bottom: 90px;
+    padding-left: 130px;
+    padding-right: 130px;
   }
 }

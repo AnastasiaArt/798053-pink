@@ -94,34 +94,61 @@
         <button class="slider__toggle" type="button">3</button>
       </p>
     </section>
-    <section class="rate slider">
+    <section class="rate ">
       <h2 class="visually-hidden">Тарифы</h2>
-      <ul class="rate__list slider__list">
-        <li class="rate__item slider__item">
-          <h3 class="rate__name slider__title">База<br><span class="rate__price">1,99 USD</span></h3>
-          <ul class="rate__option option">
-            <li class="option__item">Розовый фильтр</li>
-            <li class="option__item">Смайлики</li>
-            <li class="option__item">Комментарии</li>
-          </ul>
-        </li>
-        <li class="rate__item slider__item slider__item--hidden">
-          <h3 class="rate__name slider__title">Стандарт<br><span class="rate__price">3,99 USD</span></h3>
-          <ul class="rate__option option">
-            <li class="option__item">Розовый фильтр</li>
-            <li class="option__item">Смайлики</li>
-            <li class="option__item">Комментарии</li>
-          </ul>
-        </li>
-        <li class="rate__item slider__item slider__item--hidden">
-          <h3 class="rate__name slider__title">Анлим<br><span class="rate__price">9,99 USD</span></h3>
-          <ul class="rate__option option">
-            <li class="option__item">Розовый фильтр</li>
-            <li class="option__item">Смайлики</li>
-            <li class="option__item">Комментарии</li>
-          </ul>
-        </li>
-      </ul>
+      <table class="rates__table">
+        <tr class="rates__item rates__item--title">
+          <th class="visually-hidden"></th>
+          <th class="rates__name ">База<br><span class="rates__price">1,99 USD</span></th>
+          <th class="rates__name rates__name--hit">Стандарт<br><span class="rates__price">3,99 USD</span></th>
+          <th class="rates__name ">Анлим<br><span class="rates__price">9,99 USD</span></th>
+        </tr>
+        <tr class="rates__item">
+          <td class="rates__feature"><span class="rates__option">Розовый фильтр</span></td>
+          <td class="rates__feature">
+            <p class="rates__feature-name">Розовый фильтр</p>
+            <span class="visually-hidden">Доступно</span>
+          </td>
+          <td class="rates__feature">
+            <p class="rates__feature-name">Розовый фильтр</p>
+            <span class="visually-hidden">Доступно</span>
+          </td>
+          <td class="rates__feature">
+            <p class="rates__feature-name">Розовый фильтр</p>
+            <span class="visually-hidden">Доступно</span>
+          </td>
+        </tr>
+        <tr class="rates__item">
+          <td class="rates__feature"><span class="rates__option">Смайлики</span></td>
+          <td class="rates__feature">
+            <p class="rates__feature-name">Смайлики</p>
+            <span class="visually-hidden">Недоступно</span>
+          </td>
+          <td class="rates__feature">
+            <p class="rates__feature-name">Смайлики</p>
+            <span class="visually-hidden">Доступно</span>
+          </td>
+          <td class="rates__feature">
+            <p class="rates__feature-name">Смайлики</p>
+            <span class="visually-hidden">Доступно</span>
+          </td>
+        </tr>
+        <tr class="rates_item">
+          <td class="rates__feature"><span class="rates__option">Комментарии</span></td>
+          <td class="rates__feature">
+            <p class="rates__feature-name">Комментарии</p>
+            <span class="visually-hidden">Недоступно</span>
+          </td>
+          <td class="rates__feature">
+            <p class="rates__feature-name">Комментарии</p>
+            <span class="visually-hidden">Недоступно</span>
+          </td>
+          <td class="rates__feature">
+            <p class="rates__feature-name">Комментарии</p>
+            <span class="visually-hidden">Доступно</span>
+          </td>
+        </tr>
+      </table>
       <p class="rate__toggles slider__toggles">
         <button class="slider__toggle" type="button">1</button>
         <button class="slider__toggle" type="button">2</button>

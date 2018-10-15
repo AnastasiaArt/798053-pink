@@ -2,10 +2,6 @@
   @include indent;
 
   border: none;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .form-participant__item {
@@ -37,4 +33,46 @@
 
 .form-participant__input--indent {
   margin-top: 10px;
+}
+
+.form-participant__title {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .form-participant__item {
+    display: flex;
+    align-items: baseline;
+
+    &--col {
+      width: 80.85%;
+      margin: $center;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .form-participant__label {
+    padding-left: 0;
+
+    &--hidden {
+      color: transparent;
+    }
+  }
+
+  .form-participant__title {
+    @include font-style(14px, 30px, normal);
+
+    display: inline-block;
+    color: $red;
+    text-transform: uppercase;
+    padding: 0 15px;
+    margin-bottom: 35px;
+  }
+}
+
+@include respond-to(large) {
+  .form-participant__item--col {
+    width: 40%;
+    margin: 0;
+  }
 }

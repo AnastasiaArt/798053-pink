@@ -1,5 +1,6 @@
 .contest-form {
   width: 100%;
+  box-sizing: border-box;
 }
 
 .contest-form__note {
@@ -9,21 +10,25 @@
   width: 280px;
   margin: $center;
   padding: 20px 0;
+  text-transform: uppercase;
 
   & sup {
     color: $red;
   }
+
+  & span {
+    display: none;
+  }
 }
 
-.contest-form__name,
-.contest-form__text {
+.contest-form__name {
   padding: $padding-mobile;
 }
 
 .contest-form__contact {
-  padding: $padding-mobile;
   margin-top: 35px;
   margin-bottom: 40px;
+  padding: $padding-mobile;
 }
 
 .contest-form__text {
@@ -34,4 +39,94 @@
 .contest-form__button {
   width: 280px;
   margin: $center;
+}
+
+@include respond-to(medium) {
+  .contest-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contest-form__progress,
+  .contest-form__os,
+  .contest-form__contact,
+  .contest-form__text {
+    padding: 0;
+    margin: 0 20px;
+    margin-bottom: 55px;
+    width: 100%;
+  }
+
+  .contest-form__os {
+    order: 2;
+  }
+
+  .contest-form__progress {
+    order: 4;
+  }
+
+  .contest-form__text {
+    border: $table-border;
+    order: 5;
+  }
+
+  .contest-form__name {
+    padding: 0;
+    margin: 0 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    order: 1;
+  }
+
+  .contest-form__contact {
+    border: $table-border;
+    order: 3;
+
+    & label {
+      padding-left: 22px;
+    }
+  }
+
+  .contest-form__note {
+    margin-right: 20px;
+    text-align: right;
+    order: 7;
+  }
+
+  .contest-form__button {
+    width: 300px;
+    line-height: 30px;
+    margin-left: 20px;
+    order: 6;
+  }
+}
+
+@include respond-to(large) {
+  .contest-form__contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contest-form__contact,
+  .contest-form__progress {
+    padding: 0 60px;
+  }
+
+  .contest-form__name,
+  .contest-form__os {
+    width: 45%;
+  }
+
+  .contest-form__note {
+    width: 40%;
+    margin-right: 20px;
+
+    & span {
+      display: inline-block;
+    }
+  }
+
+  .contest-form__text {
+    padding: 0 60px;
+  }
 }

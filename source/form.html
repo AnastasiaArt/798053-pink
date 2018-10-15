@@ -27,7 +27,8 @@
       <h1 class="title__name">Конкурс на самое безбашенное путешествие с ПИНК</h1>
     </div>
     <section class="contest">
-      <h2 class="contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</h2>
+      <h2 class="contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+      <span class="contest__title--hidden">Пожалуйста, заполните форму ниже: </span></h2>
       <form class="contest-form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="contest-form__name form-participant">
           <legend class="visually-hidden">ФИО участника</legend>
@@ -46,7 +47,7 @@
         </fieldset>
         <fieldset class="contest-form__progress form-option">
           <legend class="form-option__title">Ваши безбашенные достижения в путешествии</legend>
-          <ul class="form-option__list">
+          <ul class="form-option__list form-option__list--col">
             <li class="form-option__item">
               <input class="visually-hidden" type="checkbox" name="selfy" id="selfy" checked>
               <label for="selfy">Сделал селфи с акулой</label>
@@ -74,15 +75,17 @@
           </ul>
         </fieldset>
         <fieldset class="contest-form__contact form-participant">
-          <legend class="visually-hidden">Контакты участника</legend>
-          <p class="form-participant__item">
-            <label class="form-participant__label" for="phone">Номер телефона</label>
-            <input class="form-participant__input" type="text" name="phone" id="phone" value="" placeholder="Номер, пожалуйста">
-          </p>
-          <p class="form-participant__item">
-            <label class="form-participant__label" for="mail">Адрес почты</label>
-            <input class="form-participant__input" type="text" name="mail" id="mail" value="" placeholder="Введите почту*">
-          </p>
+          <legend class="form-participant__title">Контактная информация</legend>
+          <div class="contest-form__contact-wrapper">
+            <p class="form-participant__item form-participant__item--col">
+              <label class="form-participant__label" for="phone">Номер телефона</label>
+              <input class="form-participant__input" type="text" name="phone" id="phone" value="" placeholder="Номер, пожалуйста">
+            </p>
+            <p class="form-participant__item form-participant__item--col">
+              <label class="form-participant__label" for="mail">Адрес почты</label>
+              <input class="form-participant__input" type="text" name="mail" id="mail" value="" placeholder="Введите почту*">
+            </p>
+          </div>
         </fieldset>
         <fieldset class="contest-form__os form-option">
           <legend class="form-option__title">С каким приложением путешествовали?</legend>
@@ -102,15 +105,15 @@
           </ul>
         </fieldset>
         <fieldset class="contest-form__text form-participant">
-          <legend class="visually-hidden">Опишите свои эмоции</legend>
-          <p class="form-participant__item">
-            <label class="form-participant__label" for="emotion">Опишите свои эмоции</label>
+          <legend class="form-participant__title">Опишите свои эмоции</legend>
+          <p class="form-participant__item form-participant__item--col form-textarea">
+            <label class="form-participant__label form-participant__label--hidden" for="emotion">Опишите свои эмоции</label>
             <textarea name="think" class="form-participant__input form-participant__input--indent" id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </p>
         </fieldset>
         <button type="submit" class="contest-form__button button">Отправить форму</button>
         <small class="contest-form__note">
-          <sup>*</sup> — Обязательные поля
+          <sup>*</sup> — Обязательные <span>для заполнения</span> поля
         </small>
       </form>
     </section>
