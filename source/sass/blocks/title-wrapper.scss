@@ -1,6 +1,11 @@
+.title-wrapper {
+  margin-top: -$header-height-xs;
+  position: relative;
+  z-index: 10;
+}
 @include respond-to(medium) {
   .title-wrapper {
-    position: relative;
     width: 100%;
+    margin-top: -$header-height-m;
   }
 }
