@@ -8,9 +8,13 @@ body {
   background-color: $white;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+  max-width: 1400px;
+  min-width: 320px;
+  margin: $center;
+  padding: 0;
 
-  @include indent;
-  @include fontStyle(18px, 30px, normal);
+  @include font-style(18px, 30px, normal);
 }
 
 img {

@@ -1,7 +1,152 @@
 .rate {
+  width: 320px;
   background-color: $white;
-  margin: 40px 20px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   background-image: url("../img/bg-description.png");
-  background-size: 100%;
-  padding: $padding-mobile;
+  background-size: cover;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: $center;
+}
+
+.rates__table {
+  @include font-style(14px, 30px, normal);
+
+  border-collapse: collapse;
+  width: ($table-width-xs * ($table-col - 1));
+  transform: translateX(-260px);
+  border: $table-border;
+}
+
+table tr > *:nth-child(1) {
+  display: none;
+}
+
+.rates__name {
+  @include font-style(18px, 30px, bold);
+
+  text-transform: uppercase;
+  background-color: $blue;
+  color: $white;
+  width: $table-width-xs;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-right: $table-border;
+
+  &--hit {
+    &::before {
+      @include pseudo;
+
+      width: 74px;
+      height: 73px;
+      background-image: url("../img/bg-hit.svg");
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      @include pseudo($content: "ХИТ");
+      @include font-style(14px, 30px, lighter);
+
+      transform: rotate(-45deg);
+      top: 10px;
+      left: 13px;
+    }
+  }
+}
+
+.rates__feature {
+  border: $table-border;
+  width: $table-width-xs;
+  padding: 20px;
+}
+
+.rates__feature-name {
+  @include indent;
+
+  text-align: left;
+  background-color: transparent;
+}
+
+.rates__price {
+  @include font-style(24px, 30px, lighter);
+}
+
+.rates__toggles {
+  @include indent;
+
+  margin-top: 30px;
+}
+
+@include respond-to(medium) {
+  .rate {
+    width: 100%;
+  }
+
+  .rates__feature-name {
+    display: none;
+  }
+
+  .rates__table {
+    width: $table-width-m;
+    transform: translateX(0);
+    margin: $center;
+  }
+
+  table tr > *:nth-child(1) {
+    display: table-cell;
+    width: 25%;
+  }
+
+  .rates__price {
+    @include font-style(18px, 30px, lighter);
+  }
+
+  .rates__name {
+    @include font-style(16px, 30px, bold);
+
+    width: 25%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .rates__feature {
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .rate__toggles {
+    display: none;
+  }
+}
+
+@include respond-to(large) {
+  .rates__table {
+    width: $table-width-xl;
+  }
+
+  .rates__name {
+    @include font-style(18px, 30px, bold);
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .rates__price {
+    @include font-style(24px, 30px, lighter);
+  }
+
+  .rates__feature {
+    @include font-style(18px, 30px, normal);
+
+    padding: 15px;
+    text-align: left;
+  }
 }

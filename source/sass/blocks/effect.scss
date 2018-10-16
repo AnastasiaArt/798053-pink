@@ -1,0 +1,53 @@
+.effect {
+  @include font-style(14px, 24px, normal);
+
+  padding-right: 40px;
+  padding-left: 50%;
+  padding-top: 90px;
+  padding-bottom: 80px;
+  text-align: left;
+  display: none;
+  width: 100%;
+  min-height: 380px;
+  box-sizing: border-box;
+  position: relative;
+  background-color: $white;
+}
+
+.effect__title {
+  @include indent;
+  @include font-style(30px, 36px, bold);
+
+  width: 60%;
+  text-align: left;
+}
+
+.effect__link {
+  color: $red;
+  display: block;
+}
+
+@include respond-to(medium) {
+  .effect {
+    display: block;
+
+    &::before {
+      @include pseudo;
+      @include bgImage;
+
+      width: 250px;
+      height: 280px;
+      background-image: url("../img/icon-timer.svg");
+      background-size: contain;
+      top: 60px;
+      left: 20px;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .effect {
+    min-height: 430px;
+    background-color: $gray;
+  }
+}

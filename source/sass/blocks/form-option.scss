@@ -6,16 +6,19 @@
 }
 
 .form-option__title {
-  @include fontStyle(14px, 18px, normal);
+  @include font-style(14px, 18px, normal);
   @include indent;
 
   color: $red;
-  margin-top: 50px;
+  text-transform: uppercase;
+  padding: 0 40px;
+  padding-top: 30px;
+  background-color: $gray;
 }
 
 .form-option__list {
   @include list;
-  @include fontStyle(18px, 30px, normal);
+  @include font-style(18px, 30px, normal);
 
   text-align: left;
   margin: 40px 0;
@@ -23,6 +26,37 @@
 
 .form-option__item {
   margin-bottom: 45px;
-  padding-left: 70px;
+  padding-left: 90px;
+  padding-right: 20px;
   color: $blue;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@include respond-to(medium) {
+  .form-option {
+    background-color: $white;
+    border: $table-border;
+  }
+
+  .form-option__title {
+    @include font-style(14px, 30px, normal);
+
+    background-color: inherit;
+    padding: 0 15px;
+  }
+}
+
+@include respond-to(large) {
+  .form-option__list--col {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .form-option__item {
+      width: 33%;
+      padding-right: 0;
+      padding-left: 60px;
+      justify-content: space-between;
+    }
+  }
 }

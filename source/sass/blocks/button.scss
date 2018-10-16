@@ -1,16 +1,19 @@
 .button {
-  @include fontStyle(18px, 18px, bold);
+  @include font-style(18px, 18px, bold);
 
-  display: inline-block;
-  padding: 15px 20px;
+  display: block;
+  padding: 20px 20px;
   text-decoration: none;
   background-color: $green;
   color: $white;
   border: none;
+  text-transform: uppercase;
 }
 
 .button--rounded {
-  @include color-btn($white, $bg-color: $blue);
+  @include color-btn($white, $bg-color: inherit);
+
+  text-transform: none;
 }
 
 .button--rounded-red {

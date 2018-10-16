@@ -1,11 +1,53 @@
 .contest {
   background-color: $white;
   color: $blue;
-  padding: $padding-mobile;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 45px;
 }
 
 .contest__title {
-  @include fontStyle(14px, 30px, normal);
+  @include font-style(14px, 30px, normal);
+  @include indent;
 
-  margin: 40px 0;
+  margin-bottom: 40px;
+  padding: $padding-mobile;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+@include respond-to(medium) {
+  .contest {
+    padding-top: 95px;
+  }
+
+  .contest__title {
+    @include font-style(18px, 30px, normal);
+
+    padding-left: 60px;
+    padding-right: 60px;
+
+    &--hidden {
+      display: block;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .contest {
+    padding: 0 110px;
+    padding-top: 95px;
+  }
+
+  .contest__title {
+
+    padding-left: 90px;
+    padding-right: 90px;
+
+    &--hidden {
+      display: inline-block;
+    }
+  }
 }

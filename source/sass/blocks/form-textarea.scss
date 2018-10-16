@@ -1,0 +1,12 @@
+@include respond-to(medium) {
+  .form-textarea {
+    min-height: 140px;
+  }
+}
+
+@include respond-to(large) {
+  .form-textarea {
+    min-height: 125px;
+    width: 100%;
+  }
+}

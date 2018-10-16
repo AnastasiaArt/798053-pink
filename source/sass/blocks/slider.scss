@@ -1,10 +1,12 @@
 .slider {
-  @include fontStyle(14px, 30px, normal);
+  @include font-style(14px, 30px, normal);
+
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .slider__toggles {
   text-align: center;
-  margin: 40px 0;
 }
 
 .slider__list {
@@ -14,7 +16,35 @@
 }
 
 .slider__title {
-  @include fontStyle(18px, 30px, bold);
+  @include font-style(18px, 30px, bold);
 
   font-style: normal;
+  margin: $center;
+  padding: 20px;
+}
+
+.slider__text {
+  @include indent;
+
+  margin: 20px 0;
+}
+
+.slider__item--hidden {
+  display: none;
+}
+
+.slider__title span {
+  @include font-style(14px, 30px, normal);
+
+  display: none;
+}
+
+@include respond-to(medium) {
+  .slider__title {
+    font-size: 20px;
+  }
+
+  .slider__title span {
+    display: block;
+  }
 }

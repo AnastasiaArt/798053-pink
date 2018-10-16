@@ -23,14 +23,14 @@
     </nav>
   </header>
   <main class="main-content">
-    <div class="title">
-      <h1 class="title__elem">Фотографии пользователей</h1>
+    <div class="title title--bg">
+      <h1 class="title__name">Фотографии пользователей</h1>
     </div>
     <section class="gallery">
-      <h2 class="gallery__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших!</h2>
+      <h2 class="gallery__title">Взгляните на фотографии, которые выкладывают пользователи! <span>Видите, как не хватает ваших!</span></h2>
       <ul class="gallery__list">
-        <li class="gallery__item">
-          <article class="gallery__photo gallery__photo--panorama photo">
+        <li class="gallery__item gallery__item--panorama">
+          <article class="gallery__photo photo">
             <div class="photo__image photo__image--panorama">
               <img src="../img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фото пользователя">
             </div>
@@ -136,19 +136,23 @@
         </li>
       </ul>
     </section>
-    <section class="photo-download">
-      <h2 class="photo-download__title">Затмите их всех!<br>Выкладывай все, что накопилось в телефоне!</h2>
-      <div class="photo-download__image">
-        <img src="../img/photo-road-mobile@1x.jpg" width="280" height="375" alt="Ваше фото">
+    <section class="photo-load">
+      <h2 class="photo-load__title">Затмите их всех!<br>Выкладывай все, что накопилось в телефоне!</h2>
+      <div class="photo-load__wrapper">
+        <div class="photo-load__image">
+          <img src="../img/photo-road-mobile@1x.jpg" width="280" height="375" alt="Ваше фото">
+        </div>
+        <div class="photo-load__filters">
+          <p class="photo-load__option option__toggles">
+            <button class="option__toggle" type="button">1</button>
+            <button class="option__toggle" type="button">2</button>
+            <button class="option__toggle" type="button">3</button>
+          </p>
+          <input class="option__range" type="range" min="0" max="100" value="80">
+          <button type="submit" class="photo-load__button button button--rounded button--rounded-red">Запостить</button>
+          <button type="button" class="photo-load__button button button--rounded button--rounded-gray">Отмена</button>
+        </div>
       </div>
-      <p class="photo-download__option option__toggles">
-        <button class="option__toggle" type="button">1</button>
-        <button class="option__toggle" type="button">2</button>
-        <button class="option__toggle" type="button">3</button>
-      </p>
-      <input class="option__range" type="range" min="0" max="100" value="80">
-      <button type="submit" class="option__button-send button button--rounded button--rounded-red">Запостить</button>
-      <button type="button" class="option__button-cancel button button--rounded button--rounded-gray">Отмена</button>
     </section>
   </main>
   <footer class="main-footer">

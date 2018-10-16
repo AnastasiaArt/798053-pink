@@ -1,7 +1,28 @@
 .list-icon {
   @include list;
+
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .list-icon__link {
   @include link;
+  @include bgImage;
+
+  width: 60px;
+  height: 60px;
+
+  &--apple {
+    background-image: url("../img/logo-apple.svg");
+  }
+
+  &--android {
+    background-image: url("../img/logo-android.svg");
+  }
+
+  &--microsoft {
+    background-image: url("../img/logo-microsoft.svg");
+  }
 }

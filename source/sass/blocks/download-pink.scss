@@ -3,17 +3,66 @@
   background-color: $blue;
   text-align: center;
   padding: $padding-mobile;
+  padding-top: 38px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.download-pink__name {
+  @include indent;
+
+  display: none;
 }
 
 .download-pink__button {
-  margin: 0 auto;
-  margin-top: 28px;
+  width: 280px;
+  box-sizing: border-box;
+  margin: $center;
   margin-bottom: 35px;
   color: $white;
 }
 
-.download-pink__os {
-  @include fontStyle(14px, 24px, lighter);
+.download-pink_list {
+  margin: $center;
+  margin-bottom: 20px;
+}
 
-  margin: 20px auto;
+.download-pink__os {
+  @include indent;
+  @include font-style(14px, 24px, lighter);
+
+  padding-bottom: 28px;
+}
+
+@include respond-to(medium) {
+  .download-pink {
+    position: absolute;
+    left: 20px;
+    bottom: 90px;
+    background-color: transparent;
+    width: 300px;
+    padding: 0;
+  }
+
+  .download-pink__os {
+    font-size: 18px;
+  }
+
+  .download-pink__button {
+    background-color: transparent;
+  }
+
+  .download-pink__name {
+    @include font-style(40px, 50px, lighter);
+
+    display: block;
+    padding: 30px;
+  }
+}
+
+@include respond-to(large) {
+  .download-pink {
+    left: 130px;
+    bottom: 115px;
+  }
 }

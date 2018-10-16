@@ -1,9 +1,23 @@
 .modal {
-  @include fontStyle(14px, 24px, normal);
+  @include font-style(14px, 24px, normal);
 
+  position: absolute;
+  z-index: 20;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: $white;
   color: $blue;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 320px;
+
+  &--error {
+    display: none;
+  }
+
+  &--done {
+    display: none;
+  }
 }
 
 .modal__title {
@@ -11,7 +25,8 @@
 
   color: #000000;
   font-weight: bold;
-  margin-top: 50px;
+  padding: $padding-mobile;
+  padding-top: 50px;
   margin-bottom: 20px;
 }
 
@@ -19,8 +34,25 @@
   @include indent;
 
   margin-bottom: 35px;
+  padding: $padding-mobile;
 }
 
 .modal__button {
+  margin: $center;
   margin-bottom: 50px;
+  width: 280px;
+}
+
+@include respond-to(medium) {
+  .modal {
+    width: 70%;
+    min-height: 430px;
+  }
+}
+
+@include respond-to(large) {
+  .modal {
+    width: 65%;
+    min-height: 380px;
+  }
 }
