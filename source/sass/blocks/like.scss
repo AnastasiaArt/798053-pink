@@ -5,4 +5,12 @@
   text-align: left;
   color: $red;
   padding-left: 22px;
+  position: relative;
+}
+
+@include respond-to(medium) {
+  .like {
+    padding-left: 0;
+    padding-right: 22px;
+  }
 }
