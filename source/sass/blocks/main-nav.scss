@@ -2,7 +2,7 @@
   @include font-style(18px, 32px, bold);
 
   color: $white;
-   width: 100%;
+  width: 100%;
 }
 .main-nav__button {
   width: 50px;
@@ -10,7 +10,7 @@
   padding: 0;
   position: absolute;
   top: 20px;
-  right: 6.25%;
+  right: 6.3%;
   background-color: transparent;
   border: none;
 }
@@ -40,7 +40,7 @@
     content: "";
 
     position: absolute;
-    top: 7px;
+    top: 9px;
     right: 0;
 
     width: 24px;
@@ -119,8 +119,7 @@
 
 @include respond-to(large) {
   .main-nav {
-    width: 50%;
-    margin-right: 10.8%;
+    width: 66.7%;
   }
 
   .main-nav__list {
