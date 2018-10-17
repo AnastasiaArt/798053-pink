@@ -1,8 +1,5 @@
 .slider {
   @include font-style(14px, 30px, normal);
-
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .slider__toggles {

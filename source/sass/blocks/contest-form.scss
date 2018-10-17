@@ -1,13 +1,12 @@
-.contest-form {
+.contest-form__wrapper {
   width: 100%;
-  box-sizing: border-box;
+  background-color: $gray;
 }
 
 .contest-form__note {
   @include font-style(14px, 30px, normal);
 
   display: block;
-  width: 280px;
   margin: $center;
   padding: 20px 0;
   text-transform: uppercase;
@@ -21,18 +20,21 @@
   }
 }
 
-.contest-form__name {
-  padding: $padding-mobile;
+.contest-form__name,
+.contest-form__progress,
+.contest-form__os,
+.contest-form__contact,
+.contest-form__text {
+  width: 87.5%;
+  margin: $center;
 }
 
 .contest-form__contact {
   margin-top: 35px;
   margin-bottom: 40px;
-  padding: $padding-mobile;
 }
 
 .contest-form__text {
-  padding: $padding-mobile;
   padding-top: 30px;
 }
 
@@ -43,8 +45,23 @@
 
 @include respond-to(medium) {
   .contest-form {
+    width: 93.9%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contest-form__wrapper {
+    background-color: $white;
+
+    &--os {
+      order: 2;
+    }
+
+    &--progress {
+      order: 4;
+    }
   }
 
   .contest-form__progress,
@@ -52,17 +69,8 @@
   .contest-form__contact,
   .contest-form__text {
     padding: 0;
-    margin: 0 20px;
     margin-bottom: 55px;
     width: 100%;
-  }
-
-  .contest-form__os {
-    order: 2;
-  }
-
-  .contest-form__progress {
-    order: 4;
   }
 
   .contest-form__text {
@@ -72,7 +80,6 @@
 
   .contest-form__name {
     padding: 0;
-    margin: 0 20px;
     margin-bottom: 30px;
     width: 100%;
     order: 1;
@@ -102,6 +109,9 @@
 }
 
 @include respond-to(large) {
+  .contest-form {
+    width: 80%;
+  }
   .contest-form__contact-wrapper {
     display: flex;
     justify-content: space-between;
@@ -113,8 +123,9 @@
   }
 
   .contest-form__name,
-  .contest-form__os {
+  .contest-form__wrapper--os {
     width: 45%;
+    margin: 0;
   }
 
   .contest-form__note {

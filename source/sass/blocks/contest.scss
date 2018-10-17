@@ -1,17 +1,17 @@
 .contest {
   background-color: $white;
   color: $blue;
-  width: 100%;
-  box-sizing: border-box;
   padding-top: 45px;
+  width: auto;
 }
 
 .contest__title {
   @include font-style(14px, 30px, normal);
   @include indent;
 
+  width: 87.5%;
+  margin: $center;
   margin-bottom: 40px;
-  padding: $padding-mobile;
 
   &--hidden {
     display: none;
@@ -26,8 +26,7 @@
   .contest__title {
     @include font-style(18px, 30px, normal);
 
-    padding-left: 60px;
-    padding-right: 60px;
+    width: 93.9%;
 
     &--hidden {
       display: block;
@@ -36,15 +35,8 @@
 }
 
 @include respond-to(large) {
-  .contest {
-    padding: 0 110px;
-    padding-top: 95px;
-  }
-
   .contest__title {
-
-    padding-left: 90px;
-    padding-right: 90px;
+    width: 80%;
 
     &--hidden {
       display: inline-block;

@@ -2,10 +2,8 @@
   color: $white;
   background-color: $blue;
   text-align: center;
-  padding: $padding-mobile;
   padding-top: 38px;
-  width: 100%;
-  box-sizing: border-box;
+  width: auto;
 }
 
 .download-pink__name {
@@ -37,18 +35,24 @@
 @include respond-to(medium) {
   .download-pink {
     position: absolute;
-    left: 20px;
+    left: 3%;
     bottom: 90px;
     background-color: transparent;
-    width: 300px;
     padding: 0;
+    width: 45.5%;
   }
 
+  .download-pink__wrapper {
+    margin: 0;
+    width: 100%;
+
+  }
   .download-pink__os {
     font-size: 18px;
   }
 
   .download-pink__button {
+    width: 100%;
     background-color: transparent;
   }
 
@@ -62,7 +66,8 @@
 
 @include respond-to(large) {
   .download-pink {
-    left: 130px;
+    left: 11%;
     bottom: 115px;
+    width: 25%;
   }
 }

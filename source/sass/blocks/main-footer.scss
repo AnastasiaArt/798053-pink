@@ -1,11 +1,12 @@
 .main-footer {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 100%;
-  box-sizing: border-box;
+}
+.main-footer__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: $center;
 }
 
 .main-footer--hidden {
@@ -21,9 +22,7 @@
     z-index: 10;
   }
 
-  .main-footer {
-    width: 100%;
-    display: flex;
+  .main-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -47,10 +46,6 @@
 }
 
 @include respond-to(large) {
-  .main-footer {
-    padding: 60px 130px;
-  }
-
   .main-footer--hidden {
     bottom: -350px;
   }

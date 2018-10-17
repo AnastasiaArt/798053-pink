@@ -1,7 +1,6 @@
 .title {
   @include bgImage;
 
-  width: 100%;
   min-height: 462px;
   color: $white;
   background-color: $blue;
@@ -22,7 +21,10 @@
   @include indent;
 
   color: $white;
-  padding: 30px 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 87.5%;
+  margin: $center;
 }
 
 @include respond-to(medium) {
@@ -41,6 +43,7 @@
   .title__name {
     @include font-style(50px, 60px, lighter);
 
+    width: 93.9%;
     padding-top: 70px;
     padding-bottom: 70px;
   }
@@ -60,9 +63,13 @@
   }
 
   .title__name {
+    width: 50%;
+    box-sizing: border-box;
+    max-width: 960px;
+    margin: 0 auto;
     padding-top: 190px;
     padding-bottom: 90px;
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

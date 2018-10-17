@@ -47,6 +47,7 @@
   padding: $padding-mobile;
   padding-top: 10px;
   margin-bottom: 20px;
+  margin-top: auto;
 }
 
 @include respond-to(medium) {
@@ -57,6 +58,7 @@
     &--panorama {
       margin-left: 0;
       margin-right: 0;
+      flex-direction: row;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -64,10 +66,11 @@
       .photo__like {
         order: 2;
         padding-top: 20px;
+        margin-top: 0;
       }
 
       .photo__author {
-        width: 70%;
+        width: 50%;
         order: 1;
       }
 
@@ -79,7 +82,3 @@
     }
   }
 }
-//
-// @include respond-to(large) {
-//
-// }

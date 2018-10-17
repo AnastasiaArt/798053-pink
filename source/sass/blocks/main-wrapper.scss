@@ -1,0 +1,16 @@
+.main-wrapper {
+  width: 87.5%;
+  margin: $center;
+}
+
+@include respond-to(medium) {
+  .main-wrapper {
+    width: 93.9%;
+  }
+}
+
+@include respond-to(large) {
+  .main-wrapper {
+    width: 80%;
+  }
+}

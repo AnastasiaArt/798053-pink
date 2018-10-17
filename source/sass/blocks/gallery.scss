@@ -1,15 +1,16 @@
 .gallery {
   background-color: $white;
   color: $blue;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .gallery__title {
   @include font-style(14px, 30px, normal);
   @include indent;
 
-  margin: 40px 20px;
+  width: 87.5%;
+  margin: $center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .gallery__list {
@@ -21,7 +22,8 @@
 }
 
 .gallery__item {
-  margin: $padding-mobile;
+  width: 87.5%;
+  margin: $center;
   margin-bottom: 20px;
   background-color: $gray;
 }
@@ -38,7 +40,7 @@
   .gallery__title {
     @include font-style(18px, 30px, normal);
 
-    padding: 0 85px;
+    width: 93.9%;
     margin-top: 90px;
     margin-bottom: 70px;
   }
@@ -46,7 +48,8 @@
   .gallery__list {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 20px;
+    width: 93.7%;
+    margin: $center;
     align-items: stretch;
     justify-content: space-between;
   }
@@ -55,7 +58,6 @@
     width: 45%;
     margin: 0;
     margin-bottom: 20px;
-
 
     &--panorama {
       width: 100%;
@@ -69,8 +71,7 @@
   .gallery__title {
     @include font-style(18px, 30px, normal);
 
-    margin-left: 130px;
-    margin-right: 130px;
+    width: 80%;
     margin-bottom: 80px;
 
     & span {
@@ -79,7 +80,7 @@
   }
 
   .gallery__list {
-    padding: 0 130px;
+    width: 80%;
   }
 
   .gallery__item {

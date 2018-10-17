@@ -1,11 +1,8 @@
 .contacts {
   @include font-style(24px, 30px, lighter);
 
-  padding: $padding-mobile;
   padding-bottom: 70px;
   padding-top: 45px;
-  width: 100%;
-  box-sizing: border-box;
   min-height: 450px;
   background-image: url("../img/bg-triangle-white-footer.svg");
   background-position: center bottom;
@@ -18,15 +15,12 @@
 .contacts__title {
   @include font-style(24px, 30px, lighter);
   @include indent;
-
-  margin-bottom: 35px;
 }
 
 .contacts__list {
   @include list;
 
   text-align: center;
-  width: 100%;
 }
 
 .contacts__type {
@@ -44,20 +38,14 @@
 }
 
 @include respond-to(medium) {
-  .contacts {
-    min-height: 480px;
-    padding-left: 130px;
-    padding-right: 130px;
-  }
-
   .contacts__title {
     @include font-style(40px, 50px, lighter);
+    padding-bottom: 60px;
   }
 
   .contacts__list {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     justify-content: center;
   }
 
