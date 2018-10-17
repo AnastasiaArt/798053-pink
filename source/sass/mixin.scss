@@ -38,7 +38,7 @@
 
 @mixin color-btn($color, $bg-color) {
   border: 3px solid $color;
-  border-radius: 30px;
+  border-radius: 35px;
   background-color: $bg-color;
   color: $color;
 }

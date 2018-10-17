@@ -1,9 +1,9 @@
 .contacts {
   @include font-style(24px, 30px, lighter);
 
-  padding-bottom: 70px;
-  padding-top: 45px;
-  min-height: 450px;
+  padding-bottom: 55px;
+  padding-top: 42px;
+  min-height: 300px;
   background-image: url("../img/bg-triangle-white-footer.svg");
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -15,6 +15,8 @@
 .contacts__title {
   @include font-style(24px, 30px, lighter);
   @include indent;
+
+  padding-bottom: 25px;
 }
 
 .contacts__list {
@@ -24,7 +26,7 @@
 }
 
 .contacts__type {
-  @include font-style(18px, 30px, bold);
+  @include font-style(18px, 24px, bold);
 }
 
 .contacts__text {
@@ -34,7 +36,7 @@
 }
 
 .contacts__item {
-  margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 @include respond-to(medium) {
@@ -55,8 +57,14 @@
 }
 
 @include respond-to(large) {
+  .contacts__type {
+    display: block;
+    margin-bottom: 22px;
+  }
   .contacts__title {
-    @include font-style(50px, 50px, lighter);
+    @include font-style(50px, 60px, lighter);
+    padding-top: 30px;
+    padding-bottom: 52px;
   }
 
   .contacts__item {

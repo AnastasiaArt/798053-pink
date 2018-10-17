@@ -3,7 +3,43 @@
 }
 
 .slider__toggles {
+  @include indent;
+
   text-align: center;
+  border: none;
+  width: 25%;
+  margin: $center;
+}
+
+.slider__toggle {
+  border: none;
+  background: transparent;
+  color: transparent;
+
+  &::before {
+    @include pseudo($pos: relative);
+    width: 6px;
+    height: 6px;
+    border:3px solid #0a0a0a;
+    border-radius: 50%;
+    top: 3px;
+  }
+}
+
+.slider__toggle--unchecked::before {
+  @include pseudo($pos: static);
+  width: 1px;
+  height: 1px;
+  top: 3px;
+  background: #0a0a0a;
+  border-radius: 50%;
+  opacity: 0.3;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .slider__list {
@@ -17,13 +53,14 @@
 
   font-style: normal;
   margin: $center;
-  padding: 20px;
+  box-sizing: border-box;
 }
 
 .slider__text {
   @include indent;
 
-  margin: 20px 0;
+  margin-top: 12px;
+  margin-bottom: 27px;
 }
 
 .slider__item--hidden {
@@ -43,5 +80,19 @@
 
   .slider__title span {
     display: block;
+  }
+}
+
+@include respond-to(large) {
+  .slider__text {
+    @include font-style(18px, 30px, normal);
+    margin-bottom: 36px;
+
+  }
+  .slider__title {
+    @include font-style(24px, 30px, bold);
+    & span {
+      @include font-style(18px, 30px, normal);
+    }
   }
 }

@@ -2,7 +2,7 @@
   color: $white;
   background-color: $blue;
   text-align: center;
-  padding-top: 38px;
+  padding-top: 28px;
   width: auto;
 }
 
@@ -42,7 +42,7 @@
     width: 45.5%;
   }
 
-  .download-pink__wrapper {
+  .download-pink .download-pink__wrapper {
     margin: 0;
     width: 100%;
 
@@ -67,7 +67,18 @@
 @include respond-to(large) {
   .download-pink {
     left: 11%;
-    bottom: 115px;
+    bottom: 97px;
     width: 25%;
   }
+
+  .download-pink__name {
+    @include font-style(50px, 60px, lighter);
+    margin-bottom: 25px;
+}
+  .download-pink__button {
+    margin-bottom: 70px;
+  }
+  .download-pink_list {
+    margin-bottom: 50px;
+}
 }

@@ -1,7 +1,7 @@
 .list-icon {
   @include list;
 
-  width: 230px;
+  width: 220px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -12,7 +12,7 @@
   @include bgImage;
 
   width: 60px;
-  height: 60px;
+  height: 56px;
 
   &--apple {
     background-image: url("../img/logo-apple.svg");
