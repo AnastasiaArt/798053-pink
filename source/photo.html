@@ -7,18 +7,18 @@
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="">
-  <header class="main-header">
+<body>
+  <header class="main-header main-header--opened">
     <div class="main-header__wrapper">
       <div class="main-header__wrapper-logo">
         <a class="main-header__logo" href="#">
           <img class="main-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
         </a>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__button" type="button" aria-label="Открыть меню"></button>
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a class= "main-nav__link" href="index.html" >Главная</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="index.html">Главная</a></li>
           <li class="main-nav__item"><a class= "main-nav__link" href="photo.html">Фотографии</a></li>
           <li class="main-nav__item"><a class= "main-nav__link" href="form.html">Конкурс</a></li>
           <li class="main-nav__item"><a class= "main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
@@ -40,7 +40,7 @@
             </div>
             <div class="photo__wrapper-text photo__wrapper-text--panorama">
               <p class="photo__author">
-                <cite class="photo__author-name">Анна</cite>
+                <cite class="photo__author-name">Анна </cite>
                 <span class="photo__author-time">(5 минут назад)</span>
               </p>
               <p class="photo__text">Прыгать или нет? Напишите в кмментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы! </p>
@@ -55,7 +55,7 @@
             </div>
             <div class="photo__wrapper-text">
               <p class="photo__author">
-                <cite class="photo__author-name">Левон</cite>
+                <cite class="photo__author-name">Левон </cite>
                 <span class="photo__author-time">(5 часов назад)</span>
               </p>
               <p class="photo__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
@@ -70,7 +70,7 @@
             </div>
             <div class="photo__wrapper-text">
               <p class="photo__author">
-                <cite class="photo__author-name">Антон</cite>
+                <cite class="photo__author-name">Антон </cite>
                 <span class="photo__author-time">(12 часов назад)</span>
               </p>
               <p class="photo__text">Соседи буду рады!</p>
@@ -85,7 +85,7 @@
             </div>
             <div class="photo__wrapper-text">
               <p class="photo__author">
-                <cite class="photo__author-name">Борис</cite>
+                <cite class="photo__author-name">Борис </cite>
                 <span class="photo__author-time">(20 часов назад)</span>
               </p>
               <p class="photo__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
@@ -100,7 +100,7 @@
             </div>
             <div class="photo__wrapper-text">
               <p class="photo__author">
-                <cite class="photo__author-name">Сергей</cite>
+                <cite class="photo__author-name">Сергей </cite>
                 <span class="photo__author-time">(25 часов назад)</span>
               </p>
               <p class="photo__text">Самая кубанская в мире!</p>
@@ -115,7 +115,7 @@
             </div>
             <div class="photo__wrapper-text">
               <p class="photo__author">
-                <cite class="photo__author-name">Максим</cite>
+                <cite class="photo__author-name">Максим </cite>
                 <span class="photo__author-time">(40 часов назад)</span>
               </p>
               <p class="photo__text">Где снег-то?</p>
@@ -130,7 +130,7 @@
             </div>
             <div class="photo__wrapper-text">
               <p class="photo__author">
-                <cite class="photo__author-name">Надежда</cite>
+                <cite class="photo__author-name">Надежда </cite>
                 <span class="photo__author-time">(45 часов назад)</span>
               </p>
               <p class="photo__text">Всем GM и взаимные лайки</p>
@@ -141,20 +141,22 @@
       </ul>
     </section>
     <section class="photo-load">
-      <h2 class="photo-load__title">Затмите их всех!<br>Выкладывай все, что накопилось в телефоне!</h2>
-      <div class="photo-load__wrapper main-wrapper">
-        <div class="photo-load__image">
-          <img src="../img/photo-road-mobile@1x.jpg" width="280" height="375" alt="Ваше фото">
-        </div>
-        <div class="photo-load__filters">
-          <p class="photo-load__option option__toggles">
-            <button class="option__toggle" type="button">1</button>
-            <button class="option__toggle" type="button">2</button>
-            <button class="option__toggle" type="button">3</button>
-          </p>
-          <input class="option__range" type="range" min="0" max="100" value="80">
-          <button type="submit" class="photo-load__button button button--rounded button--rounded-red">Запостить</button>
-          <button type="button" class="photo-load__button button button--rounded button--rounded-gray">Отмена</button>
+      <h2 class="photo-load__title main-wrapper">Затмите их всех!<br>Выкладывай все, что накопилось в телефоне!</h2>
+      <div class="photo-load__wrapper">
+        <div class="main-wrapper">
+          <div class="photo-load__image">
+            <img src="../img/photo-road-mobile@1x.jpg" width="280" height="375" alt="Ваше фото">
+          </div>
+          <div class="photo-load__filters">
+            <p class="photo-load__option option__toggles">
+              <button class="option__toggle" type="button">1</button>
+              <button class="option__toggle" type="button">2</button>
+              <button class="option__toggle" type="button">3</button>
+            </p>
+            <input class="option__range" type="range" min="0" max="100" value="80">
+            <button type="submit" class="photo-load__button button button--rounded button--rounded-red">Запостить</button>
+            <button type="button" class="photo-load__button button button--rounded button--rounded-gray">Отмена</button>
+          </div>
         </div>
       </div>
     </section>

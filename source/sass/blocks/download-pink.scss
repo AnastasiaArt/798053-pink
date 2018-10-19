@@ -1,8 +1,8 @@
 .download-pink {
   color: $white;
   background-color: $blue;
-  text-align: center;
   padding-top: 28px;
+  text-align: center;
   width: auto;
 }
 
@@ -34,51 +34,69 @@
 
 @include respond-to(medium) {
   .download-pink {
-    position: absolute;
-    left: 3%;
-    bottom: 90px;
     background-color: transparent;
     padding: 0;
-    width: 45.5%;
-  }
-
-  .download-pink .download-pink__wrapper {
-    margin: 0;
     width: 100%;
-
   }
+
+  .download-pink_list {
+    width: 48.4%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .download-pink__os {
     font-size: 18px;
+    width: 48.4%;
   }
 
   .download-pink__button {
-    width: 100%;
     background-color: transparent;
+    width: 48.4%;
+    margin: 0;
+    margin-bottom: 30px;
   }
 
   .download-pink__name {
     @include font-style(40px, 50px, lighter);
 
     display: block;
-    padding: 30px;
+    padding: 30px 20px;
+    width: 48.4%;
+    box-sizing: border-box;
   }
 }
 
 @include respond-to(large) {
-  .download-pink {
-    left: 11%;
-    bottom: 97px;
-    width: 25%;
+  .download-pink__wrapper {
+    padding-left: 15px;
   }
 
   .download-pink__name {
     @include font-style(50px, 60px, lighter);
-    margin-bottom: 25px;
-}
+
+    margin-top: 17px;
+    margin-bottom: 53px;
+    width: 31.57%;
+    min-width: 300px;
+    padding: 0;
+  }
+
   .download-pink__button {
     margin-bottom: 70px;
+    width: 31.57%;
+    min-width: 300px;
   }
+
   .download-pink_list {
-    margin-bottom: 50px;
-}
+    min-width: 300px;
+    margin-bottom: 52px;
+    width: 31.57%;
+  }
+
+  .download-pink__os {
+    font-size: 18px;
+    width: 31.57%;
+    min-width: 300px;
+  }
 }

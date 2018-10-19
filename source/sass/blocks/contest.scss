@@ -3,15 +3,16 @@
   color: $blue;
   padding-top: 45px;
   width: auto;
+  margin-bottom: 15px;
 }
 
 .contest__title {
   @include font-style(14px, 30px, normal);
   @include indent;
 
-  width: 87.5%;
   margin: $center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
+  box-sizing: border-box;
 
   &--hidden {
     display: none;
@@ -26,7 +27,9 @@
   .contest__title {
     @include font-style(18px, 30px, normal);
 
-    width: 93.9%;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: 67px;
 
     &--hidden {
       display: block;
@@ -36,8 +39,6 @@
 
 @include respond-to(large) {
   .contest__title {
-    width: 80%;
-
     &--hidden {
       display: inline-block;
     }

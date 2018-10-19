@@ -1,6 +1,7 @@
 .gallery {
   background-color: $white;
   color: $blue;
+  margin-bottom: 45px;
 }
 
 .gallery__title {
@@ -9,8 +10,10 @@
 
   width: 87.5%;
   margin: $center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 45px;
+  margin-bottom: 49px;
+  padding: 0 19px;
+  box-sizing: border-box;
 }
 
 .gallery__list {
@@ -24,7 +27,7 @@
 .gallery__item {
   width: 87.5%;
   margin: $center;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   background-color: $gray;
 }
 
@@ -33,7 +36,7 @@
 
   width: 100%;
   background-color: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 @include respond-to(medium) {
@@ -43,6 +46,7 @@
     width: 93.9%;
     margin-top: 90px;
     margin-bottom: 70px;
+    padding: 0 85px;
   }
 
   .gallery__list {
@@ -72,7 +76,7 @@
     @include font-style(18px, 30px, normal);
 
     width: 80%;
-    margin-bottom: 80px;
+    margin-bottom: 90px;
 
     & span {
       display: block;
@@ -85,10 +89,11 @@
 
   .gallery__item {
     width: 32%;
-    margin-bottom: 55px;
+    margin-bottom: 56px;
 
     &--panorama {
       width: 100%;
+      margin-bottom: 50px;
     }
   }
 }

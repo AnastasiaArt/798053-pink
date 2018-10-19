@@ -3,6 +3,7 @@
 
   border: none;
   box-sizing: border-box;
+  padding-bottom: 28px;
 }
 
 .form-participant__item {
@@ -18,7 +19,9 @@
 .form-participant__label {
   color: $red;
   text-transform: uppercase;
-  padding: 10px 20px;
+  padding: 0 20px;
+  display: inline-block;
+  margin-bottom: 3px;
 }
 
 .form-participant__input {
@@ -26,14 +29,10 @@
 
   text-align: left;
   color: $blue;
-  padding: 20px;
+  padding: 15px 20px;
   border: 3px solid #e5e5e5;
   width: 100%;
   box-sizing: border-box;
-}
-
-.form-participant__input--indent {
-  margin-top: 10px;
 }
 
 .form-participant__title {
@@ -44,11 +43,19 @@
   .form-participant__item {
     display: flex;
     align-items: baseline;
+    margin-bottom: 50px;
 
     &--col {
       width: 80.85%;
-      margin: $center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
       flex-direction: column-reverse;
+
+      & .form-participant__label {
+        padding-top: 7px;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -56,8 +63,12 @@
     padding-left: 0;
 
     &--hidden {
-      color: transparent;
+      display: none;
     }
+  }
+
+  .form-participant__input {
+    padding-bottom: 14px;
   }
 
   .form-participant__title {

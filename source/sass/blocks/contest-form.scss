@@ -7,7 +7,6 @@
   @include font-style(14px, 30px, normal);
 
   display: block;
-  margin: $center;
   padding: 20px 0;
   text-transform: uppercase;
 
@@ -31,16 +30,28 @@
 
 .contest-form__contact {
   margin-top: 35px;
-  margin-bottom: 40px;
 }
 
 .contest-form__text {
   padding-top: 30px;
+  padding-bottom: 0;
+  margin-bottom: 19px;
 }
 
 .contest-form__button {
   width: 280px;
   margin: $center;
+  padding-top: 22px;
+  padding-bottom: 23px;
+  margin-bottom: 15px;
+}
+
+.contest-form__os .form-option__title {
+  padding-top: 35px;
+}
+
+.contest-form__os .form-option__item {
+  margin-bottom: 37px;
 }
 
 @include respond-to(medium) {
@@ -76,11 +87,15 @@
   .contest-form__text {
     border: $table-border;
     order: 5;
+    margin-bottom: 69px;
+
+    & .form-participant__title {
+      margin-bottom: 29px;
+    }
   }
 
   .contest-form__name {
     padding: 0;
-    margin-bottom: 30px;
     width: 100%;
     order: 1;
   }
@@ -88,33 +103,52 @@
   .contest-form__contact {
     border: $table-border;
     order: 3;
+    margin-top: 0;
 
     & label {
       padding-left: 22px;
     }
+
+    & .form-participant__title {
+      margin-bottom: 30px;
+    }
   }
 
   .contest-form__note {
-    margin-right: 20px;
     text-align: right;
     order: 7;
   }
 
   .contest-form__button {
+    @include font-style(18px, 30px, bold);
+
+    padding-top: 11px;
+    padding-bottom: 5px;
     width: 300px;
-    line-height: 30px;
-    margin-left: 20px;
+    margin: 0;
     order: 6;
   }
-}
 
+  .contest-form__os {
+    min-height: 310px;
+
+    & .form-option__title {
+      padding-top: 0;
+    }
+  }
+}
 @include respond-to(large) {
   .contest-form {
     width: 80%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
   }
+
   .contest-form__contact-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
 
   .contest-form__contact,
@@ -122,15 +156,19 @@
     padding: 0 60px;
   }
 
-  .contest-form__name,
   .contest-form__wrapper--os {
     width: 45%;
     margin: 0;
   }
 
+  .contest-form__name {
+    width: 45%;
+    margin: 0;
+    padding-top: 12px;
+  }
+
   .contest-form__note {
     width: 40%;
-    margin-right: 20px;
 
     & span {
       display: inline-block;

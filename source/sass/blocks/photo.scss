@@ -3,34 +3,50 @@
 
   color: $blue;
   padding: 0 15px;
+  padding-bottom: 18px;
+}
+
+.photo__image--panorama {
+  @include font-style(12px, 24px, bold);
+
+  position: relative;
+  color: $white;
+  text-transform: uppercase;
+
+  &::before {
+    @include pseudo($content: "Панорама дня");
+    right: 6.25%;
+    padding-top: 5px;
+    box-sizing: border-box;
+    width: 140px;
+    height: 36px;
+    background-color: $red;
+  }
 }
 
 .photo__wrapper-text--panorama {
-  margin: $padding-mobile;
   background-color: $gray;
-}
-
-.photo__image {
-  @include indent;
+  box-sizing: border-box;
+  width: 87.5%;
+  margin: $center;
 }
 
 .photo__author {
   @include indent;
 
-  padding-top: 20px;
+  padding-top: 5px;
   text-align: left;
 }
 
 .photo__author-name {
-  @include font-style(18px, 24px, bold);
+  @include font-style(14px, 24px, bold);
 
   font-style: normal;
 }
 
 .photo__author-time {
-  @include font-style(14px, 24px, lighter);
+  @include font-style(12px, 24px, lighter);
 
-  line-height: 24px;
   text-transform: uppercase;
 }
 
@@ -44,29 +60,30 @@
 .photo__like {
   @include indent;
 
-  padding: $padding-mobile;
   padding-top: 10px;
-  margin-bottom: 20px;
   margin-top: auto;
 }
 
 @include respond-to(medium) {
   .photo__wrapper-text {
-    padding-left: 20px;
+    padding-left: 25px;
     padding-right: 30px;
+    flex-direction: column;
+    display: flex;
+
+    .photo__like {
+      margin-top: auto;
+    }
 
     &--panorama {
-      margin-left: 0;
-      margin-right: 0;
       flex-direction: row;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      width: 100%;
 
       .photo__like {
         order: 2;
-        padding-top: 20px;
-        margin-top: 0;
       }
 
       .photo__author {

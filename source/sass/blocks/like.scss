@@ -4,13 +4,28 @@
   text-transform: uppercase;
   text-align: left;
   color: $red;
-  padding-left: 22px;
+  padding-left: 35px;
   position: relative;
+  box-sizing: border-box;
+
+  &::before {
+    @include pseudo;
+    @include bgImage;
+
+    background-image: url("../img/icon-heart.svg");
+    width: 20px;
+    height: 20px;
+    left: 0;
+  }
 }
 
 @include respond-to(medium) {
   .like {
     padding-left: 0;
-    padding-right: 22px;
+    padding-right: 35px;
+
+    &::before {
+      left: 100%;
+    }
   }
 }

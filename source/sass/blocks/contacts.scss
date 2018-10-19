@@ -36,7 +36,7 @@
 }
 
 .contacts__item {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 
 @include respond-to(medium) {
@@ -61,6 +61,7 @@
     display: block;
     margin-bottom: 22px;
   }
+
   .contacts__title {
     @include font-style(50px, 60px, lighter);
     padding-top: 30px;

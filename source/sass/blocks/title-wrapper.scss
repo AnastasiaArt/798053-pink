@@ -1,11 +1,25 @@
 .title-wrapper {
-  margin-top: -$header-height-xs;
-  position: relative;
-  z-index: 10;
+  @include bgImage;
+
+  width: 100%;
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-position: 0 40%, 50% 0;
+  background-size: auto, cover;
 }
 
 @include respond-to(medium) {
   .title-wrapper {
-    margin-top: -$header-height-m;
+    min-height: 730px;
+    background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+    background-position: 100% 100%, 50% 0;
+  }
+}
+
+@include respond-to(large) {
+  .title-wrapper {
+    min-height: 853px;
+    background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
+    // background-position: bottom right, bottom center;
+    // background-position: 0 40%, 50% 0;
   }
 }

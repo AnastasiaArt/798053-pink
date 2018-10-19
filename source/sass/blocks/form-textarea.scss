@@ -1,12 +1,31 @@
+.form-textarea {
+  text-align: center;
+  margin-bottom: 20px;
+  width: auto;
+
+  & label {
+    margin-bottom: 9px;
+  }
+}
+
+.form-textarea__text {
+  min-height: 200px;
+}
+
 @include respond-to(medium) {
-  .form-textarea {
-    min-height: 140px;
+  .form-textarea__text {
+    min-height: 192px;
+    margin-bottom: 30px;
   }
 }
 
 @include respond-to(large) {
   .form-textarea {
+    width: 100%;
+  }
+
+  .form-textarea__text {
     min-height: 125px;
-    // width: 100%;
+    margin-bottom: 46px
   }
 }

@@ -2,4 +2,13 @@
   width: 100%;
   margin: $center;
   box-sizing: border-box;
+  margin-top: -$header-height-xs;
+  position: relative;
+  z-index: 10;
+}
+
+@include respond-to(medium) {
+  .main-content {
+    margin-top: -$header-height-m;
+  }
 }

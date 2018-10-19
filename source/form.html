@@ -8,30 +8,30 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <header class="main-header">
+  <header class="main-header main-header--opened">
     <div class="main-header__wrapper">
       <div class="main-header__wrapper-logo">
         <a class="main-header__logo" href="#">
           <img class="main-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
         </a>
-        </div?
-        <nav class="main-nav">
-          <button class="main-nav__button" type="button" aria-label="Открыть меню"></button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a class= "main-nav__link" href="index.html" >Главная</a></li>
-            <li class="main-nav__item"><a class= "main-nav__link" href="photo.html">Фотографии</a></li>
-            <li class="main-nav__item"><a class= "main-nav__link" href="form.html">Конкурс</a></li>
-            <li class="main-nav__item"><a class= "main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
-          </ul>
-        </nav>
       </div>
-    </header>
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__button" type="button" aria-label="Открыть меню"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class= "main-nav__link" href="index.html">Главная</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
     <main class="main-content">
     <div class="title title--bg">
       <h1 class="title__name">Конкурс на самое безбашенное путешествие с ПИНК</h1>
     </div>
     <section class="contest">
-      <h2 class="contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+      <h2 class="contest__title main-wrapper">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
         <span class="contest__title--hidden">Пожалуйста, заполните форму ниже: </span></h2>
         <form class="contest-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="contest-form__name form-participant">
@@ -116,7 +116,7 @@
             <legend class="form-participant__title">Опишите свои эмоции</legend>
             <p class="form-participant__item form-participant__item--col form-textarea">
               <label class="form-participant__label form-participant__label--hidden" for="emotion">Опишите свои эмоции</label>
-              <textarea name="think" class="form-participant__input form-participant__input--indent" id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              <textarea name="think" class="form-participant__input form-textarea__text" id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </p>
           </fieldset>
           <button type="submit" class="contest-form__button button">Отправить форму</button>
