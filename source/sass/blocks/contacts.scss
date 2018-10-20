@@ -14,8 +14,8 @@
 
 .contacts__title {
   @include font-style(24px, 30px, lighter);
-  @include indent;
 
+  padding: 0;
   padding-bottom: 25px;
 }
 
@@ -23,6 +23,7 @@
   @include list;
 
   text-align: center;
+  margin: $center;
 }
 
 .contacts__type {
