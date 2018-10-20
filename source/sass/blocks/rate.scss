@@ -10,8 +10,10 @@
   @include font-style(14px, 30px, normal);
 
   border-collapse: collapse;
-  width: ($table-width-xs * ($table-col - 1));
-  transform: translateX(-260px);
+  min-width: ($table-width-xs * ($table-col - 1));
+  width: 100%;
+  margin: $center;
+  transform: translateX(-30%);
   border: $table-border;
   margin-bottom: 34px;
 }
@@ -26,7 +28,9 @@ table tr > *:nth-child(1) {
   text-transform: uppercase;
   background-color: $blue;
   color: $white;
-  width: $table-width-xs;
+  width: 87.5%;
+  min-width: $table-width-xs;
+  margin: $center;
   box-sizing: border-box;
   position: relative;
   padding-left: 0;
@@ -59,7 +63,8 @@ table tr > *:nth-child(1) {
 
 .rates__feature {
   border: $table-border;
-  width: $table-width-xs;
+  width: 87.5%;
+  min-width: $table-width-xs;
   padding-left: 22px;
   padding-top: 15px;
   padding-bottom: 14px;
@@ -83,15 +88,19 @@ table tr > *:nth-child(1) {
 
 @include respond-to(medium) {
   .rate {
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+    box-sizing: border-box;
   }
 
   .rates__feature {
     text-transform: none;
-    width: 25%;
     padding: 10px;
     box-sizing: border-box;
     text-align: left;
+    min-width: 0;
+    width: 20%;
   }
 
   .rates__feature-name {
@@ -99,14 +108,13 @@ table tr > *:nth-child(1) {
   }
 
   .rates__table {
-    width: $table-width-m;
     transform: translateX(0);
-    margin: $center;
+    min-width: $table-width-m;
+    width: 93.9%;
   }
 
   table tr > *:nth-child(1) {
     display: table-cell;
-    width: 25%;
   }
 
   .rates__price {
@@ -116,9 +124,10 @@ table tr > *:nth-child(1) {
   .rates__name {
     @include font-style(16px, 30px, bold);
 
-    width: 25%;
+    width: 20%;
     padding-top: 15px;
     padding-bottom: 15px;
+    min-width: 0;
   }
 
   .rate__toggles {
@@ -133,8 +142,9 @@ table tr > *:nth-child(1) {
   }
 
   .rates__table {
-    width: $table-width-xl;
+    width: 80%;
     margin-bottom: 95px;
+    padding: 0 10px;
   }
 
   .rates__name {
