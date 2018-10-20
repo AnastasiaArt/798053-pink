@@ -1,24 +1,22 @@
 .effect {
   @include font-style(14px, 24px, normal);
 
-  padding-right: 40px;
-  padding-left: 50%;
   padding-top: 90px;
   padding-bottom: 80px;
   text-align: left;
   display: none;
-  width: 100%;
-  min-height: 380px;
-  box-sizing: border-box;
-  position: relative;
+  min-height: 430px;
   background-color: $white;
+}
+
+.effect__wrapper {
+  position: relative;
 }
 
 .effect__title {
   @include indent;
   @include font-style(30px, 36px, bold);
 
-  width: 60%;
   text-align: left;
 }
 
@@ -30,8 +28,10 @@
 @include respond-to(medium) {
   .effect {
     display: block;
+  }
 
-    &::before {
+  .effect__wrapper {
+    &::after {
       @include pseudo;
       @include bgImage;
 
@@ -39,15 +39,60 @@
       height: 280px;
       background-image: url("../img/icon-timer.svg");
       background-size: contain;
-      top: 60px;
-      left: 20px;
+      top: 0;
+      left: 0;
     }
+  }
+
+  .effect__title {
+    width: 50%;
+    margin-left: auto;
+    padding-right: 130px;
+    box-sizing: border-box;
+  }
+
+  .effect__text {
+    width: 50%;
+    margin-left: auto;
+    box-sizing: border-box;
+  }
+
+  .effect__link {
+    width: 50%;
+    margin-left: auto;
   }
 }
 
 @include respond-to(large) {
   .effect {
-    min-height: 430px;
+    min-height: 418px;
     background-color: $gray;
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  .effect__wrapper::after {
+    left: 10px;
+    width: 300px;
+    height: 356px;
+  }
+
+  .effect__title {
+    padding-top: 100px;
+    width: 60.7%;
+    margin-bottom: 23px;
+  }
+
+  .effect__text {
+    @include font-style(18px, 30px, normal);
+    text-align: left;
+    width: 60.7%;
+    margin-top: 0;
+    margin-bottom: 35px;
+    padding-right: 45px;
+  }
+
+  .effect__link {
+    width: 60.7%;
   }
 }

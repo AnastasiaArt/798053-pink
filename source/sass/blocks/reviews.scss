@@ -1,7 +1,5 @@
 .reviews {
-  width: 100%;
-  padding: $padding-mobile;
-  margin-top: 20px;
+  margin-top: 42px;
 }
 
 .reviews__item--hidden {
@@ -13,35 +11,61 @@
     display: flex;
     flex-direction: column-reverse;
   }
-
-  .reviews__item--hidden {
-    display: none;
-  }
 }
 
 @include respond-to(large) {
   .reviews {
-    padding: 0 130px;
+    margin-top: 0;
   }
 
   .reviews__item {
-    padding-top: 170px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 174px;
+    padding-right: 130px;
+    padding-left: 130px;
     position: relative;
 
     &::before {
       @include pseudo;
       @include bgImage;
 
+      width: 22px;
+      height: 42px;
+      top: 215px;
+      left: 0;
+
+      background-image: url("../img/icon-review-arrow-left.svg");
+    }
+
+    &::after {
+      @include pseudo;
+      @include bgImage;
+
+      width: 22px;
+      height: 42px;
+      top: 215px;
+      right: 0;
+
+      background-image: url("../img/icon-review-arrow-right.svg");
+    }
+  }
+
+  .reviews__text {
+    &::before {
+      @include pseudo;
+      @include bgImage;
+
       width: 100px;
       height: 90px;
-      top: 70px;
+      top: 58px;
       left: 50%;
       transform: translate(-50%, 0);
       background-image: url("../img/icon-quotes.svg");
     }
   }
 
-  .reviews__item--hidden {
+  .reviews__toggles {
     display: none;
   }
 }

@@ -1,22 +1,26 @@
-.rate {
-  width: 320px;
-  background-color: $white;
-  padding-top: 100px;
-  padding-bottom: 50px;
+.rate__container {
+  width: 100%;
+  overflow: hidden;
   background-image: url("../img/bg-description.png");
   background-size: cover;
-  box-sizing: border-box;
-  overflow: hidden;
+}
+
+.rate {
+  width: 87.5%;
   margin: $center;
+  margin-top: 112px;
+  background-size: cover;
 }
 
 .rates__table {
   @include font-style(14px, 30px, normal);
 
   border-collapse: collapse;
-  width: ($table-width-xs * ($table-col - 1));
-  transform: translateX(-260px);
+  min-width: ($table-width-xs * ($table-col - 1));
+  width: 300%;
+  transform: translateX(-33.33%);
   border: $table-border;
+  margin-bottom: 34px;
 }
 
 table tr > *:nth-child(1) {
@@ -29,13 +33,12 @@ table tr > *:nth-child(1) {
   text-transform: uppercase;
   background-color: $blue;
   color: $white;
-  width: $table-width-xs;
   box-sizing: border-box;
   position: relative;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 21px;
   border-right: $table-border;
 
   &--hit {
@@ -62,8 +65,10 @@ table tr > *:nth-child(1) {
 
 .rates__feature {
   border: $table-border;
-  width: $table-width-xs;
-  padding: 20px;
+  padding-left: 22px;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  text-transform: uppercase;
 }
 
 .rates__feature-name {
@@ -78,14 +83,26 @@ table tr > *:nth-child(1) {
 }
 
 .rates__toggles {
-  @include indent;
-
-  margin-top: 30px;
+  margin-bottom: 26px;
+  width: 100%;
 }
 
 @include respond-to(medium) {
   .rate {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+  .rates__feature {
+    text-transform: none;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    min-width: 0;
+    width: 20%;
   }
 
   .rates__feature-name {
@@ -93,14 +110,14 @@ table tr > *:nth-child(1) {
   }
 
   .rates__table {
-    width: $table-width-m;
     transform: translateX(0);
+    min-width: $table-width-m;
+    width: 93.9%;
     margin: $center;
   }
 
   table tr > *:nth-child(1) {
     display: table-cell;
-    width: 25%;
   }
 
   .rates__price {
@@ -110,16 +127,10 @@ table tr > *:nth-child(1) {
   .rates__name {
     @include font-style(16px, 30px, bold);
 
-    width: 25%;
+    width: 20%;
     padding-top: 15px;
     padding-bottom: 15px;
-  }
-
-  .rates__feature {
-    width: 25%;
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: left;
+    min-width: 0;
   }
 
   .rate__toggles {
@@ -128,14 +139,20 @@ table tr > *:nth-child(1) {
 }
 
 @include respond-to(large) {
+  .rate {
+    margin-top: 0;
+    padding-top: 190px;
+  }
+
   .rates__table {
-    width: $table-width-xl;
+    width: 80%;
+    margin-bottom: 95px;
+    padding: 0 10px;
   }
 
   .rates__name {
     @include font-style(18px, 30px, bold);
 
-    padding-top: 20px;
     padding-bottom: 20px;
   }
 
@@ -146,7 +163,13 @@ table tr > *:nth-child(1) {
   .rates__feature {
     @include font-style(18px, 30px, normal);
 
-    padding: 15px;
+    padding-left: 22px;
+    padding-top: 13px;
+    padding-bottom: 14px;
     text-align: left;
+  }
+
+  .rates__toggles {
+    display: none;
   }
 }

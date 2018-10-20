@@ -2,7 +2,7 @@
   @include font-style(18px, 18px, bold);
 
   display: block;
-  padding: 20px 20px;
+  padding: 15px 20px;
   text-decoration: none;
   background-color: $green;
   color: $white;
@@ -22,4 +22,10 @@
 
 .button--rounded-gray {
   @include color-btn($gray-btn, $bg-color: $white);
+}
+
+@include respond-to(medium) {
+  .button {
+    @include font-style(21px, 18px, bold);
+  }
 }

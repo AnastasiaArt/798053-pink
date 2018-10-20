@@ -1,7 +1,6 @@
 .description {
   padding-top: 40px;
-  width: 100%;
-  box-sizing: border-box;
+  width: auto;
   background-color: $white;
   background-image: url("../img/bg-description.png");
   background-size: 100%;
@@ -12,7 +11,7 @@
 .description__header {
   @include font-style(24px, 30px, lighter);
 
-  padding: $padding-mobile;
+  margin-bottom: 110px;
 }
 
 .description__slogan {
@@ -24,11 +23,10 @@
   @include list;
 
   text-align: center;
-  padding: $padding-mobile;
-  padding-bottom: 300px;
+  padding-bottom: 287px;
   background-image: url("../img/iphone-screen-mobile@1x.png");
   background-size: auto;
-  background-position: center 110%;
+  background-position: center 111%;
   background-repeat: no-repeat;
 }
 
@@ -36,24 +34,35 @@
   @include indent;
   @include font-style(18px, 30px, bold);
 
-  margin: 10px 0;
+  margin-top: 17px;
+  margin-bottom: 9px;
 }
 
 .description__text {
   @include indent;
-  @include font-style(14px, 30px, normal);
+  @include font-style(14px, 24px, normal);
+}
+
+.description__intro {
+  @include indent;
+
+  margin-top: 27px;
+  margin-bottom: 25px;
+}
+
+.description__item {
+  margin-bottom: 29px;
 }
 
 @include respond-to(medium) {
   .description__list {
-    width: 100%;
     padding-bottom: 0;
-    padding-left: 330px;
-    padding-right: 20px;
+    padding-left: 50%;
     padding-top: 100px;
+    margin: 0 auto;
     box-sizing: border-box;
     background-image: url("../img/iphone-screen-3-tablet@1x.png");
-    background-position: 20px 120%;
+    background-position: 0 120%;
   }
 
   .description__header {
@@ -84,32 +93,25 @@
 
 @include respond-to(large) {
   .description {
-    padding-left: 110px;
-    padding-right: 110px;
-    padding-bottom: 35px;
+    padding-top: 64px;
   }
 
   .description__list {
     background-image: url("../img/bg-description.png");
     background-position: center bottom;
     background-size: cover;
-    width: 100%;
-    padding-left: 0;
-    margin: 0;
+    padding: 0;
     display: flex;
   }
 
   .description__header {
     @include font-style(50px, 60px, lighter);
+
+    margin-bottom: 75px;
   }
 
   .description__slogan {
     @include font-style(50px, 60px, lighter);
-  }
-
-  .description__intro {
-    width: 58%;
-    margin: $center;
   }
 
   .description__item {
@@ -136,7 +138,8 @@
   .description__title {
     @include font-style(30px, 30px, bold);
 
-    margin-top: 50px;
+    margin-top: 55px;
+    margin-bottom: 25px;
   }
 
   .description__text {

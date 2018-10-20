@@ -1,15 +1,19 @@
 .gallery {
   background-color: $white;
   color: $blue;
-  width: 100%;
-  box-sizing: border-box;
+  margin-bottom: 45px;
 }
 
 .gallery__title {
   @include font-style(14px, 30px, normal);
   @include indent;
 
-  margin: 40px 20px;
+  width: 87.5%;
+  margin: $center;
+  margin-top: 45px;
+  margin-bottom: 49px;
+  padding: 0 19px;
+  box-sizing: border-box;
 }
 
 .gallery__list {
@@ -21,8 +25,9 @@
 }
 
 .gallery__item {
-  margin: $padding-mobile;
-  margin-bottom: 20px;
+  width: 87.5%;
+  margin: $center;
+  margin-bottom: 21px;
   background-color: $gray;
 }
 
@@ -31,22 +36,24 @@
 
   width: 100%;
   background-color: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 @include respond-to(medium) {
   .gallery__title {
     @include font-style(18px, 30px, normal);
 
-    padding: 0 85px;
+    width: 93.9%;
     margin-top: 90px;
     margin-bottom: 70px;
+    padding: 0 85px;
   }
 
   .gallery__list {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 20px;
+    width: 93.7%;
+    margin: $center;
     align-items: stretch;
     justify-content: space-between;
   }
@@ -55,7 +62,6 @@
     width: 45%;
     margin: 0;
     margin-bottom: 20px;
-
 
     &--panorama {
       width: 100%;
@@ -69,9 +75,8 @@
   .gallery__title {
     @include font-style(18px, 30px, normal);
 
-    margin-left: 130px;
-    margin-right: 130px;
-    margin-bottom: 80px;
+    width: 80%;
+    margin-bottom: 90px;
 
     & span {
       display: block;
@@ -79,15 +84,16 @@
   }
 
   .gallery__list {
-    padding: 0 130px;
+    width: 80%;
   }
 
   .gallery__item {
     width: 32%;
-    margin-bottom: 55px;
+    margin-bottom: 56px;
 
     &--panorama {
       width: 100%;
+      margin-bottom: 50px;
     }
   }
 }

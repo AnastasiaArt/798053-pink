@@ -1,16 +1,10 @@
 .title {
   @include bgImage;
-
-  width: 100%;
-  min-height: 462px;
+  min-height: 466px;
   color: $white;
-  background-color: $blue;
-  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
-  background-position: bottom left, bottom center;
-  background-size: auto, cover;
 
   &--bg {
-    min-height: 170px;
+    min-height: 241px;
     background-image: url("../img/bg-back-mobile@1x.jpg");
     background-position: center 20%;
     background-size: cover;
@@ -22,18 +16,19 @@
   @include indent;
 
   color: $white;
-  padding: 30px 20px;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  width: 87.5%;
+  margin: $center;
 }
 
 @include respond-to(medium) {
   .title {
-    min-height: 730px;
-    background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
-    background-position: bottom center, bottom center;
+    min-height: 200px;
   }
 
   .title--bg {
-    min-height: 330px;
+    min-height: 440px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: center;
   }
@@ -41,28 +36,24 @@
   .title__name {
     @include font-style(50px, 60px, lighter);
 
-    padding-top: 70px;
-    padding-bottom: 70px;
+    width: 93.9%;
+    padding-top: 180px;
   }
 }
 
 @include respond-to(large) {
-  .title {
-    min-height: 850px;
-    background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
-    background-position: bottom right, bottom center;
-  }
-
   .title--bg {
-    min-height: 394px;
+    min-height: 395px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-position: center;
   }
 
   .title__name {
-    padding-top: 190px;
-    padding-bottom: 90px;
-    padding-left: 130px;
-    padding-right: 130px;
+    // width: 50%;
+    box-sizing: border-box;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 172px;
+    padding-bottom: 50px;
   }
 }

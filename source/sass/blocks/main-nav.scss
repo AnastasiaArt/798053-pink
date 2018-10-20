@@ -3,18 +3,15 @@
 
   color: $white;
   width: 100%;
-  box-sizing: border-box;
 }
-//
+
 .main-nav__button {
   width: 50px;
   height: 30px;
   padding: 0;
-  //   display: block;
-  //   // margin-left: auto;
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 6.3%;
   background-color: transparent;
   border: none;
 }
@@ -44,7 +41,7 @@
     content: "";
 
     position: absolute;
-    top: 7px;
+    top: 9px;
     right: 0;
 
     width: 24px;
@@ -68,12 +65,13 @@
   }
 }
 
-// .main-nav--nojs .main-nav__button {
-//    display: none;
-//  }
-// .main-nav--nojs .main-nav__list {
-//   position: static;
-// }
+.main-nav--nojs .main-nav__button {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__list {
+  position: static;
+}
 
 .main-nav--nojs .main-nav__item {
   display: block;
@@ -84,7 +82,6 @@
 
   width: 100%;
   box-sizing: border-box;
-  background-color: $blue;
 }
 
 .main-nav__item {
@@ -100,56 +97,44 @@
   display: none;
 }
 
-.main-nav--opened .main-nav__list {
-  // position: absolute;
-  // top: $header-height-xs;
-  // left: 0;
-  z-index: 10;
+.main-nav--closed .main-nav__list {
+  background-color: transparent;
+}
 
+.main-nav--opened .main-nav__list {
+  z-index: 10;
   background-color: $blue;
 }
-//
-//   .main-nav--opened .main-nav__list::before {
-//     content: "";
-//
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     z-index: 2;
-//
-//     width: 7px;
-//     height: 100%;
-//
-//     box-shadow: inset 4px 0 7px -2px rgba(0, 0, 0, 0.4);
-//   }
+
 .main-nav__link {
   @include font-style(18px, 32px, bold);
   @include link;
 
   text-transform: uppercase;
   margin: 0;
-  padding: 20px;
+  padding: 15px;
+}
+
+@include respond-to(medium) {
+  .main-nav__button {
+    right: 3.1%;
+  }
 }
 
 @include respond-to(large) {
   .main-nav {
-    width: 65%;
-    padding-right: 110px;
+    width: 67.8%;
   }
 
   .main-nav__list {
     margin-left: auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    background-color: transparent;
   }
 
   .main-nav--closed .main-nav__item {
     display: block;
-  }
-
-  .main-nav--opened .main-nav__list {
-    background-color:transparent;
   }
 
   .main-nav__item {
@@ -157,9 +142,15 @@
     width: auto;
   }
 
+  .main-nav--opened .main-nav__list {
+    background-color: transparent;
+  }
+
   .main-nav__link {
     @include font-style(18px, 18px, normal);
-    padding: 40px 20px;
+
+    padding: 40px 10px;
+    text-transform: none;
   }
 
   .main-nav__button {
