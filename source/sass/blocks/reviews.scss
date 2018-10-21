@@ -1,5 +1,6 @@
 .reviews {
   margin-top: 42px;
+  margin-bottom: 23px;
 }
 
 .reviews__item--hidden {
@@ -7,9 +8,17 @@
 }
 
 @include respond-to(medium) {
+  .reviews {
+    margin-top: 62px;
+    margin-bottom: 0;
+  }
   .reviews__item {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .reviews__toggles {
+    margin-top: 33px;
   }
 }
 

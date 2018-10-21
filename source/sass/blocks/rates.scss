@@ -1,14 +1,19 @@
-.rate__container {
+.rates {
   width: 100%;
   overflow: hidden;
-  background-image: url("../img/bg-description.png");
-  background-size: cover;
+  background-color: $gray;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-position: top, left;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 10;
 }
 
-.rate {
+.rates__container {
   width: 87.5%;
   margin: $center;
-  margin-top: 112px;
+  padding-top: 91px;
   background-size: cover;
 }
 
@@ -69,6 +74,16 @@ table tr > *:nth-child(1) {
   padding-top: 15px;
   padding-bottom: 14px;
   text-transform: uppercase;
+
+  &--checked {
+    background: url("../img/icon-yes.svg") 90% 50% no-repeat;
+    background-size: 35px 26px;
+  }
+
+  &--unchecked {
+    background: url("../img/icon-no.svg") 90% 50% no-repeat;
+    background-size: 35px 35px;
+  }
 }
 
 .rates__feature-name {
@@ -88,21 +103,38 @@ table tr > *:nth-child(1) {
 }
 
 @include respond-to(medium) {
-  .rate {
+  .rates {
+    padding-bottom: 70px;
+
+  }
+  .rates__container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     overflow: visible;
     box-sizing: border-box;
+    padding-top: 86px;
   }
 
   .rates__feature {
     text-transform: none;
-    padding: 10px;
     box-sizing: border-box;
     text-align: left;
     min-width: 0;
     width: 20%;
+    padding-left: 14px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+
+    &--checked {
+      background-position: 50% 50% ;
+      background-size: 31px 21px;
+    }
+
+    &--unchecked {
+      background-position: 50% 50% ;
+      background-size: 27px 26px;
+    }
   }
 
   .rates__feature-name {
@@ -128,18 +160,30 @@ table tr > *:nth-child(1) {
     @include font-style(16px, 30px, bold);
 
     width: 20%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 12px;
+    padding-bottom: 5px;
     min-width: 0;
   }
 
-  .rate__toggles {
+  .rates__name--hit {
+    &::before {
+      background-image: url("../img/bg-hit-tablet.svg");
+      width: 61px;
+      height: 61px;
+    }
+    &::after {
+      left: 8px;
+      top: 3px;
+    }
+  }
+
+  .rates__toggles {
     display: none;
   }
 }
 
 @include respond-to(large) {
-  .rate {
+  .rates__container {
     margin-top: 0;
     padding-top: 190px;
   }
@@ -154,6 +198,7 @@ table tr > *:nth-child(1) {
     @include font-style(18px, 30px, bold);
 
     padding-bottom: 20px;
+    padding-top: 15px;
   }
 
   .rates__price {
@@ -167,9 +212,5 @@ table tr > *:nth-child(1) {
     padding-top: 13px;
     padding-bottom: 14px;
     text-align: left;
-  }
-
-  .rates__toggles {
-    display: none;
   }
 }

@@ -1,17 +1,42 @@
 .map {
   width: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   bottom: -5%;
   left: 0;
-  height: 600px;
+  height: 640px;
   overflow: hidden;
+
 
   &::before {
     @include pseudo($content: url("../img/icon-map-marker.svg"));
 
-    left: 0;
-    right: 0;
+    left: 50%;
+    right: 50%;
     bottom: 10%;
+    width: 70px;
+    z-index: 12;
+    transform: translate(-50%);
   }
 }
+
+.map__image {
+  width: 100%;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  bottom: 0;
+
+}
+
+@include respond-to(medium) {
+   .map {
+     height: 848px;
+     bottom: 0px;
+   }
+
+   .map__image {
+     width: 100%;
+     height: auto;
+ }

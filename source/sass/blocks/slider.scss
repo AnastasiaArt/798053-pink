@@ -84,15 +84,15 @@
   .slider__title span {
     display: block;
   }
-}
 
-@include respond-to(large) {
   .slider__text {
     @include font-style(18px, 30px, normal);
 
     margin-bottom: 36px;
   }
+}
 
+@include respond-to(large) {
   .slider__title {
     @include font-style(24px, 30px, bold);
 

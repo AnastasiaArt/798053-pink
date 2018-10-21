@@ -6,6 +6,7 @@
   <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
+  <script src="picturefill.min.js"></script>
 </head>
 <body>
   <header class="main-header main-header--opened">
@@ -53,12 +54,12 @@
       </section>
     </div>
     <section class="description">
-      <div class="main-wrapper">
-        <header class="description__header">
-          <h2 class="description__slogan">Устали от серости мегаполиса?</h2>
-          <p class="description__intro">Нам есть, что вам предложить!</p>
-        </header>
-        <ul class="description__list">
+      <header class="description__header main-wrapper">
+        <h2 class="description__slogan">Устали от серости мегаполиса?</h2>
+        <p class="description__intro">Нам есть, что вам предложить!</p>
+      </header>
+      <div class="description-container">
+        <ul class="description__list main-wrapper">
           <li class="description__item">
             <h3 class="description__title">Поднимает настроение</h3>
             <p class="description__text">Приложение позволяет вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
@@ -106,8 +107,8 @@
               <button class="slider__toggle slider__toggle--unchecked" type="button">3</button>
             </p>
           </section>
-          <div class="rate__container">
-            <section class="rate">
+          <div class="rates">
+            <section class="rates__container">
               <h2 class="visually-hidden">Тарифы</h2>
               <table class="rates__table">
                 <tr class="rates__item rates__item--title">
@@ -118,45 +119,45 @@
                 </tr>
                 <tr class="rates__item">
                   <td class="rates__feature"><span class="rates__option">Розовый фильтр</span></td>
-                  <td class="rates__feature">
+                  <td class="rates__feature rates__feature--checked">
                     <p class="rates__feature-name">Розовый фильтр</p>
                     <span class="visually-hidden">Доступно</span>
                   </td>
-                  <td class="rates__feature">
+                  <td class="rates__feature rates__feature--checked">
                     <p class="rates__feature-name">Розовый фильтр</p>
                     <span class="visually-hidden">Доступно</span>
                   </td>
-                  <td class="rates__feature">
+                  <td class="rates__feature rates__feature--checked">
                     <p class="rates__feature-name">Розовый фильтр</p>
                     <span class="visually-hidden">Доступно</span>
                   </td>
                 </tr>
                 <tr class="rates__item">
                   <td class="rates__feature"><span class="rates__option">Смайлики</span></td>
-                  <td class="rates__feature">
+                  <td class="rates__feature rates__feature--unchecked">
                     <p class="rates__feature-name">Смайлики</p>
                     <span class="visually-hidden">Недоступно</span>
                   </td>
-                  <td class="rates__feature">
+                  <td class="rates__feature rates__feature--checked">
                     <p class="rates__feature-name">Смайлики</p>
                     <span class="visually-hidden">Доступно</span>
                   </td>
-                  <td class="rates__feature">
+                  <td class="rates__feature rates__feature--checked">
                     <p class="rates__feature-name">Смайлики</p>
                     <span class="visually-hidden">Доступно</span>
                   </td>
                 </tr>
                 <tr class="rates_item">
                   <td class="rates__feature"><span class="rates__option">Комментарии</span></td>
-                  <td class="rates__feature">
+                  <td class="rates__feature rates__feature--unchecked">
                     <p class="rates__feature-name">Комментарии</p>
                     <span class="visually-hidden">Недоступно</span>
                   </td>
-                  <td class="rates__feature">
+                  <td class="rates__feature rates__feature--unchecked">
                     <p class="rates__feature-name">Комментарии</p>
                     <span class="visually-hidden">Недоступно</span>
                   </td>
-                  <td class="rates__feature">
+                  <td class="rates__feature rates__feature--checked">
                     <p class="rates__feature-name">Комментарии</p>
                     <span class="visually-hidden">Доступно</span>
                   </td>
@@ -187,7 +188,11 @@
             </ul>
           </section>
           <div class="map">
-            <img src="../img/bg-map-mobile@1x.png"  width="320" height="645" alt="Карта проезда">
+            <picture>
+              <source media="(min-width: 950px)" srcset="../img/bg-map-desktop@1x.jpg 1x, ../img/bg-map-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="../img/bg-map-tablet@1x.jpg 1x, ../img/bg-map-tablet@2x.jpg 2x">
+              <img  class="map__image" src="../img/bg-map-mobile@1x.png" srcset="../img/bg-map-mobile@2x.jpg 2x" alt="Карта проезда">
+            </picture>
           </div>
         </main>
         <footer class="main-footer main-footer--hidden">
@@ -217,4 +222,4 @@
           </div>
         </footer>
       </body>
-      </html>
+    </html>
