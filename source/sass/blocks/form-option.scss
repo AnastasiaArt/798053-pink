@@ -27,19 +27,76 @@
 
 .form-option__item {
   margin-bottom: 43px;
-  padding-left: 70px;
   color: $blue;
   width: 100%;
   box-sizing: border-box;
 
-  & label {
-    display: inline-block;
-    min-height: 40px;
-  }
-
   &:last-child {
     margin-bottom: 33px;
   }
+
+  & label {
+    display: inline-block;
+    padding-left: 70px;
+    position: relative;
+  }
+}
+
+.form-option__checkbox + label::before {
+  @include pseudo;
+
+  width: 35px;
+  height: 35px;
+  left: 0;
+  top: 0;
+  border: $table-border;
+  background-color: $white;
+}
+
+.form-option__checkbox:checked + label::after {
+  @include pseudo;
+
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 10px;
+  border-bottom: 2px solid $red;
+  border-left: 2px solid $red;
+
+  transform: rotate(-45deg);
+}
+
+.form-option__checkbox:hover + label::before,
+.form-option__radio:hover + label::before {
+  border-color: $blue;
+}
+
+.form-option__checkbox:active + label::before,
+.form-option__radio:active + label::before {
+  border-color: $red;
+}
+
+.form-option__radio + label::before {
+  @include pseudo;
+
+  width: 37px;
+  height: 37px;
+  left: 0;
+  top: 0;
+  border: $table-border;
+  border-radius: 50%;
+  background-color: $white;
+}
+
+.form-option__radio:checked + label::after {
+  @include pseudo;
+
+  left: 13px;
+  top: 13px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $red;
 }
 
 @include respond-to(medium) {
@@ -48,11 +105,19 @@
     border: $table-border;
   }
 
+  .form-option__list {
+    padding-left: 60px;
+  }
+
   .form-option__title {
     @include font-style(14px, 30px, normal);
 
     background-color: inherit;
     padding: 0 15px;
+  }
+
+  .form-option__item label {
+    padding-right: 60px;
   }
 }
 

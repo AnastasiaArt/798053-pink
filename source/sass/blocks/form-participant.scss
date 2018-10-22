@@ -69,7 +69,50 @@
 
   .form-participant__input {
     padding-bottom: 14px;
+    display: block;
+
+    &--phone {
+      padding-right: 60px;
+      position: relative;
+
+      &::before {
+        @include pseudo;
+
+        width: 56px;
+        height: 56px;
+        border: $table-border;
+        background-color: $gray-table;
+        top: 0;
+        right: 0;
+      }
+
+      &::after {
+        @include pseudo;
+
+        width: 20px;
+        height: 19px;
+        background-image: url("../img/icon-phone.svg");
+        right: 20px;
+        top: 20px;
+      }
+    }
+
+    &--mail {
+      padding-right: 60px;
+      position: relative;
+
+      &::before {
+        @include pseudo;
+
+        width: 60px;
+        height: 60px;
+        background-color: $gray-table;
+        left: 0;
+        right: 0;
+      }
+    }
   }
+
 
   .form-participant__title {
     @include font-style(14px, 30px, normal);

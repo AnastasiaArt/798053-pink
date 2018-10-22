@@ -4,6 +4,7 @@ $red: #d22856;
 $gray: #f2f2f2;
 $gray-btn: #dddfe0;
 $gray-border: #485461;
+$gray-table: #e5e5e5;
 $green: #2aab6d;
 $black: #000000;
 $padding-mobile: 0 3%;
@@ -12,10 +13,10 @@ $center: 0 auto;
 $breakpoints: (
   "small": 320px,
   "medium": 660px,
-  "large": 950px,
+  "large": 960px,
 );
 $table-col: 4;
-$table-border: 2px solid #e5e5e5;
+$table-border: 2px solid $gray-table;
 $table-width-xs: 280px;
 $table-width-m: 620px;
 $table-width-xl: 940px;

@@ -2,7 +2,7 @@
   @include font-style(24px, 30px, lighter);
 
   padding-bottom: 55px;
-  padding-top: 43px;
+  padding-top: 68px;
   min-height: 300px;
   background-image: url("../img/bg-triangle-white-footer.svg");
   background-position: center bottom;
@@ -16,7 +16,6 @@
   @include font-style(24px, 30px, lighter);
 
   padding: 0;
-  padding-bottom: 25px;
 }
 
 .contacts__list {
@@ -64,6 +63,11 @@
 }
 
 @include respond-to(large) {
+  .contacts {
+    padding-top: 39px;
+    background-size: 100% cover;
+  }
+
   .contacts__type {
     margin-bottom: 22px;
   }
@@ -77,6 +81,7 @@
   .contacts__item {
     width: 33%;
     flex-grow: 1;
+    margin-bottom: 75px;
 
     &:nth-child(2) {
       order: 3;

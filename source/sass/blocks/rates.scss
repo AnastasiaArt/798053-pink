@@ -76,12 +76,16 @@ table tr > *:nth-child(1) {
   text-transform: uppercase;
 
   &--checked {
-    background: url("../img/icon-yes.svg") 90% 50% no-repeat;
+    background-image: url("../img/icon-yes.svg");
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
     background-size: 35px 26px;
   }
 
   &--unchecked {
-    background: url("../img/icon-no.svg") 90% 50% no-repeat;
+    background: url("../img/icon-no.svg");
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
     background-size: 35px 35px;
   }
 }
@@ -105,8 +109,8 @@ table tr > *:nth-child(1) {
 @include respond-to(medium) {
   .rates {
     padding-bottom: 70px;
-
   }
+
   .rates__container {
     width: 100%;
     margin-left: auto;
@@ -127,12 +131,12 @@ table tr > *:nth-child(1) {
     padding-bottom: 8px;
 
     &--checked {
-      background-position: 50% 50% ;
+      background-position: 50% 50%;
       background-size: 31px 21px;
     }
 
     &--unchecked {
-      background-position: 50% 50% ;
+      background-position: 50% 50%;
       background-size: 27px 26px;
     }
   }
@@ -171,6 +175,7 @@ table tr > *:nth-child(1) {
       width: 61px;
       height: 61px;
     }
+
     &::after {
       left: 8px;
       top: 3px;
@@ -183,6 +188,10 @@ table tr > *:nth-child(1) {
 }
 
 @include respond-to(large) {
+  .rates {
+    padding-bottom: 98px;
+  }
+
   .rates__container {
     margin-top: 0;
     padding-top: 190px;
@@ -190,8 +199,8 @@ table tr > *:nth-child(1) {
 
   .rates__table {
     width: 80%;
-    margin-bottom: 95px;
     padding: 0 10px;
+    box-sizing: border-box;
   }
 
   .rates__name {

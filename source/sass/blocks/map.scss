@@ -1,42 +1,53 @@
 .map {
   width: 100%;
-  position: absolute;
-  z-index: 0;
-  bottom: -5%;
-  left: 0;
-  height: 640px;
+  min-height: 230px;
   overflow: hidden;
+  margin-top: -10.5%;
+  position: relative;
+}
 
+.map__yandex {
+  z-index: 3;
+  border: none;
+  width: 100%;
+  min-height: inherit;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  bottom: 0;
+}
+
+.map__image {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  z-index: 1;
 
   &::before {
     @include pseudo($content: url("../img/icon-map-marker.svg"));
 
     left: 50%;
     right: 50%;
-    bottom: 10%;
     width: 70px;
-    z-index: 12;
+    z-index: 2;
+    top: 0;
     transform: translate(-50%);
   }
 }
 
-.map__image {
-  width: 100%;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%);
-  bottom: 0;
-
+@include respond-to(medium) {
+  .map {
+    min-height: 375px;
+    margin-top: -10.8%;
+  }
 }
 
-@include respond-to(medium) {
-   .map {
-     height: 848px;
-     bottom: 0px;
-   }
-
-   .map__image {
-     width: 100%;
-     height: auto;
- }
+@include respond-to(large) {
+  .map {
+    min-height: 520px;
+  }
+}

@@ -35,11 +35,8 @@
   margin-top: 10px;
 }
 
-@include respond-to(medium) {
-  .photo-load__wrapper {
-    background-color: $white;
-  }
 
+@include respond-to(medium) {
   .photo-load {
     padding: 0;
   }
@@ -53,6 +50,8 @@
     width: 300px;
     height: 400px;
     margin: 0;
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 
   .photo-load__wrapper .main-wrapper {
@@ -64,6 +63,8 @@
 
   .photo-load__filters {
     width: 50%;
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 
   .photo-load__button {
@@ -72,16 +73,17 @@
 }
 
 @include respond-to(large) {
+  .photo-load__image {
+    padding-left: 80px;
+  }
+
   .photo-load__wrapper {
     padding: 55px 0;
+    background-color: $white;
   }
 
   .option__range {
     display: block;
-  }
-
-  .photo-load__filters {
-    width: 60%;
   }
 
   .photo-load__button {

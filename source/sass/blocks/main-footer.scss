@@ -17,10 +17,6 @@
 @include respond-to(medium) {
   .main-footer--hidden {
     display: block;
-    position: absolute;
-    left: 0;
-    bottom: -300px;
-    z-index: 10;
   }
 
   .main-footer__wrapper {
@@ -47,7 +43,13 @@
 }
 
 @include respond-to(large) {
-  .main-footer--hidden {
-    bottom: -350px;
+  .main-footer {
+    padding-top: 60px;
+  }
+
+  .main-footer__wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
   }
 }

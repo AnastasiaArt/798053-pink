@@ -4,4 +4,23 @@
 
 .social__list {
   @include list;
+
+  display: flex;
 }
+
+.social__item:nth-child(2) {
+  margin-left: 26px;
+  margin-right: 26px;
+}
+
+// @include respond-to(medium) {
+//   .social__list {
+//     width: 86%;
+//   }
+// }
+//
+// @include respond-to(large) {
+//   .social__list {
+//     width: 56.5%;
+//   }
+// }

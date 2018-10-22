@@ -31,6 +31,8 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
+      background-position: 95% 100%, 50% 0;
+      background-size: 87%, cover;
     }
   }
 }

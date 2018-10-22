@@ -71,6 +71,7 @@
   .description {
     padding-top: 48px;
   }
+
   .description__list {
     padding-left: 45%;
     padding-top: 55px;
@@ -117,6 +118,7 @@
   .description__list {
     padding: 0;
     display: flex;
+    background-image: none;
   }
 
   .description__header {
@@ -141,8 +143,8 @@
       background-image: url("../img/iphone-screen-1-desktop@1x.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/iphone-screen-1-desktop@1x.png");
-        background-size: 57%;
+        background-image: url("../img/iphone-screen-1-desktop@2x.png");
+        background-size: 91%;
       }
     }
 
@@ -150,8 +152,8 @@
       background-image: url("../img/iphone-screen-2-desktop@1x.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/iphone-screen-2-desktop@1x.png");
-        background-size: 57%;
+        background-image: url("../img/iphone-screen-2-desktop@2x.png");
+        background-size: 91%;
       }
     }
 
@@ -159,8 +161,8 @@
       background-image: url("../img/iphone-screen-3-desktop@1x.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/iphone-screen-3-desktop@1x.png");
-        background-size: 57%;
+        background-image: url("../img/iphone-screen-3-desktop@2x.png");
+        background-size: 91%;
       }
     }
   }
