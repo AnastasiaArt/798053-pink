@@ -1,0 +1,37 @@
+.edit__toggle {
+  background-color: inherit;
+}
+
+.edit label {
+  position: relative;
+  width: 240px;
+  height: 30px;
+  display: inline-block;
+  margin: $center;
+}
+
+.edit__range + label::before {
+  @include pseudo;
+
+  width: 240px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid $blue;
+}
+
+.edit__range + label::after {
+  @include pseudo;
+
+  width: 10px;
+  height: 10px;
+  border: 2px solid $red;
+  background-color: $white;
+  border-radius: 50%;
+  top: 14px;
+  left: 30px;
+}
+
+.edit__range:active + label::after {
+   background-color: $red;
+}
