@@ -125,11 +125,11 @@
   .form-option__list--col {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
 
     & .form-option__item {
       width: 33%;
       padding-right: 0;
-      padding-left: 60px;
       justify-content: space-between;
       box-sizing: border-box;
     }

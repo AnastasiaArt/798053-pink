@@ -4,6 +4,11 @@
   margin-bottom: 45px;
 }
 
+.gallery__container {
+  width: 100%;
+  position: relative;
+}
+
 .gallery__title {
   @include font-style(14px, 30px, normal);
   @include indent;
@@ -11,8 +16,8 @@
   width: 87.5%;
   margin: $center;
   margin-top: 45px;
-  margin-bottom: 49px;
   padding: 0 19px;
+  margin-bottom: 49px;
   box-sizing: border-box;
 }
 
@@ -72,6 +77,10 @@
 }
 
 @include respond-to(large) {
+  .gallery {
+    padding-bottom: 745px;
+  }
+
   .gallery__title {
     @include font-style(18px, 30px, normal);
 
