@@ -1,13 +1,35 @@
+.edit {
+  @include list;
+
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  position: relative;
+}
+
 .edit__toggle {
   background-color: inherit;
 }
 
 .edit label {
-  position: relative;
+  position: absolute;
   width: 240px;
   height: 30px;
-  display: inline-block;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   margin: $center;
+
+}
+
+.edit__item {
+  width: 33%;
+  padding-bottom: 40px;
+}
+
+.edit .edit__range--hidden {
+  display: none;
 }
 
 .edit__range + label::before {
@@ -34,4 +56,30 @@
 
 .edit__range:active + label::after {
    background-color: $red;
+}
+
+@include respond-to(medium) {
+  .edit {
+    flex-direction: column;
+  }
+
+  .edit__item {
+    width: 100%;
+    position: relative;
+    padding-right: 230px;
+    box-sizing: border-box;
+  }
+
+  .edit label {
+    width: 202px;
+    top: 0;
+  }
+
+  .edit__range + label::before  {
+    width: 202px;
+  }
+
+  .edit .edit__range--hidden {
+    display: inline-block;
+  }
 }

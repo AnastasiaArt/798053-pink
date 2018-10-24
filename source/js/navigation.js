@@ -4,7 +4,7 @@ var header = document.querySelector('.main-header--opened');
 
 nav.classList.remove('main-nav--nojs');
 header.classList.remove('main-header--opened');
-nav.classList.remove('main-nav--opened');
+
 
 button.addEventListener('click', openNav);
  function openNav() {
