@@ -4,6 +4,17 @@
   overflow: hidden;
   margin-top: -10.5%;
   position: relative;
+
+    &::before {
+      @include pseudo;
+      background-image: url("../img/icon-map-marker.svg");
+      left: 50%;
+      width: 36px;
+      height: 36px;
+      z-index: 5;
+      top: 50%;
+      transform: translate(-50%, 50%);
+  }
 }
 
 .map__yandex {
@@ -26,17 +37,6 @@
   right: 50%;
   transform: translate(-50%);
   z-index: 1;
-
-  &::before {
-    @include pseudo($content: url("../img/icon-map-marker.svg"));
-
-    left: 50%;
-    right: 50%;
-    width: 70px;
-    z-index: 2;
-    top: 0;
-    transform: translate(-50%);
-  }
 }
 
 @include respond-to(medium) {

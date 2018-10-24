@@ -18,6 +18,16 @@
   margin: $center;
   margin-bottom: 35px;
   color: $white;
+  background-color: $blue;
+
+  &:hover {
+    color: $red;
+    background-color: $white;
+  }
+
+  &:active {
+    color: rgba($red, 0.3);
+  }
 }
 
 .download-pink_list {

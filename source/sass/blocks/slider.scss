@@ -12,36 +12,41 @@
 }
 
 .slider__toggle {
+  font-size: 10px;
   border: none;
+  width: 20px;
+  height: 20px;
   background: transparent;
   color: transparent;
 
   &::before {
-    @include pseudo($pos: relative);
-    width: 6px;
-    height: 6px;
-    border: 3px solid #0a0a0a;
-    border-radius: 50%;
+    @include pseudo($pos: static);
+    width: 7px;
+    height: 7px;
     top: 3px;
+    background-color: #0a0a0a;
+    border-radius: 50%;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 }
 
-.slider__toggle--unchecked::before {
-  @include pseudo($pos: static);
-  width: 1px;
-  height: 1px;
-  top: 3px;
-  background: #0a0a0a;
+.slider__toggle--checked::before {
+  @include pseudo($pos: relative);
+  opacity: 1;
+  width: 7px;
+  height: 7px;
+  border: 3px solid $blue;
   border-radius: 50%;
-  opacity: 0.3;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.1;
-  }
+  top: 3px;
+  background-color: $white;
 }
 
 .slider__list {

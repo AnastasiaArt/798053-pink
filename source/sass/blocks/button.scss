@@ -8,6 +8,18 @@
   color: $white;
   border: none;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
+
+  &:disabled {
+    background-color: $gray-table;
+  }
 }
 
 .button--rounded {
