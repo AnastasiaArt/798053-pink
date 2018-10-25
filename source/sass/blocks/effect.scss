@@ -31,7 +31,7 @@
   }
 
   .effect__image {
-    @include pseudo;
+    position: absolute;
 
     &::after {
       @include pseudo($content: "24");
@@ -69,6 +69,14 @@
   .effect__link {
     width: 50%;
     margin-left: auto;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -101,19 +109,19 @@
 
   .effect__title {
     padding-top: 100px;
-    width: 60.7%;
+    width: 60.4%;
     margin-bottom: 23px;
   }
 
   .effect__text {
     @include font-style(18px, 30px, normal);
     text-align: left;
-    width: 60.7%;
+    width: 60.4%;
     margin-bottom: 35px;
-    padding-right: 5.8%;
+    padding-right: 5.7%;
   }
 
   .effect__link {
-    width: 60.7%;
+    width: 60.4%;
   }
 }

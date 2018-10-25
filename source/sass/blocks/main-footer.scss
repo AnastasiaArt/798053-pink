@@ -14,6 +14,29 @@
   display: none;
 }
 
+.main-footer__logo svg {
+  fill: $blue;
+}
+
+.main-footer__logo[href] svg {
+  &:hover {
+    fill: $red;
+  }
+
+  &:active {
+    fill: inherit;
+    opacity: 0.3;
+  }
+}
+.main-footer__logo-glass-xl,
+.main-footer__logo-stars {
+  display: none;
+}
+
+.main-footer__logo-glass {
+  fill: $red;
+}
+
 @include respond-to(medium) {
   .main-footer--hidden {
     display: block;
@@ -51,5 +74,18 @@
     padding-left: 10px;
     padding-right: 10px;
     box-sizing: border-box;
+  }
+
+  .main-footer__logo-glass-xl {
+    fill: $red;
+    display: inline-block;
+  }
+
+  .main-footer__logo-stars {
+    display: inline-block;
+  }
+
+  .main-footer__logo-glass {
+    display: none;
   }
 }

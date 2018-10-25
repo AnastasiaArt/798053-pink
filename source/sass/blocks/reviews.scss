@@ -7,6 +7,10 @@
   display: none;
 }
 
+.reviews__arrow {
+  display: none;
+}
+
 @include respond-to(medium) {
   .reviews {
     margin-top: 62px;
@@ -26,6 +30,7 @@
 @include respond-to(large) {
   .reviews {
     margin-top: 0;
+    position: relative;
   }
 
   .reviews__item {
@@ -35,50 +40,57 @@
     padding-right: 130px;
     padding-left: 130px;
     position: relative;
-  //
-  //   &::before {
-  //     @include pseudo;
-  //     @include bgImage;
-  //
-  //     border-top: 2px solid #bec2c7;
-  //     border-left: 2px solid #bec2c7;
-  //     transform: rotate(-45deg);
-  //     width: 24px;
-  //     height: 24px;
-  //     top: 215px;
-  //     left: 0;
-  //
-  //     &:hover {
-  //       border-color: #7e868f;
-  //     }
-  //
-  //     &:active {
-  //       opacity: 0.1;
-  //     }
-  //   }
-  //
-  //   &::after {
-  //     @include pseudo;
-  //     @include bgImage;
-  //
-  //     border-bottom: 2px solid #bec2c7;
-  //     border-right: 2px solid #bec2c7;
-  //     transform: rotate(-45deg);
-  //     width: 24px;
-  //     height: 24px;
-  //     top: 215px;
-  //     right: 0;
-  //
-  //     &:hover {
-  //       border-color: #7e868f;
-  //     }
-  //
-  //     &:active {
-  //       opacity: 0.1;
-  //     }
-  //   }
   }
 
+  .reviews__arrow {
+    display: block;
+    width: 24px;
+    height:24px;
+    padding: 10px;
+    border: none;
+    background-color: $white;
+    position: absolute;
+    outline: none;
+
+    &--left {
+      @include bgImage;
+
+      border-top: 2px solid #bec2c7;
+      border-left: 2px solid #bec2c7;
+      transform: rotate(-45deg);
+      top: 215px;
+      left: 0;
+
+      &:hover {
+        border-color: #7e868f;
+      }
+
+      &:active {
+        opacity: 0.1;
+      }
+    }
+
+    &--right {
+      @include bgImage;
+
+      border-bottom: 2px solid #bec2c7;
+      border-right: 2px solid #bec2c7;
+      transform: rotate(-45deg);
+      width: 24px;
+      height: 24px;
+      top: 215px;
+      right: 0;
+
+      &:hover {
+        border-color: #7e868f;
+      }
+
+      &:active {
+        opacity: 0.1;
+      }
+    }
+
+  }
   .reviews__text {
     &::before {
       @include pseudo;

@@ -2,4 +2,24 @@
   @include font-style(14px, 18px, normal);
 
   color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.copyright__link {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.copyright__link svg {
+  fill: $red;
+
+  &:hover {
+    fill: $blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
