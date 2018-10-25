@@ -1,0 +1,121 @@
+.edit {
+  @include list;
+
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  position: relative;
+}
+
+.edit__toggle {
+  background-color: inherit;
+  width: 50px;
+  height: 50px;
+  border:none;
+}
+
+.edit__toggle svg {
+ fill: $red;
+
+ &:hover {
+  fill: $blue;
+  opacity: 0.3;
+ }
+
+ &:active {
+   opacity: 0.5;
+ }
+}
+
+.edit label {
+  position: absolute;
+  width: 240px;
+  height: 30px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: $center;
+
+}
+
+.edit__item {
+  width: 33%;
+  padding-bottom: 40px;
+}
+
+.edit .edit__range--hidden {
+  display: none;
+}
+
+.edit__range + label::before {
+  @include pseudo;
+
+  width: 240px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid $blue;
+}
+
+.edit__range + label::after {
+  @include pseudo;
+
+  width: 10px;
+  height: 10px;
+  border: 2px solid $red;
+  background-color: $white;
+  border-radius: 50%;
+  top: 14px;
+  left: 30px;
+}
+
+.edit__range:active + label::after {
+   background-color: $red;
+}
+
+@include respond-to(medium) {
+  .edit {
+    flex-direction: column;
+  }
+
+  .edit__item {
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: $table-border;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .edit label {
+    width: 202px;
+    position: relative;
+    left: 0;
+    transform: translateX(0);
+    margin: 0;
+  }
+
+  .edit__range + label::before  {
+    width: 202px;
+  }
+
+  .edit .edit__range--hidden {
+    display: inline-block;
+  }
+}
+@include respond-to(medium) {
+  .edit {
+    padding-right: 60px;
+  }
+  .edit label {
+    width: 288px;
+  }
+
+  .edit__range + label::before  {
+    width: 288px;
+  }
+
+}
