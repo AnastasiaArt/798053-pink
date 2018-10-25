@@ -47,6 +47,10 @@
   display: none;
 }
 
+.form-participant__image {
+  display: none;
+}
+
 @include respond-to(medium) {
   .form-participant__item {
     display: flex;
@@ -122,6 +126,7 @@
     }
   }
 .form-participant__image {
+  display: block;
   width: 60px;
   height: 60px;
   background-color: $gray-table;
