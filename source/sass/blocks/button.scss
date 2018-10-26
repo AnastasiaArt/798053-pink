@@ -8,6 +8,18 @@
   color: $white;
   border: none;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
+
+  &:disabled {
+    background-color: $gray-table;
+  }
 }
 
 .button--rounded {
@@ -18,10 +30,30 @@
 
 .button--rounded-red {
   @include color-btn($red, $bg-color: $white);
+
+  &:hover {
+    background-color: $red;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }
 
 .button--rounded-gray {
   @include color-btn($gray-btn, $bg-color: $white);
+
+  &:hover {
+    border-color: rgba($blue, 0.3);
+    background-color: $white;
+    color: rgba($blue, 0.3);
+  }
+
+  &:active {
+    background-color: rgba($blue, 0.3);
+    color: rgba($white, 0.3);
+  }
 }
 
 @include respond-to(medium) {

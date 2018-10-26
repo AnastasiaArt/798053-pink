@@ -7,25 +7,29 @@
   padding-left: 35px;
   position: relative;
   box-sizing: border-box;
+}
 
-  &::before {
-    @include pseudo;
-    @include bgImage;
+.like__image {
+  @include bgImage;
 
-    background-image: url("../img/icon-heart.svg");
-    width: 20px;
-    height: 20px;
-    left: 0;
-  }
+  position: absolute;
+  height: 20px;
+  width: 15px;
+  left: 0;
+}
+
+.like__image svg {
+  fill: $red;
 }
 
 @include respond-to(medium) {
   .like {
     padding-left: 0;
     padding-right: 35px;
+  }
 
-    &::before {
-      left: 100%;
-    }
+  .like__image {
+    right: 0;
+    left: auto;
   }
 }
