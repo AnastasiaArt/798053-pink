@@ -12,22 +12,22 @@
   background-color: inherit;
   width: 50px;
   height: 50px;
-  border:none;
+  border: none;
 }
 
 .edit__toggle svg {
- fill: $blue;
- opacity: 0.3;
-
- &:hover {
   fill: $blue;
-  opacity: 0.5;
- }
+  opacity: 0.3;
 
- &:active {
-   fill: $red;
-   opacity: 1;
- }
+  &:hover {
+    fill: $blue;
+    opacity: 0.5;
+  }
+
+  &:active {
+    fill: $red;
+    opacity: 1;
+  }
 }
 
 .edit label {
@@ -38,7 +38,6 @@
   left: 50%;
   transform: translateX(-50%);
   margin: $center;
-
 }
 
 .edit__item {
@@ -73,7 +72,7 @@
 }
 
 .edit__range:active + label::after {
-   background-color: $red;
+  background-color: $red;
 }
 
 @include respond-to(medium) {
@@ -100,10 +99,6 @@
     margin: 0;
   }
 
-  .edit__range + label::before  {
-    // width: 202px;
-  }
-
   .edit .edit__range--hidden {
     display: inline-block;
   }
@@ -113,18 +108,18 @@
   }
 
   .edit__toggle svg {
-   fill: $red;
-   opacity: 1;
-
-   &:hover {
     fill: $red;
     opacity: 1;
-   }
 
-   &:active {
-     fill: $red;
-     opacity: 1;
-   }
+    &:hover {
+      fill: $red;
+      opacity: 1;
+    }
+
+    &:active {
+      fill: $red;
+      opacity: 1;
+    }
   }
 }
 
@@ -132,12 +127,8 @@
   .edit {
     padding-right: 60px;
   }
+
   .edit label {
     width: 61%;
   }
-
-  .edit__range + label::before  {
-    width: 100%;
-  }
-
 }

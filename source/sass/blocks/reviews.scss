@@ -45,7 +45,7 @@
   .reviews__arrow {
     display: block;
     width: 24px;
-    height:24px;
+    height: 24px;
     padding: 10px;
     border: none;
     background-color: $white;
@@ -89,8 +89,8 @@
         opacity: 0.1;
       }
     }
-
   }
+
   .reviews__text {
     &::before {
       @include pseudo;

@@ -5,15 +5,15 @@
   margin-top: -10.5%;
   position: relative;
 
-    &::before {
-      @include pseudo;
-      background-image: url("../img/icon-map-marker.svg");
-      left: 50%;
-      width: 36px;
-      height: 36px;
-      z-index: 5;
-      top: 50%;
-      transform: translate(-50%, 50%);
+  &::before {
+    @include pseudo;
+    background-image: url("../img/icon-map-marker.svg");
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    z-index: 5;
+    top: 50%;
+    transform: translate(-50%, 50%);
   }
 }
 

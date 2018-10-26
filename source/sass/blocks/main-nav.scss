@@ -94,7 +94,6 @@
 
   width: 100%;
   box-sizing: border-box;
-
 }
 
 .main-nav--closed .main-nav__item {
@@ -121,14 +120,14 @@
   border-bottom: 1px solid $black;
 
   &--current {
-    border:none;
+    border: none;
   }
 }
 
 .man-nav__link[href]:hover,
 .man-nav__link[href]:active {
-  border:none;
-  border-color: red;
+  border: none;
+  border-color: $red;
   outline: none;
 }
 
@@ -171,7 +170,7 @@
     border: none;
 
     &--current {
-     text-decoration: underline;
+      text-decoration: underline;
     }
   }
 
@@ -181,7 +180,7 @@
     }
 
     &:active {
-      color:inherit;
+      color: inherit;
       opacity: 0.3;
     }
   }

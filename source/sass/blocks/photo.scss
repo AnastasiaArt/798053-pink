@@ -35,7 +35,7 @@
 
 .photo__img {
   width: 100%;
-  height:100%;
+  height: 100%;
 }
 
 .photo__wrapper-text--panorama {
@@ -131,12 +131,12 @@
   .photo__image {
     height: 400px;
 
-  &--panorama {
-    height: 510px;
-  }
+    &--panorama {
+      height: 510px;
+    }
 
-  &::before {
-    right: 10%;
+    &::before {
+      right: 10%;
+    }
   }
-}
 }

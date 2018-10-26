@@ -27,14 +27,15 @@
     border-color: $blue;
     opacity: 1;
   }
-  &:active{
+
+  &:active {
     opacity: 0.3;
   }
 }
-  .social__link svg {
+
+.social__link svg {
   fill: $red;
 }
-
 
 // @include respond-to(medium) {
 //   .social__list {

@@ -38,7 +38,7 @@
       @include font-style(96px, 149.47px, bold);
       @include bgImage;
 
-      color:$red;
+      color: $red;
       width: 162px;
       height: 162px;
       border: 20px solid $red;
@@ -88,7 +88,7 @@
     padding-bottom: 0;
   }
 
-  .effect__image{
+  .effect__image {
     left: 10px;
     width: 298px;
     height: 345px;
@@ -105,7 +105,7 @@
       width: 298px;
       height: 345px;
     }
-}
+  }
 
   .effect__title {
     padding-top: 100px;
