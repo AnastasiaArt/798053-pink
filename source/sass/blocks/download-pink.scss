@@ -18,6 +18,16 @@
   margin: $center;
   margin-bottom: 35px;
   color: $white;
+  background-color: $blue;
+
+  &:hover {
+    color: $red;
+    background-color: $white;
+  }
+
+  &:active {
+    color: rgba($red, 0.3);
+  }
 }
 
 .download-pink_list {
@@ -29,7 +39,7 @@
   @include indent;
   @include font-style(14px, 24px, lighter);
 
-  padding-bottom: 28px;
+  padding-bottom: 30px;
 }
 
 @include respond-to(medium) {
@@ -43,6 +53,7 @@
     width: 48.4%;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 35px;
   }
 
   .download-pink__os {
@@ -51,17 +62,21 @@
   }
 
   .download-pink__button {
+    font-size: 18px;
     background-color: transparent;
     width: 48.4%;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 47px;
   }
 
   .download-pink__name {
     @include font-style(40px, 50px, lighter);
 
     display: block;
-    padding: 30px 20px;
+    padding: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 28px;
     width: 48.4%;
     box-sizing: border-box;
   }

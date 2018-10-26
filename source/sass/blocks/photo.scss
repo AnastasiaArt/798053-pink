@@ -6,29 +6,41 @@
   padding-bottom: 18px;
 }
 
-.photo__image--panorama {
-  @include font-style(12px, 24px, bold);
-
-  position: relative;
-  color: $white;
-  text-transform: uppercase;
+.photo__image {
   width: 100%;
+  height: 180px;
+  overflow: hidden;
 
-  &::before {
-    @include pseudo($content: "Панорама дня");
-    right: 6.25%;
-    padding-top: 5px;
-    box-sizing: border-box;
-    width: 140px;
-    height: 36px;
-    background-color: $red;
+  &--panorama {
+    @include font-style(12px, 24px, bold);
+
+    position: relative;
+    color: $white;
+    text-transform: uppercase;
+    width: 100%;
+    height: 140px;
+
+    &::before {
+      @include pseudo($content: "Панорама дня");
+      right: 6.25%;
+      padding-top: 5px;
+      box-sizing: border-box;
+      width: 140px;
+      height: 36px;
+      background-color: $red;
+      z-index: 10;
+    }
   }
+}
+
+.photo__img {
+  width: 100%;
+  height: 100%;
 }
 
 .photo__wrapper-text--panorama {
   background-color: $gray;
   box-sizing: border-box;
-  width: 87.5%;
   margin: $center;
 }
 
@@ -66,11 +78,24 @@
 }
 
 @include respond-to(medium) {
+  .photo__image {
+    height: 300px;
+
+    &--panorama {
+      height: 510px;
+    }
+
+    &::before {
+      right: 3%;
+    }
+  }
+
   .photo__wrapper-text {
     padding-left: 25px;
     padding-right: 30px;
     flex-direction: column;
     display: flex;
+    flex-grow: 1;
 
     .photo__like {
       margin-top: auto;
@@ -81,10 +106,11 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      width: 100%;
 
       .photo__like {
         order: 2;
+        position: relative;
+        width: 30%;
       }
 
       .photo__author {
@@ -97,6 +123,20 @@
         order: 3;
         margin-bottom: 20px;
       }
+    }
+  }
+}
+
+@include respond-to(large) {
+  .photo__image {
+    height: 400px;
+
+    &--panorama {
+      height: 510px;
+    }
+
+    &::before {
+      right: 10%;
     }
   }
 }

@@ -1,11 +1,10 @@
 .effect {
   @include font-style(14px, 24px, normal);
 
-  padding-top: 90px;
-  padding-bottom: 80px;
+  padding-top: 59px;
   text-align: left;
   display: none;
-  min-height: 430px;
+  min-height: 300px;
   background-color: $white;
 }
 
@@ -28,38 +27,56 @@
 @include respond-to(medium) {
   .effect {
     display: block;
+    position: relative;
   }
 
-  .effect__wrapper {
+  .effect__image {
+    position: absolute;
+
     &::after {
-      @include pseudo;
+      @include pseudo($content: "24");
+      @include font-style(96px, 149.47px, bold);
       @include bgImage;
 
-      width: 250px;
-      height: 280px;
-      background-image: url("../img/icon-timer.svg");
-      background-size: contain;
-      top: 0;
-      left: 0;
+      color: $red;
+      width: 162px;
+      height: 162px;
+      border: 20px solid $red;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -43%);
     }
   }
 
   .effect__title {
     width: 50%;
     margin-left: auto;
-    padding-right: 130px;
+    padding-right: 22.9px;
+    padding-top: 40px;
     box-sizing: border-box;
+    margin-bottom: 8px;
   }
 
   .effect__text {
     width: 50%;
     margin-left: auto;
     box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 8px;
   }
 
   .effect__link {
     width: 50%;
     margin-left: auto;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -71,28 +88,40 @@
     padding-bottom: 0;
   }
 
-  .effect__wrapper::after {
+  .effect__image {
     left: 10px;
-    width: 300px;
-    height: 356px;
+    width: 298px;
+    height: 345px;
+
+    &::after {
+      @include font-style(120px, 186.84px, bold);
+
+      width: 213px;
+      height: 213px;
+      transform: translate(-50%, -41%);
+    }
+
+    & svg {
+      width: 298px;
+      height: 345px;
+    }
   }
 
   .effect__title {
     padding-top: 100px;
-    width: 60.7%;
+    width: 60.4%;
     margin-bottom: 23px;
   }
 
   .effect__text {
     @include font-style(18px, 30px, normal);
     text-align: left;
-    width: 60.7%;
-    margin-top: 0;
+    width: 60.4%;
     margin-bottom: 35px;
-    padding-right: 45px;
+    padding-right: 5.7%;
   }
 
   .effect__link {
-    width: 60.7%;
+    width: 60.4%;
   }
 }

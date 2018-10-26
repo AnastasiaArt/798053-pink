@@ -2,9 +2,9 @@
   @include font-style(24px, 30px, lighter);
 
   padding-bottom: 55px;
-  padding-top: 42px;
+  padding-top: 68px;
   min-height: 300px;
-  background-image: url("../img/bg-triangle-white-footer.svg");
+  background-image: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='595.28px' height='61.905px' viewBox='0 0 595.28 61.905'%3E%3Cpolygon fill='%23ffffff' points='297.64,61.905 0,0 595.28,0 '/%3E%3C/svg%3E");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,7 +16,6 @@
   @include font-style(24px, 30px, lighter);
 
   padding: 0;
-  padding-bottom: 25px;
 }
 
 .contacts__list {
@@ -41,9 +40,14 @@
 }
 
 @include respond-to(medium) {
+  .contacts__type {
+    display: block;
+    margin-bottom: 5px;
+  }
+
   .contacts__title {
     @include font-style(40px, 50px, lighter);
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
 
   .contacts__list {
@@ -54,12 +58,16 @@
 
   .contacts__item {
     width: 50%;
+    margin-bottom: 43px;
   }
 }
 
 @include respond-to(large) {
+  .contacts {
+    padding-top: 39px;
+  }
+
   .contacts__type {
-    display: block;
     margin-bottom: 22px;
   }
 
@@ -72,6 +80,7 @@
   .contacts__item {
     width: 33%;
     flex-grow: 1;
+    margin-bottom: 75px;
 
     &:nth-child(2) {
       order: 3;

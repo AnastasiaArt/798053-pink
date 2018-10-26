@@ -7,46 +7,46 @@
 
 .main-nav__button {
   width: 50px;
-  height: 30px;
+  height: 24px;
   padding: 0;
   position: absolute;
   top: 20px;
   right: 6.3%;
   background-color: transparent;
   border: none;
+  outline: none;
 }
 
 .main-nav--closed .main-nav__button::before {
-  content: "";
+  @include pseudo;
 
-  position: absolute;
-  top: 20px;
-  right: 20px;
-
+  top: 0;
+  right: 0;
   width: 50px;
   height: 2px;
-
   background-color: #ffffff;
   box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
 }
 
+.main-nav--closed .main-nav__button:hover::before {
+  background-color: $red;
+  box-shadow: 0 8px 0 0 $red, 0 16px 0 0 $red;
+}
+
 .main-nav--closed .main-nav__button:active::before {
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+  background-color: rgba($red, 0.3);
+  box-shadow: 0 8px 0 0 rgba($red, 0.3), 0 16px 0 0 rgba($red, 0.3);
 }
 
 .main-nav--opened .main-nav__button {
   &::before,
   &::after {
-    content: "";
+    @include pseudo;
 
-    position: absolute;
     top: 9px;
     right: 0;
-
     width: 24px;
     height: 4px;
-
     background-color: #ffffff;
   }
 
@@ -59,9 +59,14 @@
     transform: rotate(-45deg);
   }
 
+  &:hover::before,
+  &:hover::after {
+    background-color: $red;
+  }
+
   &:active::before,
   &:active::after {
-    background-color: rgba($white, 0.3);
+    background-color: rgba($red, 0.3);
   }
 }
 
@@ -89,8 +94,6 @@
 
   width: 100%;
   box-sizing: border-box;
-  border-top: 1px solid $gray-border;
-  border-bottom: 1px solid $black;
 }
 
 .main-nav--closed .main-nav__item {
@@ -113,11 +116,25 @@
   text-transform: uppercase;
   margin: 0;
   padding: 15px;
+  border-top: 1px solid $gray-border;
+  border-bottom: 1px solid $black;
+
+  &--current {
+    border: none;
+  }
+}
+
+.man-nav__link[href]:hover,
+.man-nav__link[href]:active {
+  border: none;
+  border-color: $red;
+  outline: none;
 }
 
 @include respond-to(medium) {
   .main-nav__button {
     right: 3.1%;
+    top: 44px;
   }
 }
 
@@ -138,7 +155,6 @@
   }
 
   .main-nav__item {
-    border: none;
     width: auto;
   }
 
@@ -151,6 +167,22 @@
 
     padding: 40px 10px;
     text-transform: none;
+    border: none;
+
+    &--current {
+      text-decoration: underline;
+    }
+  }
+
+  .main-nav__link[href] {
+    &:hover {
+      color: $red;
+    }
+
+    &:active {
+      color: inherit;
+      opacity: 0.3;
+    }
   }
 
   .main-nav__button {
