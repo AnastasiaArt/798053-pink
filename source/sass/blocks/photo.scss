@@ -95,6 +95,7 @@
     padding-right: 30px;
     flex-direction: column;
     display: flex;
+    flex-grow: 1;
 
     .photo__like {
       margin-top: auto;
@@ -108,6 +109,8 @@
 
       .photo__like {
         order: 2;
+        position: relative;
+        width: 30%;
       }
 
       .photo__author {

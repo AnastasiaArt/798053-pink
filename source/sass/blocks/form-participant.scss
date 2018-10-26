@@ -30,16 +30,18 @@
   text-align: left;
   color: $blue;
   padding: 15px 20px;
-  border: 3px solid #e5e5e5;
+  border: $table-border;
   width: 100%;
   box-sizing: border-box;
 
   &:hover {
     border-color: $blue;
+    outline: none;
   }
-
+  &:focus,
   &:active {
     border-color: $red;
+    outline: none;
   }
 }
 
