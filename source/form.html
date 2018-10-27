@@ -11,19 +11,16 @@
   <svg style="display:none">
     <symbol viewBox="0 0 8.673 18.944" id="icon-facebook">
       <g>
-        <!-- <circle class="ring" r="25" cx="25" cy="25" stroke="#e9ebec" stroke-width="2" fill="none"></circle> -->
         <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
       </g>
     </symbol>
     <symbol viewBox="0 0 14.64 13.96" id="icon-twitter">
       <g>
-        <!-- <circle class="ring" r="25" cx="25" cy="25" stroke="#e9ebec" stroke-width="2" fill="none"></circle> -->
         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
       </g>
     </symbol>
     <symbol viewBox="0 0 14.64 13.96" id="icon-youtube">
       <g>
-        <!-- <circle class="ring" r="25" cx="25" cy="25" stroke="#e9ebec" stroke-width="2" fill="none"></circle> -->
         <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
       </g>
     </symbol>
@@ -115,7 +112,7 @@
   <header class="main-header main-header--opened">
     <div class="main-header__wrapper">
       <div class="main-header__wrapper-logo">
-        <a class="main-header__logo" href="index.html">
+        <a class="main-header__logo" href="index.html" aria-label="PINK">
           <svg x="0px" y="0px" width="146.3px" height="40.375px">
             <use xlink:href="#logo-pink-header"></use>
           </svg>
@@ -138,152 +135,154 @@
     </div>
     <section class="contest">
       <h2 class="contest__title main-wrapper">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
-        <span class="contest__title--hidden">Пожалуйста, заполните форму ниже: </span></h2>
-        <form class="contest-form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="contest-form__name form-participant">
-            <legend class="visually-hidden">ФИО участника</legend>
-            <p class="form-participant__item">
-              <label class="form-participant__label" for="surname">Фамилия:</label>
-              <input class="form-participant__input" type="text" name="surname" id="surname" value="" placeholder="Укажите фамилию *" required autofocus>
-            </p>
-            <p class="form-participant__item">
-              <label class="form-participant__label" for="name">Имя:</label>
-              <input class="form-participant__input" type="text" name="name" id="name" value="" placeholder="Введите ваше имя *" required>
-            </p>
-            <p class="form-participant__item">
-              <label class="form-participant__label" for="patronymic">Отчество:</label>
-              <input class="form-participant__input" type="text" name="patronymic" id="patronymic" value="" placeholder="Ну и отчество тоже">
-            </p>
+        <span class="contest__title--hidden">Пожалуйста, заполните форму ниже: </span>
+      </h2>
+      <form class="contest-form" action="https://echo.htmlacademy.ru" onsubmit="return validate()" method="post">
+        <fieldset class="contest-form__name form-participant">
+          <legend class="visually-hidden">ФИО участника</legend>
+          <p class="form-participant__item">
+            <label class="form-participant__label" for="surname">Фамилия:</label>
+            <input class="form-participant__input" type="text" name="surname" id="surname" value="" placeholder="Укажите фамилию *" autofocus>
+          </p>
+          <p class="form-participant__item">
+            <label class="form-participant__label" for="name">Имя:</label>
+            <input class="form-participant__input" type="text" name="name" id="name" value="" placeholder="Введите ваше имя *">
+          </p>
+          <p class="form-participant__item">
+            <label class="form-participant__label" for="patronymic">Отчество:</label>
+            <input class="form-participant__input" type="text" name="patronymic" id="patronymic" value="" placeholder="Ну и отчество тоже">
+          </p>
+        </fieldset>
+        <div class="contest-form__wrapper contest-form__wrapper--progress">
+          <fieldset class="contest-form__progress form-option">
+            <legend class="form-option__title">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="form-option__list form-option__list--col">
+              <li class="form-option__item">
+                <input class="visually-hidden form-option__checkbox" type="checkbox" name="selfy" id="selfy" checked>
+                <label for="selfy">Сделал селфи с акулой</label>
+              </li>
+              <li class="form-option__item">
+                <input class="visually-hidden form-option__checkbox" type="checkbox" name="beach" id="beach" checked>
+                <label for="beach">Обгорел на пляже</label>
+              </li>
+              <li class="form-option__item">
+                <input class="visually-hidden form-option__checkbox" type="checkbox" name="chuck-noris" id="chuck-noris">
+                <label for="chuck-noris">Увидел Чака Норриса</label>
+              </li>
+              <li class="form-option__item">
+                <input class="visually-hidden form-option__checkbox" type="checkbox" name="souvenir" id="souvenir" >
+                <label for="souvenir">Накупил сувениров</label>
+              </li>
+              <li class="form-option__item">
+                <input class="visually-hidden form-option__checkbox" type="checkbox" name="tower" id="tower" checked>
+                <label for="tower">Удержал башню</label>
+              </li>
+              <li class="form-option__item">
+                <input class="visually-hidden form-option__checkbox" type="checkbox" name="crush" id="crush" >
+                <label for="crush">Разгромил отель</label>
+              </li>
+            </ul>
           </fieldset>
-          <div class="contest-form__wrapper contest-form__wrapper--progress">
-            <fieldset class="contest-form__progress form-option">
-              <legend class="form-option__title">Ваши безбашенные достижения в путешествии</legend>
-              <ul class="form-option__list form-option__list--col">
-                <li class="form-option__item">
-                  <input class="visually-hidden form-option__checkbox" type="checkbox" name="selfy" id="selfy" checked>
-                  <label for="selfy">Сделал селфи с акулой</label>
-                </li>
-                <li class="form-option__item">
-                  <input class="visually-hidden form-option__checkbox" type="checkbox" name="beach" id="beach" checked>
-                  <label for="beach">Обгорел на пляже</label>
-                </li>
-                <li class="form-option__item">
-                  <input class="visually-hidden form-option__checkbox" type="checkbox" name="chuck-noris" id="chuck-noris">
-                  <label for="chuck-noris">Увидел Чака Норриса</label>
-                </li>
-                <li class="form-option__item">
-                  <input class="visually-hidden form-option__checkbox" type="checkbox" name="souvenir" id="souvenir" >
-                  <label for="souvenir">Накупил сувениров</label>
-                </li>
-                <li class="form-option__item">
-                  <input class="visually-hidden form-option__checkbox" type="checkbox" name="tower" id="tower" checked>
-                  <label for="tower">Удержал башню</label>
-                </li>
-                <li class="form-option__item">
-                  <input class="visually-hidden form-option__checkbox" type="checkbox" name="crush" id="crush" >
-                  <label for="crush">Разгромил отель</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-          <fieldset class="contest-form__contact form-participant">
-            <legend class="form-participant__title">Контактная информация</legend>
-            <div class="contest-form__contact-wrapper">
-              <p class="form-participant__item form-participant__item--col">
-                <label class="form-participant__label" for="phone">Номер телефона</label>
-                <input class="form-participant__input form-participant__input--phone" type="text" name="phone" id="phone" value="" placeholder="Номер, пожалуйста">
-                <span class="form-participant__image">
-                  <svg width="20" height="20" title="Телефон"><use xlink:href="#icon-phone"></use></svg>
-                </span>
-              </p>
-              <p class="form-participant__item form-participant__item--col">
-                <label class="form-participant__label" for="mail">Адрес почты</label>
-                <input class="form-participant__input form-participant__input--mail" type="text" name="mail" id="mail" value="" placeholder="Введите почту*" required>
-                <span class="form-participant__image">
-                  <svg width="20" height="15" title="Почта"><use xlink:href="#icon-mail"></use></svg>
-                </span>
-              </p>
-            </div>
-          </fieldset>
-          <div class="contest-form__wrapper contest-form__wrapper--os">
-            <fieldset class="contest-form__os form-option">
-              <legend class="form-option__title">С каким приложением путешествовали?</legend>
-              <ul class="form-option__list">
-                <li class="form-option__item">
-                  <input class="visually-hidden form-option__radio" type="radio" name="os" value="ios" id="ios" checked>
-                  <label for="ios">Pink для iOS</label>
-                </li>
-                <li class="form-option__item">
-                  <input class="visually-hidden form-option__radio" type="radio" name="os" value="android" id="android">
-                  <label for="android">Pink на Android</label>
-                </li>
-                <li class="form-option__item">
-                  <input class="visually-hidden form-option__radio" type="radio" name="os" value="windows" id="windows">
-                  <label for="windows">Windows Phone</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-          <fieldset class="contest-form__text form-participant">
-            <legend class="form-participant__title">Опишите свои эмоции</legend>
-            <p class="form-participant__item form-participant__item--col form-textarea">
-              <label class="form-participant__label form-participant__label--hidden" for="emotion">Опишите свои эмоции</label>
-              <textarea name="think" class="form-participant__input form-textarea__text" id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-            </p>
-          </fieldset>
-          <button type="submit" class="contest-form__button button">Отправить форму</button>
-          <small class="contest-form__note">
-            <sup>*</sup> — Обязательные <span>для заполнения</span> поля
-          </small>
-        </form>
-      </section>
-    </main>
-    <footer class="main-footer main-footer--hidden">
-      <div class="main-wrapper main-footer__wrapper">
-        <a class="main-footer__logo logo-pink" href="#">
-          <svg width="147" height="40" title="PINK"><use xlink:href="#logo-pink-footer"></use></svg>
-        </a>
-        <div class="main-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--twitter" href="https://twitter.com">
-                <svg width="17.5px" height="14.663px"><use xlink:href="#icon-twitter"></use></svg>
-                <span class="visually-hidden">Twitter</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com">
-                <svg width="8.673px" height="18.944px"><use xlink:href="#icon-facebook"></use></svg>
-                <span class="visually-hidden">Facebook</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com">
-                <svg width="14.64px" height="13.96px"><use xlink:href="#icon-youtube"></use></svg>
-                <span class="visually-hidden">Youtube</span>
-              </a>
-            </li>
-          </ul>
         </div>
-        <div class="main-footer__copyright copyright">
-          <span class="copyright__text">Разработано:</span>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg width="27" height="34"><use xlink:href="#icon-academy"></use></svg>
-            <span class="visually-hidden">HTML Academy</span>
-          </a>
+        <fieldset class="contest-form__contact form-participant">
+          <legend class="form-participant__title">Контактная информация</legend>
+          <div class="contest-form__contact-wrapper">
+            <p class="form-participant__item form-participant__item--col">
+              <label class="form-participant__label" for="phone">Номер телефона</label>
+              <input class="form-participant__input form-participant__input--phone" type="text" name="phone" id="phone" value="" placeholder="Номер, пожалуйста">
+              <span class="form-participant__image">
+                <svg width="20" height="20"><use xlink:href="#icon-phone"></use></svg>
+              </span>
+            </p>
+            <p class="form-participant__item form-participant__item--col">
+              <label class="form-participant__label" for="mail">Адрес почты</label>
+              <input class="form-participant__input form-participant__input--mail" type="text" name="mail" id="mail" value="" placeholder="Введите почту*">
+              <span class="form-participant__image">
+                <svg width="20" height="15"><use xlink:href="#icon-mail"></use></svg>
+              </span>
+            </p>
+          </div>
+        </fieldset>
+        <div class="contest-form__wrapper contest-form__wrapper--os">
+          <fieldset class="contest-form__os form-option">
+            <legend class="form-option__title">С каким приложением путешествовали?</legend>
+            <ul class="form-option__list">
+              <li class="form-option__item">
+                <input class="visually-hidden form-option__radio" type="radio" name="os" value="ios" id="ios" checked>
+                <label for="ios">Pink для iOS</label>
+              </li>
+              <li class="form-option__item">
+                <input class="visually-hidden form-option__radio" type="radio" name="os" value="android" id="android">
+                <label for="android">Pink на Android</label>
+              </li>
+              <li class="form-option__item">
+                <input class="visually-hidden form-option__radio" type="radio" name="os" value="windows" id="windows">
+                <label for="windows">Windows Phone</label>
+              </li>
+            </ul>
+          </fieldset>
         </div>
+        <fieldset class="contest-form__text form-participant">
+          <legend class="form-participant__title">Опишите свои эмоции</legend>
+          <p class="form-participant__item form-participant__item--col form-textarea">
+            <label class="form-participant__label form-participant__label--hidden" for="emotion">Опишите свои эмоции</label>
+            <textarea name="think" class="form-participant__input form-textarea__text" id="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </p>
+        </fieldset>
+        <button type="submit" class="contest-form__button button js-submit">Отправить форму</button>
+        <small class="contest-form__note">
+          <sup>*</sup> — Обязательные <span>для заполнения</span> поля
+        </small>
+      </form>
+    </section>
+  </main>
+  <footer class="main-footer main-footer--hidden">
+    <div class="main-wrapper main-footer__wrapper">
+      <a class="main-footer__logo logo-pink" href="index.html" aria-label="PINK">
+        <svg width="147" height="40"><use xlink:href="#logo-pink-footer"></use></svg>
+      </a>
+      <div class="main-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://twitter.com">
+              <svg width="17.5px" height="14.663px"><use xlink:href="#icon-twitter"></use></svg>
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com">
+              <svg width="8.673px" height="18.944px"><use xlink:href="#icon-facebook"></use></svg>
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com">
+              <svg width="14.64px" height="13.96px"><use xlink:href="#icon-youtube"></use></svg>
+              <span class="visually-hidden">Youtube</span>
+            </a>
+          </li>
+        </ul>
       </div>
-    </footer>
-    <section class="modal modal--error">
-      <h3 class="modal__title">Что-то пошло не так!</h3>
-      <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button type="button" class="modal__button button">ОК</button>
-    </section>
-    <section class="modal modal--done">
-      <h3 class="modal__title">Ваша заявка отправлена</h3>
-      <p class="modal__text">Спасибо за ваше участие, ваша заявка <br> уже поступила к нам. В ближайшее<br> время мы рассмотрим ее и<br> оповестим вас.</p>
-      <button type="button" class="modal__button modal__button--done  button">Закрыть окно</button>
-    </section>
-    <script src="js/navigation.js"></script>
-  </body>
-  </html>
+      <div class="main-footer__copyright copyright">
+        <span class="copyright__text">Разработано:</span>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg width="27" height="34"><use xlink:href="#icon-academy"></use></svg>
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <section class="modal modal--error">
+    <h3 class="modal__title">Что-то пошло не так!</h3>
+    <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button type="button" class="modal__button button">ОК</button>
+  </section>
+  <section class="modal modal--done">
+    <h3 class="modal__title">Ваша заявка отправлена</h3>
+    <p class="modal__text">Спасибо за ваше участие, ваша заявка <br> уже поступила к нам. В ближайшее<br> время мы рассмотрим ее и<br> оповестим вас.</p>
+    <button type="button" class="modal__button modal__button--done  button">Закрыть окно</button>
+  </section>
+  <script src="js/navigation.js"></script>
+  <script src="js/form-submit.js"></script>
+</body>
+</html>
