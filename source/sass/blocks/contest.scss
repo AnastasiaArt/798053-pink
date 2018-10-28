@@ -3,7 +3,6 @@
   color: $blue;
   padding-top: 45px;
   width: auto;
-  margin-bottom: 15px;
 }
 
 .contest__title {
@@ -22,13 +21,14 @@
 @include respond-to(medium) {
   .contest {
     padding-top: 95px;
+    margin-bottom: 48px;
   }
 
   .contest__title {
     @include font-style(18px, 30px, normal);
 
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
     margin-bottom: 67px;
 
     &--hidden {
@@ -38,6 +38,10 @@
 }
 
 @include respond-to(large) {
+  .contest {
+    margin-bottom: 0;
+  }
+
   .contest__title {
     &--hidden {
       display: inline-block;

@@ -10,6 +10,7 @@
   color: $blue;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 320px;
+  box-sizing: border-box;
 
   &--error {
     display: none;
@@ -26,33 +27,100 @@
   color: #000000;
   font-weight: bold;
   padding: $padding-mobile;
-  padding-top: 50px;
-  margin-bottom: 20px;
+  padding-top: 40px;
+  margin-bottom: 30px;
 }
 
 .modal__text {
   @include indent;
 
-  margin-bottom: 35px;
+  margin-bottom: 36px;
   padding: $padding-mobile;
+
+  &--error {
+    margin-bottom: 0;
+  }
 }
 
 .modal__button {
   margin: $center;
-  margin-bottom: 50px;
   width: 280px;
+}
+
+.modal__bg {
+  background-color: $gray;
+  width: 100%;
+  padding-top: 50px;
+  box-sizing: border-box;
+  padding-bottom: 55px;
+
+  &--error {
+    background-color: transparent;
+  }
 }
 
 @include respond-to(medium) {
   .modal {
     width: 70%;
-    min-height: 430px;
+  }
+
+  .modal__title {
+    @include font-style(30px, 40px, bold);
+
+    width: 47.8%;
+    margin: $center;
+    margin-bottom: 20px;
+  }
+
+  .modal__text {
+    width: 65%;
+    margin: $center;
+    font-size: 18px;
+    margin-bottom: 36px;
+
+    &--error {
+      margin-bottom: 0;
+    }
+  }
+
+  .modal__button {
+    @include font-style(18px, 24px, bold);
+
+    margin: $center;
+    width: 295px;
   }
 }
 
 @include respond-to(large) {
   .modal {
     width: 65%;
-    min-height: 380px;
+  }
+
+  .modal__title {
+    width: 60%;
+    margin: $center;
+    margin-bottom: 20px;
+  }
+
+  .modal__text {
+    width: 60%;
+    margin: $center;
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  .modal__button {
+    @include font-style(18px, 30px, bold);
+
+    margin: $center;
+    width: 295px;
+  }
+
+  .modal__bg--error {
+    background-color: $gray;
+  }
+
+  .modal__text--error {
+    margin-bottom: 25px;
   }
 }

@@ -1,6 +1,6 @@
 .map {
   width: 100%;
-  min-height: 230px;
+  min-height: 198px;
   overflow: hidden;
   margin-top: -10.5%;
   position: relative;
@@ -12,8 +12,8 @@
     width: 36px;
     height: 36px;
     z-index: 5;
-    top: 50%;
-    transform: translate(-50%, 50%);
+    top: 46%;
+    transform: translateX(-50%);
   }
 }
 
@@ -43,11 +43,19 @@
   .map {
     min-height: 375px;
     margin-top: -10.8%;
+
+    &::before {
+      top: 52%;
+    }
   }
 }
 
 @include respond-to(large) {
   .map {
     min-height: 520px;
+
+    &::before {
+      top: 54%;
+    }
   }
 }

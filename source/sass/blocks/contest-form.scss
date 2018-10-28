@@ -21,11 +21,16 @@
 
 .contest-form__name,
 .contest-form__progress,
-.contest-form__os,
 .contest-form__contact,
 .contest-form__text {
   width: 87.5%;
   margin: $center;
+}
+
+.contest-form__os {
+  width: 87.5%;
+  margin: $center;
+  padding-bottom: 10px;
 }
 
 .contest-form__contact {
@@ -35,7 +40,7 @@
 .contest-form__text {
   padding-top: 30px;
   padding-bottom: 0;
-  margin-bottom: 19px;
+  margin-bottom: 21px;
 }
 
 .contest-form__button {
@@ -43,15 +48,15 @@
   margin: $center;
   padding-top: 22px;
   padding-bottom: 23px;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .contest-form__os .form-option__title {
-  padding-top: 35px;
+  padding-top: 39px;
 }
 
 .contest-form__os .form-option__item {
-  margin-bottom: 37px;
+  margin-bottom: 36px;
 }
 
 @include respond-to(medium) {
@@ -77,19 +82,25 @@
 
   .contest-form__progress,
   .contest-form__os,
-  .contest-form__contact,
-  .contest-form__text {
+  .contest-form__contact {
     padding: 0;
-    margin-bottom: 55px;
+    margin-bottom: 65px;
     width: 100%;
   }
 
+  .contest-form__progress .form-option__item:last-child {
+    margin-bottom: 50px;
+  }
+
   .contest-form__text {
+    width: 100%;
+    padding: 0;
     border: $table-border;
     order: 5;
-    margin-bottom: 69px;
+    margin-bottom: 60px;
     padding-left: 60px;
     padding-right: 60px;
+    padding-top: 47px;
 
     & .form-participant__title {
       margin-bottom: 29px;
@@ -100,12 +111,16 @@
     padding: 0;
     width: 100%;
     order: 1;
+    margin-bottom: 5px;
   }
 
   .contest-form__contact {
     border: $table-border;
     order: 3;
     margin-top: 0;
+    margin-bottom: 48px;
+    padding-top: 50px;
+
 
     & label {
       padding-left: 22px;
@@ -119,13 +134,14 @@
   .contest-form__note {
     text-align: right;
     order: 7;
+    padding: 17px 0;
   }
 
   .contest-form__button {
     @include font-style(18px, 30px, bold);
 
-    padding-top: 11px;
-    padding-bottom: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
     width: 300px;
     margin: 0;
     order: 6;
@@ -154,20 +170,26 @@
     align-items: baseline;
   }
 
-  .contest-form__contact,
+  .contest-form__contact {
+    padding: 0 60px;
+    padding-top: 40px;
+  }
+
   .contest-form__progress {
     padding: 0 60px;
+    margin-bottom: 70px;
   }
 
   .contest-form__wrapper--os {
-    width: 45%;
+    width: 46%;
     margin: 0;
   }
 
   .contest-form__name {
-    width: 45%;
+    width: 46%;
     margin: 0;
     padding-top: 12px;
+    margin-bottom: 20px;
   }
 
   .contest-form__note {
@@ -180,9 +202,16 @@
 
   .contest-form__text {
     padding: 0 60px;
+    padding-top: 40px;
+    margin-bottom: 70px;
+
+    & .form-participant__item--col {
+      margin: 0;
+    }
   }
 
   .contest-form__os {
     padding-left: 10px;
+    margin-bottom: 53px;
   }
 }

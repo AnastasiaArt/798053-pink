@@ -12,11 +12,9 @@ function openNav() {
     nav.classList.remove('main-nav--closed');
     nav.classList.add('main-nav--opened');
     header.classList.add('main-header--opened');
-    button.blur();
   } else {
     nav.classList.add('main-nav--closed');
     nav.classList.remove('main-nav--opened');
     header.classList.remove('main-header--opened');
-    button.blur();
   }
 }

@@ -2,7 +2,7 @@
   @include font-style(24px, 30px, lighter);
 
   padding-bottom: 55px;
-  padding-top: 68px;
+  padding-top: 40px;
   min-height: 300px;
   background-image: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='595.28px' height='61.905px' viewBox='0 0 595.28 61.905'%3E%3Cpolygon fill='%23ffffff' points='297.64,61.905 0,0 595.28,0 '/%3E%3C/svg%3E");
   background-position: center bottom;
@@ -16,6 +16,7 @@
   @include font-style(24px, 30px, lighter);
 
   padding: 0;
+  margin-bottom: 29px;
 }
 
 .contacts__list {
@@ -47,7 +48,8 @@
 
   .contacts__title {
     @include font-style(40px, 50px, lighter);
-    padding-bottom: 40px;
+    padding-bottom: 42px;
+    margin-bottom: 0;
   }
 
   .contacts__list {
@@ -65,6 +67,7 @@
 @include respond-to(large) {
   .contacts {
     padding-top: 39px;
+    padding-bottom: 90px;
   }
 
   .contacts__type {
@@ -80,7 +83,6 @@
   .contacts__item {
     width: 33%;
     flex-grow: 1;
-    margin-bottom: 75px;
 
     &:nth-child(2) {
       order: 3;

@@ -16,6 +16,8 @@
   width: 87.5%;
   margin: $center;
   text-align: left;
+  margin-top: 5px;
+  padding-bottom: 12px;
 }
 
 .main-header--opened {
@@ -70,6 +72,8 @@
 
   .main-header__wrapper-logo {
     width: 93.9%;
+    padding-bottom: 0;
+    margin-top: 0;
   }
 
   .main-header__logo {
@@ -93,6 +97,7 @@
     width: 18%;
     margin: 0;
     margin-right: auto;
+    margin-left: 10px;
   }
 
   .main-header__logo-stars,
@@ -106,6 +111,7 @@
     background-color: transparent;
     width: 80%;
     margin: $center;
+    align-items: center;
   }
 
   .main-header__logo {

@@ -27,7 +27,7 @@
   @include list;
 
   text-align: center;
-  padding-bottom: 287px;
+  padding-bottom: 289px;
   padding-top: 59px;
   position: relative;
   margin: $center;
@@ -37,7 +37,7 @@
   &::after {
     @include pseudo;
 
-    bottom: -10%;
+    bottom: -5.5%;
     left: 50%;
     width: 157px;
     height: 320px;
@@ -74,9 +74,13 @@
 }
 
 .description__item {
-  margin-bottom: 29px;
+  margin-bottom: 28px;
   padding-left: 12px;
   padding-right: 12px;
+
+  & br {
+    display: none;
+  }
 }
 
 @include respond-to(medium) {
@@ -86,14 +90,14 @@
 
   .description__list {
     padding-left: 45%;
-    padding-top: 70px;
-    padding-bottom: 15px;
+    padding-top: 56px;
+    padding-bottom: 14px;
 
     &::after {
       left: 0;
       width: 268px;
       height: 547px;
-      bottom: -15%;
+      bottom: -13%;
       transform: translateX(0);
       background-image: url("../img/iphone-screen-3-tablet@1x.png");
       background-size: 100%;
@@ -125,6 +129,11 @@
   .description__text {
     text-align: left;
   }
+
+  .description__item {
+    padding-right: 15px;
+    margin-bottom: 30px;
+  }
 }
 
 @include respond-to(large) {
@@ -146,7 +155,7 @@
   .description__header {
     @include font-style(50px, 60px, lighter);
 
-    margin-bottom: 75px;
+    margin-bottom: 78px;
   }
 
   .description__slogan {
@@ -176,6 +185,10 @@
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/iphone-screen-2-desktop@2x.png");
         background-size: 91%;
+      }
+
+      & br {
+        display: block;
       }
     }
 

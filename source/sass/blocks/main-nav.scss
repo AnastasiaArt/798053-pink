@@ -3,15 +3,16 @@
 
   color: $white;
   width: 100%;
+  padding-top: 5px;
 }
 
 .main-nav__button {
   width: 50px;
-  height: 24px;
+  height: 26px;
   padding: 0;
   position: absolute;
   top: 20px;
-  right: 6.3%;
+  right: 6.25%;
   background-color: transparent;
   border: none;
   outline: none;
@@ -43,9 +44,9 @@
   &::after {
     @include pseudo;
 
-    top: 9px;
-    right: 0;
-    width: 24px;
+    top: 10px;
+    right: -4px;
+    width: 30px;
     height: 4px;
     background-color: #ffffff;
   }
@@ -120,7 +121,7 @@
   border-bottom: 1px solid $black;
 
   &--current {
-    border: none;
+    border-color: $blue;
   }
 }
 
@@ -132,6 +133,10 @@
 }
 
 @include respond-to(medium) {
+  .main-nav {
+    padding-top: 7px;
+  }
+
   .main-nav__button {
     right: 3.1%;
     top: 44px;
@@ -141,6 +146,7 @@
 @include respond-to(large) {
   .main-nav {
     width: 67.8%;
+    padding-top: 0;
   }
 
   .main-nav__list {
@@ -165,9 +171,11 @@
   .main-nav__link {
     @include font-style(18px, 18px, normal);
 
-    padding: 40px 10px;
+    padding: 0;
     text-transform: none;
     border: none;
+    padding-left: 20px;
+    padding-right: 10px;
 
     &--current {
       text-decoration: underline;

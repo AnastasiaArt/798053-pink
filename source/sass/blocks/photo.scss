@@ -3,10 +3,13 @@
 
   color: $blue;
   padding: 0 15px;
-  padding-bottom: 18px;
+  padding-bottom: 19px;
+  min-height: 121px;
+  box-sizing: border-box;
 }
 
 .photo__image {
+  display: block;
   width: 100%;
   height: 180px;
   overflow: hidden;
@@ -18,7 +21,7 @@
     color: $white;
     text-transform: uppercase;
     width: 100%;
-    height: 140px;
+    height: 137px;
 
     &::before {
       @include pseudo($content: "Панорама дня");
@@ -42,12 +45,13 @@
   background-color: $gray;
   box-sizing: border-box;
   margin: $center;
+  padding-bottom: 20px;
 }
 
 .photo__author {
   @include indent;
 
-  padding-top: 5px;
+  padding-top: 13px;
   text-align: left;
 }
 
@@ -82,20 +86,24 @@
     height: 300px;
 
     &--panorama {
-      height: 510px;
+      height: 509px;
     }
 
     &::before {
       right: 3%;
+      top: 58px;
     }
   }
 
   .photo__wrapper-text {
     padding-left: 25px;
     padding-right: 30px;
+    padding-top: 7px;
     flex-direction: column;
     display: flex;
     flex-grow: 1;
+    padding-bottom: 22px;
+    min-height: 155px;
 
     .photo__like {
       margin-top: auto;
@@ -106,11 +114,13 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      padding-bottom: 0;
+      min-height: 121px;
 
       .photo__like {
         order: 2;
         position: relative;
-        width: 30%;
+        width: 21%;
       }
 
       .photo__author {
@@ -132,11 +142,29 @@
     height: 400px;
 
     &--panorama {
-      height: 510px;
+      height: 506px;
     }
 
     &::before {
-      right: 10%;
+      right: 10.9%;
+      top: 55px;
+    }
+  }
+
+  .photo__wrapper-text--panorama {
+    width: 78.3%;
+    min-height: 97px;
+
+
+    & .photo__text {
+      margin-bottom: 0;
+      padding-bottom: 22px;
+    }
+
+    & .photo__like {
+      margin-top: 0;
+      padding-top: 17px;
+      width: 14%;
     }
   }
 }

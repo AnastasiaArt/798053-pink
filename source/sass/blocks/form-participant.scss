@@ -3,7 +3,8 @@
 
   border: none;
   box-sizing: border-box;
-  padding-bottom: 28px;
+  padding-bottom: 24px;
+  position: relative;
 }
 
 .form-participant__item {
@@ -11,7 +12,7 @@
   @include font-style(14px, 30px, normal);
 
   text-align: left;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -21,7 +22,7 @@
   text-transform: uppercase;
   padding: 0 20px;
   display: inline-block;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .form-participant__input {
@@ -30,6 +31,7 @@
   text-align: left;
   color: $blue;
   padding: 15px 20px;
+  padding-bottom: 14px;
   border: $table-border;
   width: 100%;
   box-sizing: border-box;
@@ -46,6 +48,11 @@
   }
 }
 
+.form-participant__input--mail,
+.form-participant__input--phone {
+  height: 61px;
+}
+
 .form-participant__title {
   display: none;
 }
@@ -58,18 +65,18 @@
   .form-participant__item {
     display: flex;
     align-items: baseline;
-    margin-bottom: 50px;
+    margin-bottom: 51px;
     position: relative;
 
     &--col {
       width: 80.85%;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 30px;
+      margin-bottom: 29px;
       flex-direction: column-reverse;
 
       & .form-participant__label {
-        padding-top: 7px;
+        padding-top: 11px;
         margin-bottom: 0;
       }
     }
@@ -121,15 +128,31 @@
     display: inline-block;
     color: $red;
     text-transform: uppercase;
-    padding: 0 15px;
     margin-bottom: 35px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 50%;
+    background-color: $white;
   }
 }
 
 @include respond-to(large) {
+  .form-participant__title {
+    margin-bottom: 28px;
+    width: 30%;
+  }
+
+  .form-participant__item {
+    margin-bottom: 53px;
+  }
+
   .form-participant__item--col {
-    width: 40%;
+    width: 46%;
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 }

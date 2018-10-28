@@ -1,6 +1,6 @@
 .main-footer {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   width: 100%;
 }
 
@@ -38,7 +38,17 @@
   fill: $red;
 }
 
+.main-footer__social {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
 @include respond-to(medium) {
+  .main-footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .main-footer--hidden {
     display: block;
   }
@@ -46,6 +56,8 @@
   .main-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 18px;
+    align-items: center;
   }
 
   .main-footer__logo {
@@ -57,6 +69,8 @@
   .main-footer__social {
     width: 33%;
     flex-grow: 1;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .main-footer__copyright {
@@ -68,7 +82,7 @@
 
 @include respond-to(large) {
   .main-footer {
-    padding-top: 60px;
+    padding-top: 50px;
   }
 
   .main-footer__wrapper {
