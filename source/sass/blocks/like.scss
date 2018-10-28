@@ -5,8 +5,8 @@
   text-align: left;
   color: $red;
   padding-left: 35px;
-  position: relative;
   box-sizing: border-box;
+  position: relative;
 }
 
 .like__image {
@@ -25,7 +25,6 @@
 @include respond-to(medium) {
   .like {
     padding-left: 0;
-    padding-right: 35px;
   }
 
   .like__image {

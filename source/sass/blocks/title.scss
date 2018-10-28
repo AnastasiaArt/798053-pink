@@ -1,13 +1,13 @@
 .title {
   @include bgImage;
-  min-height: 466px;
+  min-height: 467px;
   color: $white;
 
   &--bg {
-    min-height: 241px;
+    min-height: 242px;
     background-image: url("../img/bg-back-mobile@1x.jpg");
-    background-position: center 20%;
-    background-size: cover;
+    background-position: center 0;
+    background-size: 220%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-mobile@2x.jpg");
@@ -34,7 +34,8 @@
   .title--bg {
     min-height: 440px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: center;
+    background-position: center top;
+    background-size: 180%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
@@ -50,6 +51,10 @@
 }
 
 @include respond-to(large) {
+  .title {
+    min-height: 202px;
+  }
+
   .title--bg {
     min-height: 395px;
     background-image: url("../img/bg-back-desktop@1x.jpg");

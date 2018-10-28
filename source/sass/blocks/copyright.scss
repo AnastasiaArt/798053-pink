@@ -14,6 +14,7 @@
 
 .copyright__link svg {
   fill: $red;
+  object-fit: cover;
 
   &:hover {
     fill: $blue;
@@ -21,5 +22,17 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.copyright__text {
+  margin-right: 10px;
+}
+
+@include respond-to(medium) {
+  .copyright__link {
+    padding-top: 12px;
+    box-sizing: border-box;
+    height: auto;
   }
 }

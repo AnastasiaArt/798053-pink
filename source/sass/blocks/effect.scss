@@ -1,7 +1,7 @@
 .effect {
   @include font-style(14px, 24px, normal);
 
-  padding-top: 59px;
+  padding-top: 57px;
   text-align: left;
   display: none;
   min-height: 300px;
@@ -82,9 +82,9 @@
 
 @include respond-to(large) {
   .effect {
-    min-height: 418px;
+    min-height: 416px;
     background-color: $gray;
-    padding-top: 30px;
+    padding-top: 33px;
     padding-bottom: 0;
   }
 
@@ -94,11 +94,12 @@
     height: 345px;
 
     &::after {
-      @include font-style(120px, 186.84px, bold);
+      @include font-style(120px, 200px, bold);
 
-      width: 213px;
-      height: 213px;
-      transform: translate(-50%, -41%);
+      width: 217px;
+      height: 217px;
+      transform: translate(-50%, -40%);
+      border: 19px solid $red;
     }
 
     & svg {
@@ -108,7 +109,7 @@
   }
 
   .effect__title {
-    padding-top: 100px;
+    padding-top: 94px;
     width: 60.4%;
     margin-bottom: 23px;
   }

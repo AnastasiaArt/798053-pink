@@ -4,7 +4,7 @@
   width: 100%;
   background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
   background-position: 0 40.5%, 50% 0;
-  background-size: 80%, cover;
+  background-size: 80%, 220%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
@@ -13,7 +13,7 @@
 
 @include respond-to(medium) {
   .title-wrapper {
-    min-height: 728px;
+    min-height: 729px;
     background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
     background-position: 52% 100%, 50% 0;
     background-size: 106%, cover;
@@ -26,7 +26,7 @@
 
 @include respond-to(large) {
   .title-wrapper {
-    min-height: 853px;
+    min-height: 848px;
     background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

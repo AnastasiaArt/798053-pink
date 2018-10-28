@@ -1,7 +1,7 @@
 .gallery {
   background-color: $white;
   color: $blue;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .gallery__title {
@@ -32,24 +32,28 @@
 .gallery__item {
   width: 87.5%;
   margin: $center;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 }
 
 .gallery__item--panorama {
   @include indent;
 
   width: 100%;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
 }
 
 @include respond-to(medium) {
+  .gallery {
+    margin-bottom: 45px;
+  }
+
   .gallery__title {
     @include font-style(18px, 30px, normal);
 
     width: 93.9%;
     margin-top: 90px;
-    margin-bottom: 70px;
-    padding: 0 85px;
+    margin-bottom: 78px;
+    padding: 0 50px;
   }
 
   .gallery__list {
@@ -62,7 +66,7 @@
   }
 
   .gallery__item {
-    width: 45%;
+    width: 48.5%;
     margin: 0;
     margin-bottom: 20px;
 

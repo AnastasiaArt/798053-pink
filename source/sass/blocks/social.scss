@@ -6,11 +6,12 @@
   @include list;
 
   display: flex;
+  justify-content: center;
 }
 
 .social__item:nth-child(2) {
-  margin-left: 26px;
-  margin-right: 26px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .social__link {
@@ -36,15 +37,3 @@
 .social__link svg {
   fill: $red;
 }
-
-// @include respond-to(medium) {
-//   .social__list {
-//     width: 86%;
-//   }
-// }
-//
-// @include respond-to(large) {
-//   .social__list {
-//     width: 56.5%;
-//   }
-// }

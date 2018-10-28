@@ -45,12 +45,11 @@
   @include color-btn($gray-btn, $bg-color: $white);
 
   &:hover {
-    border-color: rgba($blue, 0.3);
-    background-color: $white;
-    color: rgba($blue, 0.3);
+    @include color-btn(rgba($blue, 0.3), $bg-color: $white);
   }
 
   &:active {
+    border-color: transparent;
     background-color: rgba($blue, 0.3);
     color: rgba($white, 0.3);
   }

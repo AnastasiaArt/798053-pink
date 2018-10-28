@@ -1,6 +1,6 @@
 .reviews {
   margin-top: 42px;
-  margin-bottom: 23px;
+  margin-bottom: 34px;
 }
 
 .reviews__item--hidden {
@@ -23,7 +23,8 @@
   }
 
   .reviews__toggles {
-    margin-top: 33px;
+    margin-top: 25px;
+    margin-bottom: 13px;
   }
 }
 
@@ -31,12 +32,13 @@
   .reviews {
     margin-top: 0;
     position: relative;
+    padding-bottom: 35px;
   }
 
   .reviews__item {
     margin-left: 10px;
     margin-right: 10px;
-    padding-top: 174px;
+    padding-top: 172px;
     padding-right: 130px;
     padding-left: 130px;
     position: relative;
@@ -44,8 +46,8 @@
 
   .reviews__arrow {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     padding: 10px;
     border: none;
     background-color: $white;
@@ -59,7 +61,7 @@
       border-left: 2px solid #bec2c7;
       transform: rotate(-45deg);
       top: 215px;
-      left: 0;
+      left: 15px;
 
       &:hover {
         border-color: #7e868f;
@@ -76,10 +78,8 @@
       border-bottom: 2px solid #bec2c7;
       border-right: 2px solid #bec2c7;
       transform: rotate(-45deg);
-      width: 24px;
-      height: 24px;
       top: 215px;
-      right: 0;
+      right: 15px;
 
       &:hover {
         border-color: #7e868f;
