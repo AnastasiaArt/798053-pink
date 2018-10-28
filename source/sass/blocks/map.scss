@@ -53,5 +53,9 @@
 @include respond-to(large) {
   .map {
     min-height: 520px;
+
+    &::before {
+      top: 54%;
+    }
   }
 }

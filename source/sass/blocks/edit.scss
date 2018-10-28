@@ -88,7 +88,7 @@
     width: 90%;
     margin-left: auto;
     margin-right: 0;
-    margin-bottom: 42px;
+    margin-bottom: 46px;
   }
 
   .edit__item {
@@ -112,9 +112,19 @@
     margin: 0;
   }
 
-  .edit__range:nth-child(2) + label::after {
+  .edit__item:nth-child(1) .edit__range + label::after {
     top: 14px;
-    left: 10%;
+    left: 25%;
+  }
+
+  .edit__item:nth-child(2) .edit__range + label::after {
+    top: 14px;
+    left: 88%;
+  }
+
+  .edit__item:nth-child(3) .edit__range + label::after {
+    top: 14px;
+    left: 57%;
   }
 
   .edit__hidden {
@@ -131,8 +141,8 @@
   .edit__toggle svg {
     fill: $red;
     opacity: 1;
-    width: 30px;
-    height: 27px;
+    width: 24px;
+    height: 24px;
 
     &:hover {
       fill: $red;
@@ -144,16 +154,31 @@
       opacity: 1;
     }
   }
+
+  .edit__toggle--contrast {
+    width: 35px;
+    height: 35px;
+
+    & svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .edit__item:last-child {
+    padding-bottom: 13px;
+  }
 }
 
 @include respond-to(large) {
   .edit {
-    padding-right: 30px;
-    margin-left: 0
+    width: 86%;
+    margin-left: 0;
+    margin-bottom: 129px;
   }
 
   .edit label {
-    width: 61%;
+    width: 72%;
   }
 
   .edit__toggle {
@@ -164,7 +189,21 @@
   .edit__toggle svg {
     fill: $red;
     opacity: 1;
-    width: 50px;
-    height: 50px;
-}
+    width: 44px;
+    height: 44px;
+  }
+
+  .edit__toggle--contrast {
+    width: 35px;
+    height: 35px;
+
+    & svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .edit__item:last-child {
+    padding-bottom: 10px;
+  }
 }

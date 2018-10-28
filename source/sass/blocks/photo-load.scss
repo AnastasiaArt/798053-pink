@@ -94,6 +94,10 @@
 }
 
 @include respond-to(large) {
+  .photo-load {
+    margin-bottom: 29px;
+  }
+
   .photo-load__image {
     padding-left: 80px;
   }
@@ -108,11 +112,21 @@
   }
 
   .photo-load__button {
-    width: 186px;
+    width: 41%;
     display: inline-block;
+    margin: 0;
   }
 
   .photo-load__wrapper .main-wrapper {
     width: 78.3%;
+  }
+
+  .photo-load__filters {
+    text-align: justify;
+    padding-top: 54px;
+
+    & .photo-load__button:nth-child(3) {
+      margin-left: 8%;
+    }
   }
 }

@@ -30,9 +30,11 @@
   color: $blue;
   width: 100%;
   box-sizing: border-box;
+  padding-top: 4px;
+  padding-bottom: 4px;
 
   &:last-child {
-    margin-bottom: 33px;
+    margin-bottom: 46px;
   }
 
   & label {
@@ -69,8 +71,8 @@
 .form-option__radio + label::before {
   @include pseudo;
 
-  width: 37px;
-  height: 37px;
+  width: 35px;
+  height: 35px;
   left: 0;
   top: 0;
   border: $table-border;
@@ -81,8 +83,8 @@
 .form-option__radio:checked + label::after {
   @include pseudo;
 
-  left: 13px;
-  top: 13px;
+  left: 12px;
+  top: 11px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -113,11 +115,11 @@
     @include font-style(14px, 30px, normal);
 
     background-color: inherit;
-    padding: 0 15px;
+    padding: 0 30px;
   }
 
   .form-option__item label {
-    padding-right: 60px;
+    padding-left: 60px;
   }
 }
 
@@ -126,12 +128,37 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0;
+    justify-content: space-between;
 
     & .form-option__item {
-      width: 33%;
+      width: 33.3%;
       padding-right: 0;
-      justify-content: space-between;
-      box-sizing: border-box;
+
+      &:nth-child(1) {
+        order: 1;
+      }
+
+      &:nth-child(2) {
+        order: 4;
+      }
+
+      &:nth-child(3) {
+        order: 2;
+      }
+
+      &:nth-child(4) {
+        order: 5;
+      }
+
+      &:nth-child(5) {
+        order: 3;
+        width: 25%;
+      }
+
+      &:nth-child(6) {
+        order: 6;
+        width: 25%;
+      }
     }
   }
 }

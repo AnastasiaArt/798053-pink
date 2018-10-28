@@ -21,7 +21,7 @@
   height: 50px;
   border-radius: 50%;
   border: 2px solid rgba($blue, 0.1);
-  padding-top: 10px;
+  padding-top: 9px;
   box-sizing: border-box;
 
   &:hover {
@@ -36,4 +36,11 @@
 
 .social__link svg {
   fill: $red;
+}
+
+@include respond-to(large) {
+  .social__item:nth-child(2) {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
 }
