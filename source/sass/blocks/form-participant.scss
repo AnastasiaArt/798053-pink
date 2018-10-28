@@ -4,6 +4,7 @@
   border: none;
   box-sizing: border-box;
   padding-bottom: 24px;
+  position: relative;
 }
 
 .form-participant__item {
@@ -47,6 +48,11 @@
   }
 }
 
+.form-participant__input--mail,
+.form-participant__input--phone {
+  height: 61px;
+}
+
 .form-participant__title {
   display: none;
 }
@@ -70,7 +76,7 @@
       flex-direction: column-reverse;
 
       & .form-participant__label {
-        padding-top: 10px;
+        padding-top: 11px;
         margin-bottom: 0;
       }
     }
@@ -122,14 +128,22 @@
     display: inline-block;
     color: $red;
     text-transform: uppercase;
-    padding: 0 30px;
     margin-bottom: 35px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 50%;
+    background-color: $white;
   }
 }
 
 @include respond-to(large) {
   .form-participant__title {
     margin-bottom: 28px;
+    width: 30%;
   }
 
   .form-participant__item {

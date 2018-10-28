@@ -36,3 +36,9 @@
     height: auto;
   }
 }
+
+@include respond-to(large) {
+  .copyright__text {
+    font-size: 18px;
+  }
+}

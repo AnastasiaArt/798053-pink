@@ -112,6 +112,10 @@
     padding-top: 94px;
     width: 60.4%;
     margin-bottom: 23px;
+
+    & br {
+      display: none;
+    }
   }
 
   .effect__text {
