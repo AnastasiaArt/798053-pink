@@ -85,26 +85,36 @@
 @include respond-to(medium) {
   .edit {
     flex-direction: column;
-    width: 85%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 42px;
   }
 
   .edit__item {
     width: 100%;
     box-sizing: border-box;
     border-bottom: $table-border;
-    padding-bottom: 20px;
+    padding-bottom: 2px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   .edit label {
-    width: 76%;
+    width: 72%;
     position: relative;
-    left: 2px;
-    bottom: 10px;
+    right: 20px;
+    left: auto;
+    bottom: 14px;
     transform: translateX(0);
     margin: 0;
+  }
+
+  .edit__range:nth-child(2) + label::after {
+    top: 14px;
+    left: 10%;
   }
 
   .edit__hidden {
@@ -113,8 +123,9 @@
 
   .edit__toggle {
     outline: none;
-    width: 52px;
-    height: 52px;
+    width: 40px;
+    height: 51px;
+    padding: 0;
   }
 
   .edit__toggle svg {
@@ -137,10 +148,23 @@
 
 @include respond-to(large) {
   .edit {
-    padding-right: 60px;
+    padding-right: 30px;
+    margin-left: 0
   }
 
   .edit label {
     width: 61%;
   }
+
+  .edit__toggle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .edit__toggle svg {
+    fill: $red;
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+}
 }

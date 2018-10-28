@@ -142,11 +142,29 @@
     height: 400px;
 
     &--panorama {
-      height: 510px;
+      height: 506px;
     }
 
     &::before {
       right: 10%;
     }
+  }
+
+  .photo__wrapper-text--panorama {
+    width: 78.3%;
+    min-height: 97px;
+
+
+    & .photo__text {
+      margin-bottom: 0;
+      padding-bottom: 22px;
+    }
+
+    & .photo__like {
+      margin-top: 0;
+      padding-top: 17px;
+      width: 14%;
+    }
+
   }
 }

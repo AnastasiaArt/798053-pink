@@ -59,4 +59,12 @@
   .button {
     @include font-style(21px, 18px, bold);
   }
+
+  .button--rounded-red {
+    font-size: 18px;
+  }
+
+  .button--rounded-gray {
+    font-size: 18px;
+  }
 }
