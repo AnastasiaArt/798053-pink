@@ -1,0 +1,24 @@
+.logo-footer__glass-xl,
+.logo-footer__stars {
+  display: none;
+}
+
+.logo-footer__glass {
+  fill: $red;
+}
+
+
+@include respond-to(large) {
+  .logo-footer__glass-xl {
+    fill: $red;
+    display: inline-block;
+  }
+
+  .logo-footer__stars {
+    display: inline-block;
+  }
+
+  .logo-footer__glass {
+    display: none;
+  }
+}

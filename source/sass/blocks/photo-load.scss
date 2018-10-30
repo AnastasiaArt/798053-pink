@@ -10,6 +10,7 @@
   background-color: $white;
   padding: 0;
   margin-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .photo-load__wrapper {
@@ -53,7 +54,10 @@
 
   .photo-load__title {
     @include font-style(18px, 30px, normal);
+
     margin-bottom: 70px;
+    padding-left: 55px;
+    padding-right: 55px;
   }
 
   .photo-load__image {
@@ -112,7 +116,7 @@
   }
 
   .photo-load__button {
-    width: 41%;
+    width: 39%;
     display: inline-block;
     margin: 0;
   }

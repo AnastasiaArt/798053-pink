@@ -23,6 +23,7 @@
   padding: 0 20px;
   display: inline-block;
   margin-bottom: 4px;
+  margin-right: auto;
 }
 
 .form-participant__input {
@@ -30,11 +31,11 @@
 
   text-align: left;
   color: $blue;
-  padding: 15px 20px;
-  padding-bottom: 14px;
+  padding: 13px 20px;
   border: $table-border;
   width: 100%;
   box-sizing: border-box;
+  height: 63px;
 
   &:hover {
     border-color: $blue;
@@ -65,7 +66,7 @@
   .form-participant__item {
     display: flex;
     align-items: baseline;
-    margin-bottom: 51px;
+    margin-bottom: 54px;
     position: relative;
 
     &--col {
@@ -107,8 +108,8 @@
 
   .form-participant__image {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 57px;
+    height: 57px;
     background-color: $gray-table;
     position: absolute;
     right: 2px;

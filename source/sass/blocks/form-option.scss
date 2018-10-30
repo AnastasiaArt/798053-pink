@@ -3,19 +3,29 @@
 
   border: none;
   box-sizing: border-box;
+  position: relative;
 }
 
 .form-option__title {
   @include font-style(14px, 18px, normal);
-  @include indent;
 
+  display: inline-block;
   color: $red;
   text-transform: uppercase;
-  padding: 0 25px;
-  padding-top: 40px;
-  margin-bottom: 38px;
-  background-color: $gray;
-  box-sizing: border-box;
+  margin-bottom: 35px;
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 100%;
+
+  & span {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .form-option__list {
@@ -64,7 +74,6 @@
   height: 10px;
   border-bottom: 2px solid $red;
   border-left: 2px solid $red;
-
   transform: rotate(-45deg);
 }
 
@@ -115,7 +124,13 @@
     @include font-style(14px, 30px, normal);
 
     background-color: inherit;
-    padding: 0 30px;
+    width: 70%;
+    top: -5%;
+
+    & span {
+      background-color: $white;
+      padding: 0;
+    }
   }
 
   .form-option__item label {
@@ -124,6 +139,11 @@
 }
 
 @include respond-to(large) {
+  .form-option__title {
+    width: 50%;
+    top: -13%;
+  }
+
   .form-option__list--col {
     display: flex;
     flex-wrap: wrap;

@@ -3,8 +3,8 @@
 
   width: 100%;
   background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
-  background-position: 0 40.5%, 50% 0;
-  background-size: 80%, 220%;
+  background-position: 0 40%, 50% 0;
+  background-size: 80.5%, 220%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");

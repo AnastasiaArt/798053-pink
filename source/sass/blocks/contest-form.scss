@@ -20,17 +20,22 @@
 }
 
 .contest-form__name,
-.contest-form__progress,
 .contest-form__contact,
 .contest-form__text {
   width: 87.5%;
   margin: $center;
 }
 
+.contest-form__progress {
+  width: 87.5%;
+  margin: $center;
+  padding-top: 115px;
+}
+
 .contest-form__os {
   width: 87.5%;
   margin: $center;
-  padding-bottom: 10px;
+  padding-top: 110px;
 }
 
 .contest-form__contact {
@@ -52,11 +57,11 @@
 }
 
 .contest-form__os .form-option__title {
-  padding-top: 39px;
+  top: 7%;
 }
 
 .contest-form__os .form-option__item {
-  margin-bottom: 36px;
+  margin-bottom: 39px;
 }
 
 @include respond-to(medium) {
@@ -80,16 +85,19 @@
     }
   }
 
-  .contest-form__progress,
-  .contest-form__os,
-  .contest-form__contact {
+  .contest-form__progress .form-option__item:last-child {
+    margin-bottom: 52px;
+  }
+
+  .contest-form__os .form-option__item:last-child {
+    margin-bottom: 50px;
+  }
+
+  .contest-form__progress {
     padding: 0;
     margin-bottom: 65px;
     width: 100%;
-  }
-
-  .contest-form__progress .form-option__item:last-child {
-    margin-bottom: 50px;
+    padding-top: 55px;
   }
 
   .contest-form__text {
@@ -111,14 +119,16 @@
     padding: 0;
     width: 100%;
     order: 1;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   .contest-form__contact {
     border: $table-border;
     order: 3;
+    padding: 0;
+    width: 100%;
     margin-top: 0;
-    margin-bottom: 48px;
+    margin-bottom: 57px;
     padding-top: 50px;
 
 
@@ -148,10 +158,14 @@
   }
 
   .contest-form__os {
-    min-height: 310px;
+    padding: 0;
+    margin-bottom: 65px;
+    width: 100%;
+    padding-top: 50px;
 
     & .form-option__title {
-      padding-top: 0;
+      top: -10%;
+      width: 60%;
     }
   }
 }
@@ -172,12 +186,14 @@
 
   .contest-form__contact {
     padding: 0 60px;
-    padding-top: 40px;
+    padding-top: 45px;
+    margin-bottom: 65px;
   }
 
   .contest-form__progress {
     padding: 0 60px;
     margin-bottom: 70px;
+    padding-top: 50px;
   }
 
   .contest-form__wrapper--os {
@@ -189,7 +205,6 @@
     width: 46%;
     margin: 0;
     padding-top: 12px;
-    margin-bottom: 20px;
   }
 
   .contest-form__note {
@@ -212,6 +227,12 @@
 
   .contest-form__os {
     padding-left: 10px;
-    margin-bottom: 53px;
+    margin-bottom: 67px;
+    padding-top: 56px;
+
+    & .form-option__title {
+      top: -8%;
+      width: 85%;
+    }
   }
 }

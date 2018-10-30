@@ -43,8 +43,11 @@
   }
 
   .contest__title {
+    margin-bottom: 35px;
+
     &--hidden {
       display: inline-block;
+      padding: 0;
     }
   }
 }

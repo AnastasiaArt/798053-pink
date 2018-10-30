@@ -1,0 +1,28 @@
+.logo-header__stars {
+  display: none;
+}
+
+.logo-header__glass {
+  display: none;
+}
+
+.logo-header__glass-xl {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .logo-header__glass {
+    display: inline-block;
+  }
+}
+
+@include respond-to(large) {
+  .logo-header__stars,
+  .logo-header__glass-xl {
+    display: inline-block;
+  }
+
+  .logo-header__glass {
+    display: none;
+  }
+}

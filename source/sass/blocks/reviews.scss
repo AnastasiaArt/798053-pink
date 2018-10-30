@@ -20,6 +20,10 @@
   .reviews__item {
     display: flex;
     flex-direction: column-reverse;
+
+    &--hidden {
+      display: none;
+    }
   }
 
   .reviews__toggles {

@@ -11,14 +11,14 @@
     left: 50%;
     width: 36px;
     height: 36px;
-    z-index: 5;
+    z-index: 3;
     top: 46%;
     transform: translateX(-50%);
   }
 }
 
 .map__yandex {
-  z-index: 3;
+  z-index: 5;
   border: none;
   width: 100%;
   min-height: inherit;
