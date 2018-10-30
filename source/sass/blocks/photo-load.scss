@@ -1,11 +1,11 @@
 .photo-load {
-  @include font-style(14px, 30px, normal);
+  @include font-style(14px, 30px, 400);
 
   color: $blue;
 }
 
 .photo-load__title {
-  @include font-style(14px, 30px, normal);
+  @include font-style(14px, 30px, 400);
 
   background-color: $white;
   padding: 0;
@@ -53,7 +53,7 @@
   }
 
   .photo-load__title {
-    @include font-style(18px, 30px, normal);
+    @include font-style(18px, 30px, 400);
 
     margin-bottom: 70px;
     padding-left: 55px;

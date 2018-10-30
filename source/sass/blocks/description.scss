@@ -13,13 +13,13 @@
 }
 
 .description__header {
-  @include font-style(24px, 30px, lighter);
+  @include font-style(24px, 30px, 300);
 
   margin-bottom: 32px;
 }
 
 .description__slogan {
-  @include font-style(24px, 30px, lighter);
+  @include font-style(24px, 30px, 300);
   @include indent;
 }
 
@@ -55,7 +55,7 @@
 
 .description__title {
   @include indent;
-  @include font-style(18px, 30px, bold);
+  @include font-style(18px, 30px, 700);
 
   margin-top: 17px;
   margin-bottom: 9px;
@@ -63,7 +63,7 @@
 
 .description__text {
   @include indent;
-  @include font-style(14px, 24px, normal);
+  @include font-style(14px, 24px, 400);
 }
 
 .description__intro {
@@ -109,12 +109,12 @@
   }
 
   .description__header {
-    @include font-style(40px, 48px, lighter);
+    @include font-style(40px, 48px, 300);
     margin-bottom: 47px;
   }
 
   .description__slogan {
-    @include font-style(40px, 50px, lighter);
+    @include font-style(40px, 50px, 300);
   }
 
   .description__intro {
@@ -153,13 +153,13 @@
   }
 
   .description__header {
-    @include font-style(50px, 60px, lighter);
+    @include font-style(50px, 60px, 300);
 
     margin-bottom: 78px;
   }
 
   .description__slogan {
-    @include font-style(50px, 60px, lighter);
+    @include font-style(50px, 60px, 300);
   }
 
   .description__item {
@@ -203,13 +203,13 @@
   }
 
   .description__title {
-    @include font-style(30px, 30px, bold);
+    @include font-style(30px, 30px, 700);
 
     margin-top: 55px;
     margin-bottom: 25px;
   }
 
   .description__text {
-    @include font-style(18px, 30px, normal);
+    @include font-style(18px, 30px, 400);
   }
 }

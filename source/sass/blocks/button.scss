@@ -1,5 +1,5 @@
 .button {
-  @include font-style(18px, 18px, bold);
+  @include font-style(18px, 18px, 700);
 
   display: block;
   padding: 15px 20px;
@@ -57,7 +57,7 @@
 
 @include respond-to(medium) {
   .button {
-    @include font-style(21px, 18px, bold);
+    @include font-style(21px, 18px, 700);
   }
 
   .button--rounded-red {

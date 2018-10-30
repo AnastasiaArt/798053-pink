@@ -5,6 +5,7 @@
 
   &--bg {
     min-height: 242px;
+    background-color: $blue;
     background-image: url("../img/bg-back-mobile@1x.jpg");
     background-position: center 0;
     background-size: 220%;
@@ -16,7 +17,7 @@
 }
 
 .title__name {
-  @include font-style(24px, 30px, lighter);
+  @include font-style(24px, 30px, 300);
   @include indent;
 
   color: $white;
@@ -43,7 +44,7 @@
   }
 
   .title__name {
-    @include font-style(50px, 60px, lighter);
+    @include font-style(50px, 60px, 300);
 
     width: 93.9%;
     padding-top: 180px;

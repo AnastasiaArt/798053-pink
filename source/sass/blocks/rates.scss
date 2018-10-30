@@ -18,13 +18,12 @@
 }
 
 .rates__table {
-  @include font-style(14px, 30px, normal);
+  @include font-style(14px, 30px, 400);
 
   border-collapse: collapse;
   min-width: ($table-width-xs * ($table-col - 1));
   width: 300%;
   transform: translateX(-33.33%);
-  // border: $table-border;
   margin-bottom: 25px;
 }
 
@@ -33,7 +32,7 @@ table tr > *:nth-child(1) {
 }
 
 .rates__name {
-  @include font-style(18px, 30px, bold);
+  @include font-style(18px, 30px, 700);
 
   text-transform: uppercase;
   background-color: $blue;
@@ -59,7 +58,7 @@ table tr > *:nth-child(1) {
 
     &::after {
       @include pseudo($content: "ХИТ");
-      @include font-style(14px, 30px, lighter);
+      @include font-style(14px, 30px, 300);
 
       transform: rotate(-45deg);
       top: 10px;
@@ -98,7 +97,7 @@ table tr > *:nth-child(1) {
 }
 
 .rates__price {
-  @include font-style(24px, 30px, lighter);
+  @include font-style(24px, 30px, 300);
 }
 
 .rates__toggles {
@@ -157,11 +156,11 @@ table tr > *:nth-child(1) {
   }
 
   .rates__price {
-    @include font-style(18px, 30px, lighter);
+    @include font-style(18px, 30px, 300);
   }
 
   .rates__name {
-    @include font-style(16px, 30px, bold);
+    @include font-style(16px, 30px, 700);
 
     width: 20%;
     padding-top: 12px;
@@ -204,7 +203,7 @@ table tr > *:nth-child(1) {
   }
 
   .rates__name {
-    @include font-style(18px, 30px, bold);
+    @include font-style(18px, 30px, 700);
 
     padding-bottom: 20px;
     padding-top: 15px;
@@ -224,11 +223,11 @@ table tr > *:nth-child(1) {
   }
 
   .rates__price {
-    @include font-style(24px, 30px, lighter);
+    @include font-style(24px, 30px, 300);
   }
 
   .rates__feature {
-    @include font-style(18px, 30px, normal);
+    @include font-style(18px, 30px, 400);
 
     padding-left: 20px;
     padding-top: 13px;

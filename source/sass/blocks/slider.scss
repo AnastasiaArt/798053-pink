@@ -1,5 +1,5 @@
 .slider {
-  @include font-style(14px, 30px, normal);
+  @include font-style(14px, 30px, 400);
 }
 
 .slider__toggles {
@@ -63,7 +63,7 @@
 }
 
 .slider__title {
-  @include font-style(18px, 30px, bold);
+  @include font-style(18px, 30px, 700);
 
   font-style: normal;
   margin: $center;
@@ -82,7 +82,7 @@
 }
 
 .slider__title span {
-  @include font-style(14px, 30px, normal);
+  @include font-style(14px, 30px, 400);
 
   display: none;
 }
@@ -97,7 +97,7 @@
   }
 
   .slider__text {
-    @include font-style(18px, 30px, normal);
+    @include font-style(18px, 30px, 400);
 
     margin-bottom: 36px;
   }
@@ -105,10 +105,10 @@
 
 @include respond-to(large) {
   .slider__title {
-    @include font-style(24px, 30px, bold);
+    @include font-style(24px, 30px, 700);
 
     & span {
-      @include font-style(18px, 30px, normal);
+      @include font-style(18px, 30px, 400);
     }
   }
 }

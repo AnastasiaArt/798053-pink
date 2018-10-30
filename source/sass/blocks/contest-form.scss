@@ -4,7 +4,7 @@
 }
 
 .contest-form__note {
-  @include font-style(14px, 30px, normal);
+  @include font-style(14px, 30px, 400);
 
   display: block;
   padding: 20px 0;
@@ -148,7 +148,7 @@
   }
 
   .contest-form__button {
-    @include font-style(18px, 30px, bold);
+    @include font-style(18px, 30px, 700);
 
     padding-top: 0;
     padding-bottom: 0;

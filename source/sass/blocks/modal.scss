@@ -1,5 +1,5 @@
 .modal {
-  @include font-style(14px, 24px, normal);
+  @include font-style(14px, 24px, 400);
 
   position: absolute;
   z-index: 20;
@@ -25,7 +25,7 @@
   @include indent;
 
   color: #000000;
-  font-weight: bold;
+  font-weight: 700;
   padding: $padding-mobile;
   padding-top: 40px;
   margin-bottom: 30px;
@@ -65,7 +65,7 @@
   }
 
   .modal__title {
-    @include font-style(30px, 40px, bold);
+    @include font-style(30px, 40px, 700);
 
     width: 47.8%;
     margin: $center;
@@ -84,7 +84,7 @@
   }
 
   .modal__button {
-    @include font-style(18px, 24px, bold);
+    @include font-style(18px, 24px, 700);
 
     margin: $center;
     width: 295px;
@@ -110,7 +110,7 @@
   }
 
   .modal__button {
-    @include font-style(18px, 30px, bold);
+    @include font-style(18px, 30px, 700);
 
     margin: $center;
     width: 295px;

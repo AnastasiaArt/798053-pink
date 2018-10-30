@@ -2,6 +2,7 @@
   @include bgImage;
 
   width: 100%;
+  background-color: $blue;
   background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
   background-position: 0 40%, 50% 0;
   background-size: 80.5%, 220%;

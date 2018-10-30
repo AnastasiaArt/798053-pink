@@ -12,7 +12,7 @@ body {
   padding: 0;
   overflow-x: hidden;
 
-  @include font-style(18px, 30px, normal);
+  @include font-style(18px, 30px, 400);
 }
 
 img {

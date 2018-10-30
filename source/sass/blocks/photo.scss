@@ -15,7 +15,7 @@
   overflow: hidden;
 
   &--panorama {
-    @include font-style(12px, 24px, bold);
+    @include font-style(12px, 24px, 700);
 
     position: relative;
     color: $white;
@@ -56,19 +56,19 @@
 }
 
 .photo__author-name {
-  @include font-style(14px, 24px, bold);
+  @include font-style(14px, 24px, 700);
 
   font-style: normal;
 }
 
 .photo__author-time {
-  @include font-style(12px, 24px, lighter);
+  @include font-style(12px, 24px, 300);
 
   text-transform: uppercase;
 }
 
 .photo__text {
-  @include font-style(14px, 24px, normal);
+  @include font-style(14px, 24px, 400);
   @include indent;
 
   text-align: left;

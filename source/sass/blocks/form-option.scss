@@ -7,7 +7,7 @@
 }
 
 .form-option__title {
-  @include font-style(14px, 18px, normal);
+  @include font-style(14px, 18px, 400);
 
   display: inline-block;
   color: $red;
@@ -30,7 +30,7 @@
 
 .form-option__list {
   @include list;
-  @include font-style(18px, 30px, normal);
+  @include font-style(18px, 30px, 400);
 
   text-align: left;
 }
@@ -121,7 +121,7 @@
   }
 
   .form-option__title {
-    @include font-style(14px, 30px, normal);
+    @include font-style(14px, 30px, 400);
 
     background-color: inherit;
     width: 70%;

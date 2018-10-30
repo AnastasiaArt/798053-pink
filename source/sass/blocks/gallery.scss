@@ -5,7 +5,7 @@
 }
 
 .gallery__title {
-  @include font-style(14px, 30px, normal);
+  @include font-style(14px, 30px, 400);
   @include indent;
 
   width: 87.5%;
@@ -48,7 +48,7 @@
   }
 
   .gallery__title {
-    @include font-style(18px, 30px, normal);
+    @include font-style(18px, 30px, 400);
 
     width: 93.9%;
     margin-top: 90px;
@@ -86,11 +86,11 @@
 
 @include respond-to(large) {
   .gallery {
-    margin-bottom: 0;
+    margin-bottom: 4px;
   }
 
   .gallery__title {
-    @include font-style(18px, 30px, normal);
+    @include font-style(18px, 30px, 400);
 
     width: 80%;
     margin-bottom: 89px;
@@ -110,11 +110,11 @@
 
   .gallery__item {
     width: 32%;
-    margin-bottom: 56px;
+    margin-bottom: 54px;
 
     &--panorama {
       width: 100%;
-      margin-bottom: 50px;
+      margin-bottom: 49px;
     }
   }
 }
