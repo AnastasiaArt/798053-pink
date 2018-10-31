@@ -35,13 +35,13 @@
 
     &::after {
       @include pseudo($content: "24");
-      @include font-style(96px, 149.47px, 700);
+      @include font-style(96px, 160px, 700);
       @include bgImage;
 
       color: $red;
-      width: 162px;
-      height: 162px;
-      border: 20px solid $red;
+      width: 175px;
+      height: 175px;
+      border: 15px solid $red;
       border-radius: 50%;
       top: 50%;
       left: 50%;
@@ -64,6 +64,11 @@
     box-sizing: border-box;
     margin-top: 0;
     margin-bottom: 8px;
+    padding-right: 13px;
+
+    & br:last-child {
+      display: none;
+    }
   }
 
   .effect__link {
@@ -109,9 +114,12 @@
   }
 
   .effect__title {
+    @include font-style(30px, 30px, 700);
+
     padding-top: 94px;
     width: 60.4%;
     margin-bottom: 23px;
+    text-align: left;
 
     & br {
       display: none;
@@ -120,13 +128,21 @@
 
   .effect__text {
     @include font-style(18px, 30px, 400);
+
     text-align: left;
     width: 60.4%;
     margin-bottom: 35px;
-    padding-right: 5.7%;
+    padding-right: 6.1%;
+
+    & br:first-child {
+      display: none;
+    }
   }
 
   .effect__link {
+    @include font-style(18px, 30px, 400);
+
     width: 60.4%;
+    text-align: left;
   }
 }

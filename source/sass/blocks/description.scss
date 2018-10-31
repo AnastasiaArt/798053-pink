@@ -28,7 +28,7 @@
 
   text-align: center;
   padding-bottom: 289px;
-  padding-top: 59px;
+  padding-top: 60px;
   position: relative;
   margin: $center;
   overflow: hidden;
@@ -75,8 +75,6 @@
 
 .description__item {
   margin-bottom: 28px;
-  padding-left: 12px;
-  padding-right: 12px;
 
   & br {
     display: none;
@@ -131,8 +129,12 @@
   }
 
   .description__item {
-    padding-right: 15px;
     margin-bottom: 30px;
+    padding-left: 12px;
+
+    & br {
+      display: block;
+    }
   }
 }
 
@@ -186,10 +188,6 @@
         background-image: url("../img/iphone-screen-2-desktop@2x.png");
         background-size: 91%;
       }
-
-      & br {
-        display: block;
-      }
     }
 
     &:nth-child(3) {
@@ -199,6 +197,10 @@
         background-image: url("../img/iphone-screen-3-desktop@2x.png");
         background-size: 91%;
       }
+    }
+
+    & br {
+      display: none;
     }
   }
 
