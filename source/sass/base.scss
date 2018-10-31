@@ -1,6 +1,6 @@
-@include font-face("OpenSans", "../fonts/opensans", normal, normal);
-@include font-face("OpenSans", "../fonts/opensansbold", bold, normal);
-@include font-face("OpenSans", "../fonts/opensanslight", lighter, normal);
+@include font-face("OpenSans", "../fonts/opensans", 400, normal);
+@include font-face("OpenSans", "../fonts/opensansbold", 700, normal);
+@include font-face("OpenSans", "../fonts/opensanslight", 300, normal);
 
 body {
   font-family: "OpenSans", "Arial", sans-serif;
