@@ -4,6 +4,7 @@
     src: url("#{$path}.woff2") format("woff2"), url("#{$path}.woff") format("woff");
     font-weight: $weight;
     font-style: $style;
+    font-display: swap;
   }
 }
 
@@ -19,7 +20,6 @@
 }
 
 @mixin font-style($size, $height, $weight) {
-  // font-family: $family;
   font-size: $size;
   line-height: $height;
   font-weight: $weight;

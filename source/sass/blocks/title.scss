@@ -8,7 +8,7 @@
     background-color: $blue;
     background-image: url("../img/bg-back-mobile@1x.jpg");
     background-position: center 0;
-    background-size: 220%;
+    background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-mobile@2x.jpg");

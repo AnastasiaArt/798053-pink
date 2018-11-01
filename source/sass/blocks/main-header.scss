@@ -1,7 +1,7 @@
 .main-header {
   position: relative;
   min-height: $header-height-xs;
-  background-color: rgba($blue, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 100;
 }
 
@@ -73,7 +73,7 @@
 
 @include respond-to(large) {
   .main-header {
-    background-color: rgba($blue, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   .main-header__wrapper-logo {
