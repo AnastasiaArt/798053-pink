@@ -12,6 +12,8 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-mobile@2x.jpg");
+      background-position: center 0;
+      background-size: 220%;
     }
   }
 }
@@ -64,6 +66,7 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-position: center -1%;
     }
   }
 
